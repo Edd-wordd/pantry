@@ -5,7 +5,7 @@ export default function Landing() {
    return (
       <div>
          <nav className="navbar navbar-expand-md navbar-light fixed-top">
-            <a className="navbar-brand" href="#">
+            <Link to="/" className="navbar-brand">
                <img
                   id="brandLogo"
                   src="https://thumbs.dreamstime.com/z/graffiti-grin-wink-icon-face-black-over-white-graffiti-grin-wink-icon-face-black-white-117146447.jpg"
@@ -14,7 +14,7 @@ export default function Landing() {
                   alt="pantry logo"
                />
                EDDWORDDS PANTRY
-            </a>
+            </Link>
             <button
                className="navbar-toggler"
                data-toggle="collapse"
@@ -49,13 +49,13 @@ export default function Landing() {
                         className="dropdown-menu"
                         aria-labelledby="navbarDropdown"
                      >
-                        <a className="dropdown-item" href="#">
-                           item 1
-                        </a>
+                        <Link to="/recipes" className="dropdown-item">
+                           add
+                        </Link>
                         <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="#">
-                           item 2{" "}
-                        </a>
+                        <Link to="/recipes" className="dropdown-item">
+                           Favorites
+                        </Link>
                      </div>
                   </li>
                   <li className="nav-item dropdown">
@@ -72,13 +72,13 @@ export default function Landing() {
                         className="dropdown-menu"
                         aria-labelledby="navbarDropdown"
                      >
-                        <a className="dropdown-item" href="#">
-                           item 1
-                        </a>
+                        <Link to="/pantry" className="dropdown-item">
+                           Update Pantry Items
+                        </Link>
                         <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="#">
-                           item 2{" "}
-                        </a>
+                        <Link to="/pantry" className="dropdown-item">
+                           item 2
+                        </Link>
                      </div>
                   </li>
                   <li className="nav-item dropdown">
@@ -89,9 +89,9 @@ export default function Landing() {
                </ul>
             </div>
          </nav>
-         <div class="container landing-signIn">
-            <div class="row">
-               <div class="col-6 ">
+         <div className="container landing-signIn">
+            <div className="row">
+               <div className="col-6 ">
                   <section>
                      <h3>Impressive collection of Meals</h3>
                      <p>Designed to look gorgeous together</p>

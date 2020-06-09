@@ -5,7 +5,7 @@ export default function SignIn() {
    return (
       <div>
          <nav className="navbar navbar-expand-md navbar-light fixed-top">
-            <a className="navbar-brand" href="#">
+            <Link to="/" className="navbar-brand">
                <img
                   id="brandLogo"
                   src="https://thumbs.dreamstime.com/z/graffiti-grin-wink-icon-face-black-over-white-graffiti-grin-wink-icon-face-black-white-117146447.jpg"
@@ -14,7 +14,7 @@ export default function SignIn() {
                   alt="pantry logo"
                />
                EDDWORDDS PANTRY
-            </a>
+            </Link>
             <button
                className="navbar-toggler"
                data-toggle="collapse"
@@ -37,7 +37,7 @@ export default function SignIn() {
 
                   <li className="nav-item dropdown">
                      <Link
-                        to="/recipes"
+                        to=""
                         className="nav-link dropdown-toggle"
                         id="navbarDropdown"
                         role="button"
@@ -49,13 +49,13 @@ export default function SignIn() {
                         className="dropdown-menu"
                         aria-labelledby="navbarDropdown"
                      >
-                        <a className="dropdown-item" href="#">
-                           item 1
-                        </a>
+                        <Link to="/recipes" className="dropdown-item">
+                           add
+                        </Link>
                         <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="#">
-                           item 2{" "}
-                        </a>
+                        <Link to="/recipes" className="dropdown-item">
+                           Favorites
+                        </Link>
                      </div>
                   </li>
                   <li className="nav-item dropdown">
@@ -72,26 +72,26 @@ export default function SignIn() {
                         className="dropdown-menu"
                         aria-labelledby="navbarDropdown"
                      >
-                        <a className="dropdown-item" href="#">
-                           item 1
-                        </a>
+                        <Link to="/pantry" className="dropdown-item">
+                           Update Pantry Items
+                        </Link>
                         <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="#">
-                           item 2{" "}
-                        </a>
+                        <Link to="/pantry" className="dropdown-item">
+                           item 2
+                        </Link>
                      </div>
                   </li>
                   <li className="nav-item dropdown">
-                     <a className="nav-link" role="button" href="#">
-                        Sign In
-                     </a>
+                     <Link to="/" className="nav-link" role="button">
+                        Log Out
+                     </Link>
                   </li>
                </ul>
             </div>
          </nav>
-         <div class="container landing-signIn">
-            <div class="row">
-               <div class="col-6 offset-3 text-center ">
+         <div className="container landing-signIn">
+            <div className="row">
+               <div className="col-6 offset-3 text-center ">
                   <form>
                      <h1>Lets SIgn In</h1>
                      <input className="mb-3 w-100"></input>

@@ -5,7 +5,7 @@ export default function Pantry() {
    return (
       <div>
          <nav className="navbar navbar-expand-md navbar-light fixed-top">
-            <a className="navbar-brand" href="#">
+            <Link to="/" className="navbar-brand">
                <img
                   id="brandLogo"
                   src="https://thumbs.dreamstime.com/z/graffiti-grin-wink-icon-face-black-over-white-graffiti-grin-wink-icon-face-black-white-117146447.jpg"
@@ -14,7 +14,7 @@ export default function Pantry() {
                   alt="pantry logo"
                />
                EDDWORDDS PANTRY
-            </a>
+            </Link>
             <button
                className="navbar-toggler"
                data-toggle="collapse"
@@ -49,13 +49,13 @@ export default function Pantry() {
                         className="dropdown-menu"
                         aria-labelledby="navbarDropdown"
                      >
-                        <a className="dropdown-item" href="#">
-                           item 1
-                        </a>
+                        <Link to="/recipes" className="dropdown-item">
+                           add
+                        </Link>
                         <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="#">
-                           item 2{" "}
-                        </a>
+                        <Link to="/recipes" className="dropdown-item">
+                           Favorites
+                        </Link>
                      </div>
                   </li>
                   <li className="nav-item dropdown">
@@ -72,37 +72,19 @@ export default function Pantry() {
                         className="dropdown-menu"
                         aria-labelledby="navbarDropdown"
                      >
-                        <a className="dropdown-item" href="#">
-                           item 1
-                        </a>
+                        <Link to="/pantry" className="dropdown-item">
+                           Update Pantry Items
+                        </Link>
                         <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="#">
-                           item 2{" "}
-                        </a>
+                        <Link to="/pantry" className="dropdown-item">
+                           item 2
+                        </Link>
                      </div>
                   </li>
                   <li className="nav-item dropdown">
-                     <a
-                        className="nav-link dropdown-toggle"
-                        id="navbarDropdown"
-                        role="button"
-                        data-toggle="dropdown"
-                        href="#"
-                     >
-                        Sign In
-                     </a>
-                     <div
-                        className="dropdown-menu"
-                        aria-labelledby="navbarDropdown"
-                     >
-                        <a className="dropdown-item" href="#">
-                           item 1
-                        </a>
-                        <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="#">
-                           item 2{" "}
-                        </a>
-                     </div>
+                     <Link to="/" className="nav-link" role="button">
+                        Log Out
+                     </Link>
                   </li>
                </ul>
             </div>

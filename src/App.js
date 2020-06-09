@@ -15,6 +15,7 @@ function App() {
             <Route exact path="/recipes" component={Recipes}></Route>
             <Route exact path="/pantry" component={Pantry}></Route>
             <Route exact path="/signIn" component={SignIn}></Route>
+
             <Route component={NotFound}></Route>
          </Switch>
       </Router>
