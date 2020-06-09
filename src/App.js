@@ -5,6 +5,7 @@ import Landing from "./components/pages/Landing";
 import NotFound from "./components/pages/NotFound";
 import Recipes from "./components/pages/Recipes";
 import Pantry from "./components/pages/Pantry";
+import SignIn from "./components/pages/SignIn";
 
 function App() {
    return (
@@ -13,7 +14,7 @@ function App() {
             <Route exact path="/" component={Landing}></Route>
             <Route exact path="/recipes" component={Recipes}></Route>
             <Route exact path="/pantry" component={Pantry}></Route>
-
+            <Route exact path="/signIn" component={SignIn}></Route>
             <Route component={NotFound}></Route>
          </Switch>
       </Router>

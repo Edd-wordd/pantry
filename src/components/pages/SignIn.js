@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Landing() {
+export default function SignIn() {
    return (
       <div>
          <nav className="navbar navbar-expand-md navbar-light fixed-top">
@@ -82,30 +82,18 @@ export default function Landing() {
                      </div>
                   </li>
                   <li className="nav-item dropdown">
-                     <Link to="/signIn" className="nav-link" role="button">
+                     <a className="nav-link" role="button" href="#">
                         Sign In
-                     </Link>
+                     </a>
                   </li>
                </ul>
             </div>
          </nav>
          <div class="container landing-signIn">
             <div class="row">
-               <div class="col-6 ">
-                  <section>
-                     <h3>Impressive collection of Meals</h3>
-                     <p>Designed to look gorgeous together</p>
-                     <p>
-                        Now UI Kit Pro comes with a huge number of customisable
-                        elements. They are not only designed to be pixel perfect
-                        and light but they are also easy to use and combine well
-                        with other components.
-                     </p>
-                  </section>
-               </div>
-               <div className="col-4 offset-1 text-center">
+               <div class="col-6 offset-3 text-center ">
                   <form>
-                     <h1>Lets get started!</h1>
+                     <h1>Lets SIgn In</h1>
                      <input className="mb-3 w-100"></input>
                      <br />
 
