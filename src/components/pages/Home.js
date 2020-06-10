@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Landing() {
+export default function Home() {
    return (
       <div>
          <nav className="navbar navbar-expand-md navbar-light fixed-top">
@@ -82,8 +82,8 @@ export default function Landing() {
                      </div>
                   </li>
                   <li className="nav-item dropdown">
-                     <Link to="/signIn" className="nav-link" role="button">
-                        Sign In
+                     <Link to="/" className="nav-link" role="button">
+                        Log Out
                      </Link>
                   </li>
                </ul>
@@ -91,32 +91,22 @@ export default function Landing() {
          </nav>
          <div className="container landing-signIn">
             <div className="row">
-               <div className="col-6 ">
-                  <section>
-                     <h3>Impressive collection of Meals</h3>
-                     <p>Designed to look gorgeous together</p>
-                     <p>
-                        Now UI Kit Pro comes with a huge number of customisable
-                        elements. They are not only designed to be pixel perfect
-                        and light but they are also easy to use and combine well
-                        with other components.
-                     </p>
-                  </section>
-               </div>
-               <div className="col-4 offset-1 text-center">
-                  <form>
-                     <h1>Lets get started!</h1>
-                     <input className="mb-3 w-100"></input>
-                     <br />
-
-                     <input className="mb-2 w-100"></input>
-                     <Link
-                        to="/recipes"
-                        className="btn btn-primary float-right"
-                     >
-                        Sign Up
-                     </Link>
-                  </form>
+               <div className="col-12 text-center">
+                  <h2>Impressive collection of Meals</h2>
+                  <textarea className="w-75" rows="15">
+                     Directions Instructions Checklist Step 1 Stir tuna, Cheddar
+                     cheese, diced jalapeno, mayonnaise, relish, lemon juice,
+                     and pepper together in a bowl. Spread tuna mixture on a
+                     slice of toast and top with remaining slice to make a
+                     sandwich. Note: You can eat the tuna on bread, toast, or
+                     cook it like a grilled cheese sandwich to make a tuna melt.
+                     Nutrition Facts Per Serving: 322 calories; 10.6 g total
+                     fat; 36 mg cholesterol; 637 mg sodium. 27.8 g
+                     carbohydrates; 27.5 g protein; Full Nutrition
+                  </textarea>
+                  <textarea className="w-75" rows="15"></textarea>
+                  <textarea className="w-75" rows="15"></textarea>
+                  <textarea className="w-75" rows="15"></textarea>
                </div>
             </div>
          </div>

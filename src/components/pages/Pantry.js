@@ -30,7 +30,7 @@ export default function Pantry() {
             >
                <ul className="navbar-nav ml-auto">
                   <li className="nav-item active">
-                     <Link to="/" className="nav-link">
+                     <Link to="/Home" className="nav-link">
                         Home
                      </Link>
                   </li>
@@ -92,7 +92,38 @@ export default function Pantry() {
          <div class="container landing-signIn">
             <div class="row">
                <div class="col-12 text-center">
-                  <h3>Impressive collection of Ingredients</h3>
+                  <h2>Impressive collection of Ingredients</h2>
+                  <h3>Whats in that pantry!</h3>
+                  <label>Ingredient</label>
+                  <input></input>
+                  <label>Ingredient</label>
+                  <input></input>
+                  <label>Ingredient</label>
+                  <input></input>
+                  <br></br>
+                  <label>Ingredient</label>
+                  <input></input>
+                  <label>Ingredient</label>
+                  <input></input>
+                  <label>Ingredient</label>
+                  <input></input>
+                  <br></br>
+                  <button className="btn btn-primary">Find Recipes</button>
+                  <form>
+                     <div className="custom-control custom-switch">
+                        <input
+                           type="checkbox"
+                           className="custom-control-input"
+                           id="customSwitch1"
+                        />
+                        <label
+                           className="custom-control-label"
+                           htmlFor="customSwitch1"
+                        >
+                           Toggle this switch element
+                        </label>
+                     </div>
+                  </form>
                </div>
             </div>
          </div>

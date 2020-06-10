@@ -30,7 +30,7 @@ export default function Recipes() {
             >
                <ul className="navbar-nav ml-auto">
                   <li className="nav-item active">
-                     <Link to="/" className="nav-link">
+                     <Link to="/Home" className="nav-link">
                         Home
                      </Link>
                   </li>
@@ -93,6 +93,66 @@ export default function Recipes() {
             <div className="row">
                <div className="col-12 text-center">
                   <h3>Impressive collection of Recipes</h3>
+                  <label>Amount</label>
+                  <input></input>
+                  <label>Ingredient</label>
+                  <input></input>
+                  <button className="btn btn-primary ml-3">
+                     {" "}
+                     ADD another Ingredient
+                  </button>
+                  <br />
+                  <label>Amount</label>
+                  <input></input>
+                  <label>Ingredient</label>
+                  <input></input>
+                  <button className="btn btn-primary ml-3">
+                     {" "}
+                     ADD another Ingredient
+                  </button>
+                  <br />
+                  <label>Amount</label>
+                  <input></input>
+                  <label>Ingredient</label>
+                  <input></input>
+                  <button className="btn btn-primary ml-3">
+                     {" "}
+                     ADD another Ingredient
+                  </button>
+                  <br />
+                  <label>Amount</label>
+                  <input></input>
+                  <label>Ingredient</label>
+                  <input></input>
+                  <button className="btn btn-primary ml-3">
+                     {" "}
+                     ADD another Ingredient
+                  </button>
+                  <br />
+                  <input
+                     placeholder="Recipe Title"
+                     className="w-50 mt-2"
+                  ></input>
+                  <br />
+                  <label>Instructions</label>
+                  <br />
+
+                  <textarea rows="10" className="w-50">
+                     DirectionsInstructions Checklist Step 1 Stir tuna, Cheddar
+                     cheese, diced jalapeno, mayonnaise, relish, lemon juice,
+                     and pepper together in a bowl. Spread tuna mixture on a
+                     slice of toast and top with remaining slice to make a
+                     sandwich. I Made It Print Cook's Note: You can eat the tuna
+                     on bread, toast, or cook it like a grilled cheese sandwich
+                     to make a tuna melt. Nutrition Facts Per Serving: 322
+                     calories; 10.6 g total fat; 36 mg cholesterol; 637 mg
+                     sodium. 27.8 g carbohydrates; 27.5 g protein; Full
+                     Nutrition
+                  </textarea>
+                  <br />
+                  <button className="btn btn-danger mr-5">Delete Recipe</button>
+
+                  <button className="btn btn-primary">ADD Recipe</button>
                </div>
             </div>
          </div>
