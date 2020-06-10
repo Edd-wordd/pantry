@@ -93,7 +93,7 @@ export default function Landing() {
             <div className="row">
                <div className="col-6 ">
                   <section>
-                     <h3>Impressive collection of Meals</h3>
+                     <h3>Impressive collection of Recipes</h3>
                      <p>Designed to look gorgeous together</p>
                      <p>
                         Now UI Kit Pro comes with a huge number of customisable

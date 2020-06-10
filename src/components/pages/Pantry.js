@@ -89,9 +89,9 @@ export default function Pantry() {
                </ul>
             </div>
          </nav>
-         <div class="container landing-signIn">
-            <div class="row">
-               <div class="col-12 text-center">
+         <div className="container landing-signIn">
+            <div className="row">
+               <div className="col-12 text-center">
                   <h2>Impressive collection of Ingredients</h2>
                   <h3>Whats in that pantry!</h3>
                   <label>Ingredient</label>
@@ -123,6 +123,52 @@ export default function Pantry() {
                            Toggle this switch element
                         </label>
                      </div>
+
+                     <div className="custom-control custom-switch">
+                        <input
+                           type="checkbox"
+                           className="custom-control-input"
+                           id="customSwitchesChecked"
+                           defaultChecked
+                        />
+                        <label
+                           className="custom-control-label"
+                           htmlFor="customSwitchesChecked"
+                        >
+                           Toggle this switch element
+                        </label>
+                     </div>
+                     <>
+                        <div className="custom-control custom-switch">
+                           <input
+                              type="checkbox"
+                              className="custom-control-input"
+                              id="customSwitches"
+                              readOnly
+                           />
+                           <label
+                              className="custom-control-label"
+                              htmlFor="customSwitches"
+                           >
+                              Toggle this switch element
+                           </label>
+                        </div>
+
+                        <div className="custom-control custom-switch">
+                           <input
+                              type="checkbox"
+                              className="custom-control-input"
+                              id="customSwitchesChecked"
+                              defaultChecked
+                           />
+                           <label
+                              className="custom-control-label"
+                              htmlFor="customSwitchesChecked"
+                           >
+                              Toggle this switch element
+                           </label>
+                        </div>
+                     </>
                   </form>
                </div>
             </div>

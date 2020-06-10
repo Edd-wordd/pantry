@@ -89,24 +89,96 @@ export default function Home() {
                </ul>
             </div>
          </nav>
+
          <div className="container landing-signIn">
             <div className="row">
-               <div className="col-12 text-center">
+               <div className="col-6 offset-2">
                   <h2>Impressive collection of Meals</h2>
-                  <textarea className="w-75" rows="15">
-                     Directions Instructions Checklist Step 1 Stir tuna, Cheddar
-                     cheese, diced jalapeno, mayonnaise, relish, lemon juice,
-                     and pepper together in a bowl. Spread tuna mixture on a
-                     slice of toast and top with remaining slice to make a
-                     sandwich. Note: You can eat the tuna on bread, toast, or
-                     cook it like a grilled cheese sandwich to make a tuna melt.
-                     Nutrition Facts Per Serving: 322 calories; 10.6 g total
-                     fat; 36 mg cholesterol; 637 mg sodium. 27.8 g
-                     carbohydrates; 27.5 g protein; Full Nutrition
-                  </textarea>
-                  <textarea className="w-75" rows="15"></textarea>
-                  <textarea className="w-75" rows="15"></textarea>
-                  <textarea className="w-75" rows="15"></textarea>
+                  <div class="custom-control custom-switch">
+                     <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="customSwitch1"
+                     />
+                     <label class="custom-control-label" for="customSwitch1">
+                        Toggle this switch element
+                     </label>
+                  </div>
+                  <div className="card mb-3" style={{ width: "50rem" }}>
+                     <div className="card-body ">
+                        <h5 className="card-title text-center">Recipe One</h5>
+                        <h6 className="card-subtitle mb-2 text-muted">
+                           Card subtitle
+                        </h6>
+                        <p className="card-text">
+                           Some quick example text to build on the card title
+                           and make up the bulk of the card's content.
+                        </p>
+                        <a href="#" className="card-link">
+                           Card link
+                        </a>
+                        <a href="#" className="card-link">
+                           Another link
+                        </a>
+                     </div>
+                  </div>
+                  <div className="card mb-3" style={{ width: "50rem" }}>
+                     <div className="card-body ">
+                        <h5 className="card-title text-center">Recipe Two</h5>
+                        <h6 className="card-subtitle mb-2 text-muted">
+                           Card subtitle
+                        </h6>
+                        <p className="card-text">
+                           Some quick example text to build on the card title
+                           and make up the bulk of the card's content.
+                        </p>
+                        <a href="#" className="card-link">
+                           Card link
+                        </a>
+                        <a href="#" className="card-link">
+                           Another link
+                        </a>
+                     </div>
+                  </div>{" "}
+                  <div className="card mb-3" style={{ width: "50rem" }}>
+                     <div className="card-body ">
+                        <h5 className="card-title text-center">
+                           {" "}
+                           Recipe Three
+                        </h5>
+                        <h6 className="card-subtitle mb-2 text-muted">
+                           card subtitle
+                        </h6>
+                        <p className="card-text">
+                           Some quick example text to build on the card title
+                           and make up the bulk of the card's content.
+                        </p>
+                        <a href="#" className="card-link">
+                           Card link
+                        </a>
+                        <a href="#" className="card-link">
+                           Another link
+                        </a>
+                     </div>
+                  </div>{" "}
+                  <div className="card mb-3" style={{ width: "50rem" }}>
+                     <div className="card-body ">
+                        <h5 className="card-title text-center"> Recipe four</h5>
+                        <h6 className="card-subtitle mb-2 text-muted">
+                           card sustitle
+                        </h6>
+                        <p className="card-text">
+                           Some quick example text to build on the card title
+                           and make up the bulk of the card's content.
+                        </p>
+                        <a href="#" className="card-link">
+                           Card link
+                        </a>
+                        <a href="#" className="card-link">
+                           Another link
+                        </a>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
