@@ -93,83 +93,141 @@ export default function Pantry() {
             <div className="row">
                <div className="col-12 text-center">
                   <h2>Impressive collection of Ingredients</h2>
-                  <h3>Whats in that pantry!</h3>
-                  <label>Ingredient</label>
-                  <input></input>
-                  <label>Ingredient</label>
-                  <input></input>
-                  <label>Ingredient</label>
-                  <input></input>
-                  <br></br>
-                  <label>Ingredient</label>
-                  <input></input>
-                  <label>Ingredient</label>
-                  <input></input>
-                  <label>Ingredient</label>
-                  <input></input>
-                  <br></br>
-                  <button className="btn btn-primary">Find Recipes</button>
-                  <form>
-                     <div className="custom-control custom-switch">
-                        <input
-                           type="checkbox"
-                           className="custom-control-input"
-                           id="customSwitch1"
-                        />
-                        <label
-                           className="custom-control-label"
-                           htmlFor="customSwitch1"
-                        >
-                           Toggle this switch element
-                        </label>
-                     </div>
-
-                     <div className="custom-control custom-switch">
-                        <input
-                           type="checkbox"
-                           className="custom-control-input"
-                           id="customSwitchesChecked"
-                           defaultChecked
-                        />
-                        <label
-                           className="custom-control-label"
-                           htmlFor="customSwitchesChecked"
-                        >
-                           Toggle this switch element
-                        </label>
-                     </div>
-                     <>
-                        <div className="custom-control custom-switch">
+                  <h5>Whats in that pantry!</h5>
+                  <div className="col-9 offset-2">
+                     <div class="form-row align-items-center">
+                        <div class="col-auto">
                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="customSwitches"
-                              readOnly
+                              type="text"
+                              class="form-control mb-2"
+                              id="inlineFormInput"
                            />
-                           <label
-                              className="custom-control-label"
-                              htmlFor="customSwitches"
-                           >
-                              Toggle this switch element
-                           </label>
+                        </div>
+                        <div class="col-auto">
+                           <input
+                              type="text"
+                              class="form-control mb-2"
+                              id="inlineFormInput"
+                           />
                         </div>
 
-                        <div className="custom-control custom-switch">
-                           <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="customSwitchesChecked"
-                              defaultChecked
-                           />
-                           <label
-                              className="custom-control-label"
-                              htmlFor="customSwitchesChecked"
-                           >
-                              Toggle this switch element
-                           </label>
+                        <div class="col-auto">
+                           <div className="custom-control custom-switch">
+                              <input
+                                 type="checkbox"
+                                 className="custom-control-input"
+                                 id="customSwitchesChecked"
+                                 defaultChecked
+                              />
+                              <label
+                                 className="custom-control-label"
+                                 htmlFor="customSwitchesChecked"
+                              >
+                                 In-Stock
+                              </label>
+                           </div>
                         </div>
-                     </>
-                  </form>
+                        <div class="col-auto">
+                           <button type="submit" class="btn btn-primary mb-2">
+                              ADD to Pantry
+                           </button>
+                        </div>
+                     </div>
+                     <div class="form-row align-items-center">
+                        <div class="col-auto">
+                           <input
+                              type="text"
+                              class="form-control mb-2"
+                              id="inlineFormInput"
+                           />
+                        </div>
+                        <div class="col-auto">
+                           <input
+                              type="text"
+                              class="form-control mb-2"
+                              id="inlineFormInput"
+                           />
+                        </div>
+
+                        <div class="col-auto">
+                           <div className="custom-control custom-switch">
+                              <input
+                                 type="checkbox"
+                                 className="custom-control-input"
+                                 id="custom2"
+                                 defaultChecked
+                              />
+                              <label
+                                 className="custom-control-label"
+                                 htmlFor="custom2"
+                              >
+                                 In-Stock
+                              </label>
+                           </div>
+                        </div>
+                        <div class="col-auto">
+                           <button type="submit" class="btn btn-primary mb-2">
+                              ADD to Pantry
+                           </button>
+                        </div>
+                     </div>
+                     <div class="form-row align-items-center">
+                        <div class="col-auto">
+                           <input
+                              type="text"
+                              class="form-control mb-2"
+                              id="inlineFormInput"
+                           />
+                        </div>
+                        <div class="col-auto">
+                           <input
+                              type="text"
+                              class="form-control mb-2"
+                              id="inlineFormInput"
+                           />
+                        </div>
+
+                        <div class="col-auto">
+                           <div className="custom-control custom-switch">
+                              <input
+                                 type="checkbox"
+                                 className="custom-control-input"
+                                 id="custom3"
+                                 defaultChecked
+                              />
+                              <label
+                                 className="custom-control-label"
+                                 htmlFor="custom3"
+                              >
+                                 In-Stock
+                              </label>
+                           </div>
+                        </div>
+                        <div class="col-auto">
+                           <button type="submit" class="btn btn-primary mb-2">
+                              ADD to Pantry
+                           </button>
+                        </div>
+                     </div>
+                     <div class="card w-75" style={{ width: "18rem" }}>
+                        <div class="card-body">
+                           <h5 class="card-title">Pantry Inventory</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                           <li class="list-group-item">cucumbers</li>
+                           <li class="list-group-item">Tomatoes</li>
+                           <li class="list-group-item">Bread</li>
+                        </ul>
+                        <div class="card-body">
+                           <a href="#" class="card-link">
+                              Edit Pantry
+                           </a>
+                           <a href="#" class="card-link">
+                              ???
+                           </a>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>

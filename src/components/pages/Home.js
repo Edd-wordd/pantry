@@ -109,6 +109,9 @@ export default function Home() {
                            <h6 className="card-subtitle mb-2 text-muted">
                               Cook-Time
                            </h6>
+                           <h6 className="card-subtitle mb-2 text-muted">
+                              Serving Size
+                           </h6>
                         </div>
                         <h6 className="card-subtitle mb-2 text-muted">
                            Ingredients

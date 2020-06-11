@@ -123,6 +123,16 @@ export default function Recipes() {
                               <option>30 or more mins</option>
                            </select>
                         </div>
+                        <div class="form-group col-md-4">
+                           <label for="inputState">Meals for</label>
+                           <select id="inputState" class="form-control">
+                              <option selected>Choose...</option>
+                              <option>Breakfast</option>
+                              <option>Brunch</option>
+                              <option>Lunch</option>
+                              <option>Dinner</option>
+                           </select>
+                        </div>
                      </div>
 
                      <div class="form-row">
