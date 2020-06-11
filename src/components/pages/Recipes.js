@@ -91,68 +91,156 @@ export default function Recipes() {
          </nav>
          <div className="container landing-signIn">
             <div className="row">
-               <div className="col-12 text-center">
-                  <h3>Impressive collection of Recipes</h3>
-                  <label>Amount</label>
-                  <input></input>
-                  <label>Ingredient</label>
-                  <input></input>
-                  <button className="btn btn-primary ml-3">
-                     {" "}
-                     ADD another Ingredient
-                  </button>
-                  <br />
-                  <label>Amount</label>
-                  <input></input>
-                  <label>Ingredient</label>
-                  <input></input>
-                  <button className="btn btn-primary ml-3">
-                     {" "}
-                     ADD another Ingredient
-                  </button>
-                  <br />
-                  <label>Amount</label>
-                  <input></input>
-                  <label>Ingredient</label>
-                  <input></input>
-                  <button className="btn btn-primary ml-3">
-                     {" "}
-                     ADD another Ingredient
-                  </button>
-                  <br />
-                  <label>Amount</label>
-                  <input></input>
-                  <label>Ingredient</label>
-                  <input></input>
-                  <button className="btn btn-primary ml-3">
-                     {" "}
-                     ADD another Ingredient
-                  </button>
-                  <br />
-                  <input
-                     placeholder="Recipe Title"
-                     className="w-50 mt-2"
-                  ></input>
-                  <br />
-                  <label>Instructions</label>
-                  <br />
+               <div className="col-12 ">
+                  <h3 className="text-center">
+                     Impressive collection of Recipes
+                  </h3>
+                  <form>
+                     <div class="form-group">
+                        <label for="inputAddress">Recipe Title</label>
+                        <input
+                           type="text"
+                           class="form-control"
+                           id="inputAddress"
+                        />
+                     </div>
+                     <div class="form-row">
+                        <div class="form-group col-md-4">
+                           <label for="inputState">Pre-Time</label>
+                           <select id="inputState" class="form-control">
+                              <option selected>Choose...</option>
+                              <option>5-10 mins</option>
+                              <option>10-20 mins</option>
+                              <option>30 or more mins</option>
+                           </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                           <label for="inputState">Cook-Time</label>
+                           <select id="inputState" class="form-control">
+                              <option selected>Choose...</option>
+                              <option>5-10 mins</option>
+                              <option>10-20 mins</option>
+                              <option>30 or more mins</option>
+                           </select>
+                        </div>
+                     </div>
 
-                  <textarea rows="10" className="w-50">
-                     DirectionsInstructions Checklist Step 1 Stir tuna, Cheddar
-                     cheese, diced jalapeno, mayonnaise, relish, lemon juice,
-                     and pepper together in a bowl. Spread tuna mixture on a
-                     slice of toast and top with remaining slice to make a
-                     sandwich. I Made It Print Cook's Note: You can eat the tuna
-                     on bread, toast, or cook it like a grilled cheese sandwich
-                     to make a tuna melt. Nutrition Facts Per Serving: 322
-                     calories; 10.6 g total fat; 36 mg cholesterol; 637 mg
-                     sodium. 27.8 g carbohydrates; 27.5 g protein; Full
-                     Nutrition
-                  </textarea>
-                  <br />
-                  <button className="btn btn-danger mr-5">Delete Recipe</button>
+                     <div class="form-row">
+                        <div class="form-group col-md-6">
+                           <label for="inputEmail4">Amount of Ingredient</label>
+                           <input
+                              type="email"
+                              class="form-control"
+                              id="inputEmail4"
+                           />
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label for="inputPassword4">Ingredient</label>
+                           <input
+                              type="password"
+                              class="form-control"
+                              id="inputPassword4"
+                           />
+                        </div>
+                     </div>
+                     <div class="form-row">
+                        <div class="form-group col-md-6">
+                           <label for="inputEmail4">Amount of Ingredient</label>
+                           <input
+                              type="email"
+                              class="form-control"
+                              id="inputEmail4"
+                           />
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label for="inputPassword4">Ingredient</label>
+                           <input
+                              type="password"
+                              class="form-control"
+                              id="inputPassword4"
+                           />
+                        </div>
+                     </div>
+                     <div class="form-row">
+                        <div class="form-group col-md-6">
+                           <label for="inputEmail4">Amount of Ingredient</label>
+                           <input
+                              type="email"
+                              class="form-control"
+                              id="inputEmail4"
+                           />
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label for="inputPassword4">Ingredient</label>
+                           <input
+                              type="password"
+                              class="form-control"
+                              id="inputPassword4"
+                           />
+                        </div>
+                     </div>
 
-                  <button className="btn btn-primary">ADD Recipe</button>
+                     <div class="form-group">
+                        <label for="inputAddress2">Step 1:</label>
+                        <input
+                           type="text"
+                           class="form-control"
+                           id="inputAddress2"
+                        />
+                     </div>
+                     <div class="form-group">
+                        <label for="inputAddress2">Step 2:</label>
+                        <input
+                           type="text"
+                           class="form-control"
+                           id="inputAddress2"
+                        />
+                     </div>
+                     <div class="form-group">
+                        <label for="inputAddress2">Step 3:</label>
+                        <input
+                           type="text"
+                           class="form-control"
+                           id="inputAddress2"
+                        />
+                     </div>
+                     <div class="form-group">
+                        <label for="inputAddress2">Step 4:</label>
+                        <input
+                           type="text"
+                           class="form-control"
+                           id="inputAddress2"
+                        />
+                     </div>
+                     <div class="form-group">
+                        <label for="inputAddress2">Additional Notes:</label>
+                        <input
+                           type="text"
+                           class="form-control"
+                           id="inputAddress2"
+                        />
+                     </div>
+                     <div class="form-group float-right">
+                        <div class="form-check">
+                           <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="gridCheck"
+                           />
+                           <label class="form-check-label" for="gridCheck">
+                              Add to favorite Recipes
+                           </label>
+                        </div>
+                     </div>
+                     <div className="clearfix"></div>
+                     <div className="float-right mb-5">
+                        <button className="btn btn-danger mr-5">
+                           Delete Recipe
+                        </button>
+
+                        <button className="btn btn-primary">ADD Recipe</button>
+                     </div>
+                  </form>
                </div>
             </div>
          </div>

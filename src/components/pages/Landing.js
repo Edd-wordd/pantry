@@ -95,25 +95,27 @@ export default function Landing() {
                   <section>
                      <h3>Impressive collection of Recipes</h3>
                      <p>Designed to look gorgeous together</p>
+
                      <p>
                         Now UI Kit Pro comes with a huge number of customisable
                         elements. They are not only designed to be pixel perfect
                         and light but they are also easy to use and combine well
                         with other components.
                      </p>
+                     <img src="https://plantyou.com/wp-content/uploads/2019/11/plant-based-pantry-staples-top-tips.png"></img>
                   </section>
                </div>
                <div className="col-4 offset-1 text-center">
                   <form>
                      <h1>Lets get started!</h1>
-                     <input className="mb-3 w-100"></input>
+                     <input className="mb-3 w-100" placeholder="Email"></input>
                      <br />
 
-                     <input className="mb-2 w-100"></input>
-                     <Link
-                        to="/recipes"
-                        className="btn btn-primary float-right"
-                     >
+                     <input
+                        className="mb-2 w-100"
+                        placeholder="create password"
+                     ></input>
+                     <Link to="/home" className="btn btn-primary float-right">
                         Sign Up
                      </Link>
                   </form>
