@@ -131,12 +131,12 @@ export default function Pantry() {
                               <li className="list-group-item">Bread</li>
                            </ul>
                            <div className="card-body">
-                              <a href="#" className="card-link">
+                              <Link to="" className="card-link">
                                  Edit Pantry
-                              </a>
-                              <a href="#" className="card-link">
+                              </Link>
+                              <Link to="" className="card-link">
                                  ???
-                              </a>
+                              </Link>
                            </div>
                         </div>
                         <div
@@ -153,12 +153,12 @@ export default function Pantry() {
                               <li className="list-group-item">Bread</li>
                            </ul>
                            <div className="card-body">
-                              <a href="#" className="card-link">
+                              <Link to="" className="card-link">
                                  Edit Shopping list
-                              </a>
-                              <a href="#" className="card-link">
+                              </Link>
+                              <Link to="" className="card-link">
                                  ???
-                              </a>
+                              </Link>
                            </div>
                         </div>
                      </div>

@@ -15,10 +15,9 @@ export default function Home() {
                   </h2>
                   <div className="card mb-3" style={{ width: "50rem" }}>
                      <div className="card-body ">
-                        <div className="card-header text-center">
+                        <div className="card-header text-center mb-3">
                            Turkey Sandwhich
                         </div>
-                        <h4 className="card-title text-center mb-4"></h4>
                         <div className="row mb-3">
                            <h6 className="card-subtitle mb-2 text-muted col-4">
                               Prep-Time: 5-10 mins
@@ -61,9 +60,9 @@ export default function Home() {
                            <Link to="/pantry" className="card-link ">
                               Check Pantry
                            </Link>
-                           <a href="#" className="card-link ">
+                           <Link to="" className="card-link ">
                               Add to Favorites
-                           </a>
+                           </Link>
                         </div>
                      </div>
                   </div>
@@ -102,9 +101,9 @@ export default function Home() {
                            <Link to="/pantry" className="card-link ">
                               Check Pantry
                            </Link>
-                           <a href="#" className="card-link ">
+                           <Link to="" className="card-link ">
                               Add to Favorites
-                           </a>
+                           </Link>
                         </div>
                      </div>
                   </div>
@@ -143,9 +142,9 @@ export default function Home() {
                            <Link to="/pantry" className="card-link ">
                               Check Pantry
                            </Link>
-                           <a href="#" className="card-link ">
+                           <Link to="" className="card-link ">
                               Add to Favorites
-                           </a>
+                           </Link>
                         </div>
                      </div>
                   </div>
@@ -184,9 +183,9 @@ export default function Home() {
                            <Link to="/pantry" className="card-link ">
                               Check Pantry
                            </Link>
-                           <a href="#" className="card-link ">
+                           <Link to="" className="card-link ">
                               Add to Favorites
-                           </a>
+                           </Link>
                         </div>
                      </div>
                   </div>

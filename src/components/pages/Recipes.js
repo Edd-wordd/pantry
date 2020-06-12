@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Navigation from "../ui/Navigation";
 
 export default function Recipes() {
@@ -23,7 +22,7 @@ export default function Recipes() {
                      </div>
                      <div className="form-row">
                         <div className="form-group col-md-4">
-                           <label htmlFor="inputState">Pre-Time</label>
+                           <label htmlFor="inputState">Prep-Time</label>
                            <select id="inputState" className="form-control">
                               <option defaultValue>Choose...</option>
                               <option>5-10 mins</option>
@@ -41,7 +40,7 @@ export default function Recipes() {
                            </select>
                         </div>
                         <div className="form-group col-md-4">
-                           <label htmlFor="inputState">Meals htmlFor</label>
+                           <label htmlFor="inputState">Meal For</label>
                            <select id="inputState" className="form-control">
                               <option defaultValue>Choose...</option>
                               <option>Breakfast</option>
@@ -58,7 +57,7 @@ export default function Recipes() {
                               Amount of Ingredient
                            </label>
                            <input
-                              type="email"
+                              type="text"
                               className="form-control"
                               id="inputEmail4"
                            />
@@ -66,7 +65,7 @@ export default function Recipes() {
                         <div className="form-group col-md-6">
                            <label htmlFor="inputPassword4">Ingredient</label>
                            <input
-                              type="password"
+                              type="text"
                               className="form-control"
                               id="inputPassword4"
                            />
@@ -78,7 +77,7 @@ export default function Recipes() {
                               Amount of Ingredient
                            </label>
                            <input
-                              type="email"
+                              type="text"
                               className="form-control"
                               id="inputEmail4"
                            />
@@ -86,7 +85,7 @@ export default function Recipes() {
                         <div className="form-group col-md-6">
                            <label htmlFor="inputPassword4">Ingredient</label>
                            <input
-                              type="password"
+                              type="text"
                               className="form-control"
                               id="inputPassword4"
                            />
@@ -98,7 +97,7 @@ export default function Recipes() {
                               Amount of Ingredient
                            </label>
                            <input
-                              type="email"
+                              type="text"
                               className="form-control"
                               id="inputEmail4"
                            />
@@ -106,7 +105,7 @@ export default function Recipes() {
                         <div className="form-group col-md-6">
                            <label htmlFor="inputPassword4">Ingredient</label>
                            <input
-                              type="password"
+                              type="text"
                               className="form-control"
                               id="inputPassword4"
                            />
