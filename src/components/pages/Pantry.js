@@ -118,7 +118,7 @@ export default function Pantry() {
                         </div>
                      </div>
                      <div className="row">
-                        <div className="card mb-3 offset-1 col-10 offset-sm-1 col-sm-10 offset-md-2 col-md-10  col-lg-12 col-xl-12">
+                        <div className="card mb-3 offset-1 col-10 offset-sm-1 col-sm-10 offset-md-2 col-md-10  col-lg-6 col-xl-5">
                            <div className="card-body ">
                               <h5 className="card-title">Pantry Inventory</h5>
                            </div>
@@ -136,9 +136,11 @@ export default function Pantry() {
                               </Link>
                            </div>
                         </div>
-                        <div className="card offset-1 col-10 offset-sm-1 col-sm-10 offset-md-2 col-md-10  col-lg-12 col-xl-12">
+                        <div className="card offset-1 col-10 offset-sm-1 col-sm-10 offset-md-2 col-md-10  col-lg-6 col-xl-5 offset-1">
                            <div className="card-body ">
-                              <h5 className="card-title">Out Of Stock</h5>
+                              <h5 className="card-title">
+                                 Out Of Stock(Shopping List)
+                              </h5>
                            </div>
                            <ul className="list-group list-group-flush">
                               <li className="list-group-item">cucumbers</li>

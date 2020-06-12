@@ -1,0 +1,3 @@
+const recipeIngredientSchema = {
+   steps: String,
+};

@@ -62,6 +62,7 @@ export default function Recipes() {
                               id="inputEmail4"
                            />
                         </div>
+
                         <div className="form-group col-md-6">
                            <label htmlFor="inputPassword4">Ingredient</label>
                            <input
@@ -70,6 +71,7 @@ export default function Recipes() {
                               id="inputPassword4"
                            />
                         </div>
+                        <img src="src/icons/plus.svg" alt="plus icon"></img>
                      </div>
                      <div className="form-row">
                         <div className="form-group col-md-6">

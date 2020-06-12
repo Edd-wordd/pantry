@@ -20,7 +20,10 @@ export default function Landing() {
                         and light but they are also easy to use and combine well
                         with other components.
                      </p>
-                     <img src="" alt="background pantry"></img>
+                     <img
+                        src="src/img/annie-spratt-w5xpOP5z1Uw-unsplash.jpg"
+                        alt="background pantry"
+                     />
                   </section>
                </div>
                <div className="text-center offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-5 offset-lg-1 col-lg-4 offset-xl-1 col-xl-5">
