@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Landing() {
+export default function Navigation() {
    return (
       <div>
          <nav className="navbar navbar-expand-md navbar-light fixed-top">
@@ -82,49 +82,13 @@ export default function Landing() {
                      </div>
                   </li>
                   <li className="nav-item dropdown">
-                     <Link to="/signIn" className="nav-link" role="button">
-                        Sign In
+                     <Link to="/" className="nav-link" role="button">
+                        Log Out
                      </Link>
                   </li>
                </ul>
             </div>
          </nav>
-         <div className="container landing-signIn">
-            <div className="row">
-               <div className="col-6 ">
-                  <section>
-                     <h3>Impressive collection of Recipes</h3>
-                     <p>Designed to look gorgeous together</p>
-
-                     <p>
-                        Now UI Kit Pro comes with a huge number of customisable
-                        elements. They are not only designed to be pixel perfect
-                        and light but they are also easy to use and combine well
-                        with other components.
-                     </p>
-                     <img
-                        src="https://plantyou.com/wp-content/uploads/2019/11/plant-based-pantry-staples-top-tips.png"
-                        alt="background pantry"
-                     ></img>
-                  </section>
-               </div>
-               <div className="col-4 offset-1 text-center">
-                  <form>
-                     <h1>Lets get started!</h1>
-                     <input className="mb-3 w-100" placeholder="Email"></input>
-                     <br />
-
-                     <input
-                        className="mb-2 w-100"
-                        placeholder="create password"
-                     ></input>
-                     <Link to="/home" className="btn btn-primary float-right">
-                        Sign Up
-                     </Link>
-                  </form>
-               </div>
-            </div>
-         </div>
       </div>
    );
 }

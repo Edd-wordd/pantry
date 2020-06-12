@@ -1,94 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navigation from "../ui/Navigation";
 
 export default function Home() {
    return (
       <div>
-         <nav className="navbar navbar-expand-md navbar-light fixed-top">
-            <Link to="/" className="navbar-brand">
-               <img
-                  id="brandLogo"
-                  src="https://thumbs.dreamstime.com/z/graffiti-grin-wink-icon-face-black-over-white-graffiti-grin-wink-icon-face-black-white-117146447.jpg"
-                  width="50"
-                  height="50"
-                  alt="pantry logo"
-               />
-               EDDWORDDS PANTRY
-            </Link>
-            <button
-               className="navbar-toggler"
-               data-toggle="collapse"
-               data-target="#navbarSupportedContent"
-               type="button"
-               name="button"
-            >
-               <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-               className="collapse navbar-collapse"
-               id="navbarSupportedContent"
-            >
-               <ul className="navbar-nav ml-auto">
-                  <li className="nav-item active">
-                     <Link to="/Home" className="nav-link">
-                        Home
-                     </Link>
-                  </li>
-
-                  <li className="nav-item dropdown">
-                     <Link
-                        to="/recipes"
-                        className="nav-link dropdown-toggle"
-                        id="navbarDropdown"
-                        role="button"
-                        data-toggle="dropdown"
-                     >
-                        Recipes
-                     </Link>
-                     <div
-                        className="dropdown-menu"
-                        aria-labelledby="navbarDropdown"
-                     >
-                        <Link to="/recipes" className="dropdown-item">
-                           add
-                        </Link>
-                        <div className="dropdown-divider"></div>
-                        <Link to="/recipes" className="dropdown-item">
-                           Favorites
-                        </Link>
-                     </div>
-                  </li>
-                  <li className="nav-item dropdown">
-                     <Link
-                        to="/pantry"
-                        className="nav-link dropdown-toggle"
-                        id="navbarDropdown"
-                        role="button"
-                        data-toggle="dropdown"
-                     >
-                        Pantry
-                     </Link>
-                     <div
-                        className="dropdown-menu"
-                        aria-labelledby="navbarDropdown"
-                     >
-                        <Link to="/pantry" className="dropdown-item">
-                           Update Pantry Items
-                        </Link>
-                        <div className="dropdown-divider"></div>
-                        <Link to="/pantry" className="dropdown-item">
-                           item 2
-                        </Link>
-                     </div>
-                  </li>
-                  <li className="nav-item dropdown">
-                     <Link to="/" className="nav-link" role="button">
-                        Log Out
-                     </Link>
-                  </li>
-               </ul>
-            </div>
-         </nav>
+         <Navigation />
 
          <div className="container landing-signIn">
             <div className="row">
@@ -98,22 +15,23 @@ export default function Home() {
                   </h2>
                   <div className="card mb-3" style={{ width: "50rem" }}>
                      <div className="card-body ">
-                        <h4 className="card-title text-center">
+                        <div className="card-header text-center">
                            Turkey Sandwhich
-                        </h4>
-                        <div className="text-center ">
-                           <h6 className="card-subtitle mb-2 text-muted">
-                              Prep-Time
+                        </div>
+                        <h4 className="card-title text-center mb-4"></h4>
+                        <div className="row mb-3">
+                           <h6 className="card-subtitle mb-2 text-muted col-4">
+                              Prep-Time: 5-10 mins
                            </h6>
 
-                           <h6 className="card-subtitle mb-2 text-muted">
-                              Cook-Time
+                           <h6 className="card-subtitle mb-2 text-muted col-4">
+                              Cook-Time: 10-20 mins
                            </h6>
-                           <h6 className="card-subtitle mb-2 text-muted">
-                              Serving Size
+                           <h6 className="card-subtitle mb-2 text-muted col-4">
+                              Serving Size: 1 person
                            </h6>
                         </div>
-                        <h6 className="card-subtitle mb-2 text-muted">
+                        <h6 className="card-subtitle text-muted">
                            Ingredients
                         </h6>
                         <p className="card-text"></p>
@@ -125,9 +43,9 @@ export default function Home() {
                            <li>2 leafs iceberg leetuce</li>
                         </ul>
 
-                        <h5 className="card-subtitle mb-2 text-muted text-center">
-                           Instructions
-                        </h5>
+                        <button className=" mb-2 btn btn-md btn-primary col-6 offset-3">
+                           Cook this Meal
+                        </button>
                         <ol>
                            <li>Spread mayonnaise on one slice of toast</li>
                            <li>Arrange the sliced turkey on one side</li>
@@ -140,9 +58,9 @@ export default function Home() {
                         <h5>Notes:</h5>
                         <p>Make sure not to burn the toast.</p>
                         <div className="float-right">
-                           <a href="#" className="card-link ">
+                           <Link to="/pantry" className="card-link ">
                               Check Pantry
-                           </a>
+                           </Link>
                            <a href="#" className="card-link ">
                               Add to Favorites
                            </a>
@@ -167,7 +85,7 @@ export default function Home() {
                         </ul>
 
                         <h5 className="card-subtitle mb-2 text-muted text-center">
-                           Instructions
+                           Cook this Meal
                         </h5>
                         <ol>
                            <li>Spread mayonnaise on one slice of toast</li>
@@ -181,9 +99,9 @@ export default function Home() {
                         <h5>Notes:</h5>
                         <p>Make sure not to burn the toast.</p>
                         <div className="float-right">
-                           <a href="#" className="card-link ">
+                           <Link to="/pantry" className="card-link ">
                               Check Pantry
-                           </a>
+                           </Link>
                            <a href="#" className="card-link ">
                               Add to Favorites
                            </a>
@@ -222,9 +140,9 @@ export default function Home() {
                         <h5>Notes:</h5>
                         <p>Make sure not to burn the toast.</p>
                         <div className="float-right">
-                           <a href="#" className="card-link ">
+                           <Link to="/pantry" className="card-link ">
                               Check Pantry
-                           </a>
+                           </Link>
                            <a href="#" className="card-link ">
                               Add to Favorites
                            </a>
@@ -263,9 +181,9 @@ export default function Home() {
                         <h5>Notes:</h5>
                         <p>Make sure not to burn the toast.</p>
                         <div className="float-right">
-                           <a href="#" className="card-link ">
+                           <Link to="/pantry" className="card-link ">
                               Check Pantry
-                           </a>
+                           </Link>
                            <a href="#" className="card-link ">
                               Add to Favorites
                            </a>
