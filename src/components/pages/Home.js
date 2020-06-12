@@ -116,15 +116,15 @@ export default function Home() {
                         <h6 className="card-subtitle mb-2 text-muted">
                            Ingredients
                         </h6>
-                        <p className="card-text">
-                           <ul>
-                              <li>2 slices whole wheat bread</li>
-                              <li>3 slices smoked turkey breast</li>
-                              <li>2 slices Colby-Monterey</li>
-                              <li>4 slices avocado</li>
-                              <li>2 leafs iceberg leetuce</li>
-                           </ul>
-                        </p>
+                        <p className="card-text"></p>
+                        <ul>
+                           <li>2 slices whole wheat bread</li>
+                           <li>3 slices smoked turkey breast</li>
+                           <li>2 slices Colby-Monterey</li>
+                           <li>4 slices avocado</li>
+                           <li>2 leafs iceberg leetuce</li>
+                        </ul>
+
                         <h5 className="card-subtitle mb-2 text-muted text-center">
                            Instructions
                         </h5>
@@ -157,15 +157,15 @@ export default function Home() {
                         <h6 className="card-subtitle mb-2 text-muted">
                            Ingredients
                         </h6>
-                        <p className="card-text">
-                           <ul>
-                              <li>2 slices whole wheat bread</li>
-                              <li>3 slices smoked turkey breast</li>
-                              <li>2 slices Colby-Monterey</li>
-                              <li>4 slices avocado</li>
-                              <li>2 leafs iceberg leetuce</li>
-                           </ul>
-                        </p>
+                        <p className="card-text"> </p>
+                        <ul>
+                           <li>2 slices whole wheat bread</li>
+                           <li>3 slices smoked turkey breast</li>
+                           <li>2 slices Colby-Monterey</li>
+                           <li>4 slices avocado</li>
+                           <li>2 leafs iceberg leetuce</li>
+                        </ul>
+
                         <h5 className="card-subtitle mb-2 text-muted text-center">
                            Instructions
                         </h5>
@@ -198,15 +198,15 @@ export default function Home() {
                         <h6 className="card-subtitle mb-2 text-muted">
                            Ingredients
                         </h6>
-                        <p className="card-text">
-                           <ul>
-                              <li>2 slices whole wheat bread</li>
-                              <li>3 slices smoked turkey breast</li>
-                              <li>2 slices Colby-Monterey</li>
-                              <li>4 slices avocado</li>
-                              <li>2 leafs iceberg leetuce</li>
-                           </ul>
-                        </p>
+                        <p className="card-text"> </p>
+                        <ul>
+                           <li>2 slices whole wheat bread</li>
+                           <li>3 slices smoked turkey breast</li>
+                           <li>2 slices Colby-Monterey</li>
+                           <li>4 slices avocado</li>
+                           <li>2 leafs iceberg leetuce</li>
+                        </ul>
+
                         <h5 className="card-subtitle mb-2 text-muted text-center">
                            Instructions
                         </h5>
@@ -239,15 +239,15 @@ export default function Home() {
                         <h6 className="card-subtitle mb-2 text-muted">
                            Ingredients
                         </h6>
-                        <p className="card-text">
-                           <ul>
-                              <li>2 slices whole wheat bread</li>
-                              <li>3 slices smoked turkey breast</li>
-                              <li>2 slices Colby-Monterey</li>
-                              <li>4 slices avocado</li>
-                              <li>2 leafs iceberg leetuce</li>
-                           </ul>
-                        </p>
+                        <p className="card-text"></p>
+                        <ul>
+                           <li>2 slices whole wheat bread</li>
+                           <li>3 slices smoked turkey breast</li>
+                           <li>2 slices Colby-Monterey</li>
+                           <li>4 slices avocado</li>
+                           <li>2 leafs iceberg leetuce</li>
+                        </ul>
+
                         <h5 className="card-subtitle mb-2 text-muted text-center">
                            Instructions
                         </h5>

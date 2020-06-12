@@ -96,37 +96,37 @@ export default function Recipes() {
                      Impressive collection of Recipes
                   </h3>
                   <form>
-                     <div class="form-group">
-                        <label for="inputAddress">Recipe Title</label>
+                     <div className="form-group">
+                        <label htmlFor="inputAddress">Recipe Title</label>
                         <input
                            type="text"
-                           class="form-control"
+                           className="form-control"
                            id="inputAddress"
                         />
                      </div>
-                     <div class="form-row">
-                        <div class="form-group col-md-4">
-                           <label for="inputState">Pre-Time</label>
-                           <select id="inputState" class="form-control">
-                              <option selected>Choose...</option>
+                     <div className="form-row">
+                        <div className="form-group col-md-4">
+                           <label htmlFor="inputState">Pre-Time</label>
+                           <select id="inputState" className="form-control">
+                              <option defaultValue>Choose...</option>
                               <option>5-10 mins</option>
                               <option>10-20 mins</option>
                               <option>30 or more mins</option>
                            </select>
                         </div>
-                        <div class="form-group col-md-4">
-                           <label for="inputState">Cook-Time</label>
-                           <select id="inputState" class="form-control">
-                              <option selected>Choose...</option>
+                        <div className="form-group col-md-4">
+                           <label htmlFor="inputState">Cook-Time</label>
+                           <select id="inputState" className="form-control">
+                              <option defaultValue>Choose...</option>
                               <option>5-10 mins</option>
                               <option>10-20 mins</option>
                               <option>30 or more mins</option>
                            </select>
                         </div>
-                        <div class="form-group col-md-4">
-                           <label for="inputState">Meals for</label>
-                           <select id="inputState" class="form-control">
-                              <option selected>Choose...</option>
+                        <div className="form-group col-md-4">
+                           <label htmlFor="inputState">Meals htmlFor</label>
+                           <select id="inputState" className="form-control">
+                              <option defaultValue>Choose...</option>
                               <option>Breakfast</option>
                               <option>Brunch</option>
                               <option>Lunch</option>
@@ -135,109 +135,118 @@ export default function Recipes() {
                         </div>
                      </div>
 
-                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                           <label for="inputEmail4">Amount of Ingredient</label>
+                     <div className="form-row">
+                        <div className="form-group col-md-6">
+                           <label htmlFor="inputEmail4">
+                              Amount of Ingredient
+                           </label>
                            <input
                               type="email"
-                              class="form-control"
+                              className="form-control"
                               id="inputEmail4"
                            />
                         </div>
-                        <div class="form-group col-md-6">
-                           <label for="inputPassword4">Ingredient</label>
+                        <div className="form-group col-md-6">
+                           <label htmlFor="inputPassword4">Ingredient</label>
                            <input
                               type="password"
-                              class="form-control"
+                              className="form-control"
                               id="inputPassword4"
                            />
                         </div>
                      </div>
-                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                           <label for="inputEmail4">Amount of Ingredient</label>
+                     <div className="form-row">
+                        <div className="form-group col-md-6">
+                           <label htmlFor="inputEmail4">
+                              Amount of Ingredient
+                           </label>
                            <input
                               type="email"
-                              class="form-control"
+                              className="form-control"
                               id="inputEmail4"
                            />
                         </div>
-                        <div class="form-group col-md-6">
-                           <label for="inputPassword4">Ingredient</label>
+                        <div className="form-group col-md-6">
+                           <label htmlFor="inputPassword4">Ingredient</label>
                            <input
                               type="password"
-                              class="form-control"
+                              className="form-control"
                               id="inputPassword4"
                            />
                         </div>
                      </div>
-                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                           <label for="inputEmail4">Amount of Ingredient</label>
+                     <div className="form-row">
+                        <div className="form-group col-md-6">
+                           <label htmlFor="inputEmail4">
+                              Amount of Ingredient
+                           </label>
                            <input
                               type="email"
-                              class="form-control"
+                              className="form-control"
                               id="inputEmail4"
                            />
                         </div>
-                        <div class="form-group col-md-6">
-                           <label for="inputPassword4">Ingredient</label>
+                        <div className="form-group col-md-6">
+                           <label htmlFor="inputPassword4">Ingredient</label>
                            <input
                               type="password"
-                              class="form-control"
+                              className="form-control"
                               id="inputPassword4"
                            />
                         </div>
                      </div>
 
-                     <div class="form-group">
-                        <label for="inputAddress2">Step 1:</label>
+                     <div className="form-group">
+                        <label htmlFor="inputAddress2">Step 1:</label>
                         <input
                            type="text"
-                           class="form-control"
+                           className="form-control"
                            id="inputAddress2"
                         />
                      </div>
-                     <div class="form-group">
-                        <label for="inputAddress2">Step 2:</label>
+                     <div className="form-group">
+                        <label htmlFor="inputAddress2">Step 2:</label>
                         <input
                            type="text"
-                           class="form-control"
+                           className="form-control"
                            id="inputAddress2"
                         />
                      </div>
-                     <div class="form-group">
-                        <label for="inputAddress2">Step 3:</label>
+                     <div className="form-group">
+                        <label htmlFor="inputAddress2">Step 3:</label>
                         <input
                            type="text"
-                           class="form-control"
+                           className="form-control"
                            id="inputAddress2"
                         />
                      </div>
-                     <div class="form-group">
-                        <label for="inputAddress2">Step 4:</label>
+                     <div className="form-group">
+                        <label htmlFor="inputAddress2">Step 4:</label>
                         <input
                            type="text"
-                           class="form-control"
+                           className="form-control"
                            id="inputAddress2"
                         />
                      </div>
-                     <div class="form-group">
-                        <label for="inputAddress2">Additional Notes:</label>
+                     <div className="form-group">
+                        <label htmlFor="inputAddress2">Additional Notes:</label>
                         <input
                            type="text"
-                           class="form-control"
+                           className="form-control"
                            id="inputAddress2"
                         />
                      </div>
-                     <div class="form-group float-right">
-                        <div class="form-check">
+                     <div className="form-group float-right">
+                        <div className="form-check">
                            <input
-                              class="form-check-input"
+                              className="form-check-input"
                               type="checkbox"
                               id="gridCheck"
                            />
-                           <label class="form-check-label" for="gridCheck">
+                           <label
+                              className="form-check-label"
+                              htmlFor="gridCheck"
+                           >
                               Add to favorite Recipes
                            </label>
                         </div>

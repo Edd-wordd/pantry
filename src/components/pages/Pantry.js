@@ -95,23 +95,23 @@ export default function Pantry() {
                   <h2>Impressive collection of Ingredients</h2>
                   <h5>Whats in that pantry!</h5>
                   <div className="col-9 offset-2">
-                     <div class="form-row align-items-center">
-                        <div class="col-auto">
+                     <div className="form-row align-items-center">
+                        <div className="col-auto">
                            <input
                               type="text"
-                              class="form-control mb-2"
+                              className="form-control mb-2"
                               id="inlineFormInput"
                            />
                         </div>
-                        <div class="col-auto">
+                        <div className="col-auto">
                            <input
                               type="text"
-                              class="form-control mb-2"
+                              className="form-control mb-2"
                               id="inlineFormInput"
                            />
                         </div>
 
-                        <div class="col-auto">
+                        <div className="col-auto">
                            <div className="custom-control custom-switch">
                               <input
                                  type="checkbox"
@@ -127,29 +127,32 @@ export default function Pantry() {
                               </label>
                            </div>
                         </div>
-                        <div class="col-auto">
-                           <button type="submit" class="btn btn-primary mb-2">
+                        <div className="col-auto">
+                           <button
+                              type="submit"
+                              className="btn btn-primary mb-2"
+                           >
                               ADD to Pantry
                            </button>
                         </div>
                      </div>
-                     <div class="form-row align-items-center">
-                        <div class="col-auto">
+                     <div className="form-row align-items-center">
+                        <div className="col-auto">
                            <input
                               type="text"
-                              class="form-control mb-2"
+                              className="form-control mb-2"
                               id="inlineFormInput"
                            />
                         </div>
-                        <div class="col-auto">
+                        <div className="col-auto">
                            <input
                               type="text"
-                              class="form-control mb-2"
+                              className="form-control mb-2"
                               id="inlineFormInput"
                            />
                         </div>
 
-                        <div class="col-auto">
+                        <div className="col-auto">
                            <div className="custom-control custom-switch">
                               <input
                                  type="checkbox"
@@ -165,29 +168,32 @@ export default function Pantry() {
                               </label>
                            </div>
                         </div>
-                        <div class="col-auto">
-                           <button type="submit" class="btn btn-primary mb-2">
+                        <div className="col-auto">
+                           <button
+                              type="submit"
+                              className="btn btn-primary mb-2"
+                           >
                               ADD to Pantry
                            </button>
                         </div>
                      </div>
-                     <div class="form-row align-items-center">
-                        <div class="col-auto">
+                     <div className="form-row align-items-center">
+                        <div className="col-auto">
                            <input
                               type="text"
-                              class="form-control mb-2"
+                              className="form-control mb-2"
                               id="inlineFormInput"
                            />
                         </div>
-                        <div class="col-auto">
+                        <div className="col-auto">
                            <input
                               type="text"
-                              class="form-control mb-2"
+                              className="form-control mb-2"
                               id="inlineFormInput"
                            />
                         </div>
 
-                        <div class="col-auto">
+                        <div className="col-auto">
                            <div className="custom-control custom-switch">
                               <input
                                  type="checkbox"
@@ -203,26 +209,29 @@ export default function Pantry() {
                               </label>
                            </div>
                         </div>
-                        <div class="col-auto">
-                           <button type="submit" class="btn btn-primary mb-2">
+                        <div className="col-auto">
+                           <button
+                              type="submit"
+                              className="btn btn-primary mb-2"
+                           >
                               ADD to Pantry
                            </button>
                         </div>
                      </div>
-                     <div class="card w-75" style={{ width: "18rem" }}>
-                        <div class="card-body">
-                           <h5 class="card-title">Pantry Inventory</h5>
+                     <div className="card w-75" style={{ width: "18rem" }}>
+                        <div className="card-body">
+                           <h5 className="card-title">Pantry Inventory</h5>
                         </div>
-                        <ul class="list-group list-group-flush">
-                           <li class="list-group-item">cucumbers</li>
-                           <li class="list-group-item">Tomatoes</li>
-                           <li class="list-group-item">Bread</li>
+                        <ul className="list-group list-group-flush">
+                           <li className="list-group-item">cucumbers</li>
+                           <li className="list-group-item">Tomatoes</li>
+                           <li className="list-group-item">Bread</li>
                         </ul>
-                        <div class="card-body">
-                           <a href="#" class="card-link">
+                        <div className="card-body">
+                           <a href="#" className="card-link">
                               Edit Pantry
                            </a>
-                           <a href="#" class="card-link">
+                           <a href="#" className="card-link">
                               ???
                            </a>
                         </div>
