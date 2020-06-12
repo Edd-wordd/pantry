@@ -8,25 +8,23 @@ export default function Home() {
          <Navigation />
 
          <div className="container landing-signIn">
+            <h2 className="text-center">Impressive collection of Meals</h2>
             <div className="row">
-               <div className="col-6 offset-2">
-                  <h2 className="text-center">
-                     Impressive collection of Meals
-                  </h2>
-                  <div className="card mb-3" style={{ width: "50rem" }}>
+               <div className="">
+                  <div className="card mb-3 offset-1 col-10 offset-sm-1 col-sm-10 offset-md-2 col-md-10  col-lg-12 col-xl-12">
                      <div className="card-body ">
                         <div className="card-header text-center mb-3">
                            Turkey Sandwhich
                         </div>
                         <div className="row mb-3">
-                           <h6 className="card-subtitle mb-2 text-muted col-4">
+                           <h6 className="card-subtitle mb-2 text-muted text-center col-12 col-xl-4">
                               Prep-Time: 5-10 mins
                            </h6>
 
-                           <h6 className="card-subtitle mb-2 text-muted col-4">
+                           <h6 className="card-subtitle mb-2 text-muted text-center col-12 col-xl-4">
                               Cook-Time: 10-20 mins
                            </h6>
-                           <h6 className="card-subtitle mb-2 text-muted col-4">
+                           <h6 className="card-subtitle mb-2 text-muted text-center col-12 col-xl-4">
                               Serving Size: 1 person
                            </h6>
                         </div>
@@ -42,8 +40,11 @@ export default function Home() {
                            <li>2 leafs iceberg leetuce</li>
                         </ul>
 
-                        <button className=" mb-2 btn btn-md btn-primary col-6 offset-3">
+                        <button className=" mb-2 btn btn-md btn-primary col-12 ">
                            Cook this Meal
+                        </button>
+                        <button className=" mb-2 btn btn-md btn-primary col-12 ">
+                           Changed My Mind
                         </button>
                         <ol>
                            <li>Spread mayonnaise on one slice of toast</li>
@@ -66,7 +67,7 @@ export default function Home() {
                         </div>
                      </div>
                   </div>
-                  <div className="card mb-3" style={{ width: "50rem" }}>
+                  {/* <div className="card mb-3" style={{ width: "50rem" }}>
                      <div className="card-body ">
                         <h4 className="card-title text-center">
                            Mushroom Sandwhich
@@ -188,7 +189,7 @@ export default function Home() {
                            </Link>
                         </div>
                      </div>
-                  </div>
+   </div>*/}
                </div>
             </div>
          </div>

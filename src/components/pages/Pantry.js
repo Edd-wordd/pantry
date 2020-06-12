@@ -118,10 +118,7 @@ export default function Pantry() {
                         </div>
                      </div>
                      <div className="row">
-                        <div
-                           className="card w-75 col-4 "
-                           style={{ width: "18rem" }}
-                        >
+                        <div className="card mb-3 offset-1 col-10 offset-sm-1 col-sm-10 offset-md-2 col-md-10  col-lg-12 col-xl-12">
                            <div className="card-body ">
                               <h5 className="card-title">Pantry Inventory</h5>
                            </div>
@@ -139,10 +136,7 @@ export default function Pantry() {
                               </Link>
                            </div>
                         </div>
-                        <div
-                           className="card col-4 offset-2 w-75"
-                           style={{ width: "18rem" }}
-                        >
+                        <div className="card offset-1 col-10 offset-sm-1 col-sm-10 offset-md-2 col-md-10  col-lg-12 col-xl-12">
                            <div className="card-body ">
                               <h5 className="card-title">Out Of Stock</h5>
                            </div>
