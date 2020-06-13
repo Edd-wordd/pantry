@@ -9,4 +9,5 @@ const recipeCardSchema = {
    stepsNum: Number,
    stepInstruction: String,
    noteSection: String,
+   favorites: Boolen,
 };

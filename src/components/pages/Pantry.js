@@ -92,22 +92,7 @@ export default function Pantry() {
                            />
                         </div>
 
-                        <div className="col-auto">
-                           <div className="custom-control custom-switch">
-                              <input
-                                 type="checkbox"
-                                 className="custom-control-input"
-                                 id="custom3"
-                                 defaultChecked
-                              />
-                              <label
-                                 className="custom-control-label"
-                                 htmlFor="custom3"
-                              >
-                                 In-Stock
-                              </label>
-                           </div>
-                        </div>
+                        <div className="col-auto"></div>
                         <div className="col-auto">
                            <button
                               type="submit"
@@ -123,34 +108,27 @@ export default function Pantry() {
                               <h5 className="card-title">Pantry Inventory</h5>
                            </div>
                            <ul className="list-group list-group-flush">
-                              <li className="list-group-item">cucumbers</li>
+                              <div className="custom-control custom-switch">
+                                 <input
+                                    type="checkbox"
+                                    className="custom-control-input"
+                                    id="custom3"
+                                    defaultChecked
+                                 />{" "}
+                                 <li className="list-group-item">cucumbers</li>
+                                 <label
+                                    className="custom-control-label"
+                                    htmlFor="custom3"
+                                 >
+                                    In-Stock
+                                 </label>
+                              </div>
                               <li className="list-group-item">Tomatoes</li>
                               <li className="list-group-item">Bread</li>
                            </ul>
                            <div className="card-body">
                               <Link to="" className="card-link">
                                  Edit Pantry
-                              </Link>
-                              <Link to="" className="card-link">
-                                 ???
-                              </Link>
-                           </div>
-                        </div>
-                        <div className="card offset-1 col-10 offset-sm-1 col-sm-10 offset-md-2 col-md-10  col-lg-6 col-xl-5 offset-1">
-                           <div className="card-body ">
-                              <h5 className="card-title">
-                                 Out Of Stock(Shopping List)
-                              </h5>
-                           </div>
-                           <ul className="list-group list-group-flush">
-                              <li className="list-group-item">cucumbers</li>
-
-                              <li className="list-group-item">Tomatoes</li>
-                              <li className="list-group-item">Bread</li>
-                           </ul>
-                           <div className="card-body">
-                              <Link to="" className="card-link">
-                                 Edit Shopping list
                               </Link>
                               <Link to="" className="card-link">
                                  ???

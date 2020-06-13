@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import recipeCard from "../../mock data/recipe-card";
 import recipeDirection from "../../mock data/recipe-direction";
-const oneCard = recipeCard[2];
+const oneCard = recipeCard[3];
 
 export default function RecipeCard() {
    console.log(recipeCard);
@@ -14,14 +14,14 @@ export default function RecipeCard() {
                   {oneCard.recipeTitle}
                </div>
                <div className="row mb-3">
-                  <h6 className="card-subtitle mb-2 text-muted text-center col-12 col-xl-4">
+                  <h6 className="card-subtitle mb-2 text-muted  col-12 col-xl-4">
                      Prep-Time:{oneCard.prepTime}
                   </h6>
 
-                  <h6 className="card-subtitle mb-2 text-muted text-center col-12 col-xl-4">
+                  <h6 className="card-subtitle mb-2 text-muted  col-12 col-xl-4">
                      Cook-Time:{oneCard.cookTime}
                   </h6>
-                  <h6 className="card-subtitle mb-2 text-muted text-center col-12 col-xl-4">
+                  <h6 className="card-subtitle mb-2 text-muted  col-12 col-xl-4">
                      Serving Size:{oneCard.servingSize}
                   </h6>
                </div>
@@ -41,7 +41,7 @@ export default function RecipeCard() {
                <button className=" mb-2 btn btn-md btn-primary col-12 col-xl-6 offset-xl-3 ">
                   Changed My Mind
                </button>
-               <div className="">
+               <div className="d-none">
                   <ol>
                      <li>{recipeDirection.steps1}</li>
                      <li>{recipeDirection.steps2}</li>

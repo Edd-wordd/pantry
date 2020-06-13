@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "../ui/Navigation";
+import { plus } from "../../icons/plus.svg";
 
 export default function Recipes() {
    return (
@@ -21,16 +22,7 @@ export default function Recipes() {
                         />
                      </div>
                      <div className="form-row">
-                        <div className="form-group col-md-4">
-                           <label htmlFor="inputState">Prep-Time</label>
-                           <select id="inputState" className="form-control">
-                              <option defaultValue>Choose...</option>
-                              <option>5-10 mins</option>
-                              <option>10-20 mins</option>
-                              <option>30 or more mins</option>
-                           </select>
-                        </div>
-                        <div className="form-group col-md-4">
+                        <div className="form-group col-md-6">
                            <label htmlFor="inputState">Cook-Time</label>
                            <select id="inputState" className="form-control">
                               <option defaultValue>Choose...</option>
@@ -39,7 +31,8 @@ export default function Recipes() {
                               <option>30 or more mins</option>
                            </select>
                         </div>
-                        <div className="form-group col-md-4">
+
+                        <div className="form-group col-md-6">
                            <label htmlFor="inputState">Meal For</label>
                            <select id="inputState" className="form-control">
                               <option defaultValue>Choose...</option>
@@ -52,7 +45,7 @@ export default function Recipes() {
                      </div>
 
                      <div className="form-row">
-                        <div className="form-group col-md-6">
+                        <div className="form-group col-md-3">
                            <label htmlFor="inputEmail4">
                               Amount of Ingredient
                            </label>
@@ -71,7 +64,9 @@ export default function Recipes() {
                               id="inputPassword4"
                            />
                         </div>
-                        <img src="src/icons/plus.svg" alt="plus icon"></img>
+                        <div className="col-md-3 mt-5">
+                           <img src={plus} alt="plus icon" />
+                        </div>
                      </div>
                      <div className="form-row">
                         <div className="form-group col-md-6">
@@ -113,39 +108,11 @@ export default function Recipes() {
                            />
                         </div>
                      </div>
+                     <div>
+                        <label>Directions:</label>
+                        <textarea className="w-100" rows="15"></textarea>
+                     </div>
 
-                     <div className="form-group">
-                        <label htmlFor="inputAddress2">Step 1:</label>
-                        <input
-                           type="text"
-                           className="form-control"
-                           id="inputAddress2"
-                        />
-                     </div>
-                     <div className="form-group">
-                        <label htmlFor="inputAddress2">Step 2:</label>
-                        <input
-                           type="text"
-                           className="form-control"
-                           id="inputAddress2"
-                        />
-                     </div>
-                     <div className="form-group">
-                        <label htmlFor="inputAddress2">Step 3:</label>
-                        <input
-                           type="text"
-                           className="form-control"
-                           id="inputAddress2"
-                        />
-                     </div>
-                     <div className="form-group">
-                        <label htmlFor="inputAddress2">Step 4:</label>
-                        <input
-                           type="text"
-                           className="form-control"
-                           id="inputAddress2"
-                        />
-                     </div>
                      <div className="form-group">
                         <label htmlFor="inputAddress2">Additional Notes:</label>
                         <input

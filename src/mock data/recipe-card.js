@@ -10,6 +10,7 @@ const recipeCard = [
       stepsNum: "1",
       stepInstruction: "chop the chicken",
       noteSection: "make sure not to burn the TOAST!!",
+      favorites: false,
    },
    {
       recipeTitle: "Cheese Pizza",
@@ -22,6 +23,7 @@ const recipeCard = [
       stepsNum: "1",
       stepInstruction: "chop the chicken",
       noteSection: "make sure not to burn the TOAST!!",
+      favorites: false,
    },
    {
       recipeTitle: "Egg Burrito",
@@ -34,6 +36,7 @@ const recipeCard = [
       stepsNum: "1",
       stepInstruction: "chop the chicken",
       noteSection: "make sure not to burn the TOAST!!",
+      favorites: false,
    },
    {
       recipeTitle: "French Toast",
@@ -46,6 +49,7 @@ const recipeCard = [
       stepsNum: "1",
       stepInstruction: "chop the chicken",
       noteSection: "make sure not to burn the TOAST!!",
+      favorites: false,
    },
 ];
 export default recipeCard;

@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../ui/Navigation";
 import RecipeCard from "../ui/RecipeCard";
+import recipeCard from "../../mock data/recipe-card";
 
 export default function Home() {
    return (
@@ -8,10 +9,9 @@ export default function Home() {
          <Navigation />
          <div className="container landing-signIn">
             <h2 className="text-center">Impressive collection of Meals</h2>
-            <RecipeCard />
-            <RecipeCard />
-            <RecipeCard />
-            <RecipeCard />
+            {recipeCard.map((recipe) => {
+               return <RecipeCard />;
+            })}
          </div>
       </div>
    );
