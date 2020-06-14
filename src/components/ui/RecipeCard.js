@@ -8,39 +8,32 @@ export default function RecipeCard() {
    console.log(recipeCard);
    return (
       <div>
-         <div className="card mb-3 offset-1 col-10 col-xl-10 offset-1">
+         <div className="mb-3 offset-1 col-10 col-xl-3 ">
             <div className="card-body ">
-               <div className="card-header text-center mb-3">
-                  {oneCard.recipeTitle}
-               </div>
+               <div className="mb-3">{oneCard.recipeTitle}</div>
                <div className="row mb-3">
-                  <h6 className="card-subtitle mb-2 text-muted  col-12 col-xl-4">
-                     Prep-Time:{oneCard.prepTime}
+                  <h6 className="card-subtitle mb-2 text-muted  col-12 ">
+                     Prep/Cook-Time:{oneCard.prepTime}
                   </h6>
 
-                  <h6 className="card-subtitle mb-2 text-muted  col-12 col-xl-4">
-                     Cook-Time:{oneCard.cookTime}
-                  </h6>
-                  <h6 className="card-subtitle mb-2 text-muted  col-12 col-xl-4">
+                  <h6 className="card-subtitle mb-2 text-muted  col-12 ">
                      Serving Size:{oneCard.servingSize}
                   </h6>
                </div>
                <h6 className="card-subtitle text-muted">Ingredients</h6>
                <p className="card-text"></p>
                <ul>
-                  <li>2 slices whole wheat bread</li>
-                  <li>3 slices smoked turkey breast</li>
-                  <li>2 slices Colby-Monterey</li>
-                  <li>4 slices avocado</li>
-                  <li>2 leafs iceberg leetuce</li>
+                  <li>whole wheat bread</li>
+                  <li>smoked turkey breast</li>
+                  <li>Colby-Monterey</li>
+                  <li>avocado</li>
+                  <li>iceberg lettuce</li>
                </ul>
 
-               <button className=" mb-2 btn btn-md btn-primary col-12  col-xl-6 offset-xl-3">
+               <button className=" mb-2 btn btn-md btn-primary">
                   Cook this Meal
                </button>
-               <button className=" mb-2 btn btn-md btn-primary col-12 col-xl-6 offset-xl-3 ">
-                  Changed My Mind
-               </button>
+
                <div className="d-none">
                   <ol>
                      <li>{recipeDirection.steps1}</li>

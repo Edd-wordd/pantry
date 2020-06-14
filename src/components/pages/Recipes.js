@@ -8,7 +8,7 @@ export default function Recipes() {
          <Navigation />
          <div className="container landing-signIn">
             <div className="row">
-               <div className="col-12 ">
+               <div className="col-6 ">
                   <h3 className="text-center">
                      Impressive collection of Recipes
                   </h3>
@@ -45,9 +45,9 @@ export default function Recipes() {
                      </div>
 
                      <div className="form-row">
-                        <div className="form-group col-md-3">
+                        <div className="form-group col-md-4">
                            <label htmlFor="inputEmail4">
-                              Amount of Ingredient
+                              Ingredient Amount
                            </label>
                            <input
                               type="text"
@@ -64,14 +64,14 @@ export default function Recipes() {
                               id="inputPassword4"
                            />
                         </div>
-                        <div className="col-md-3 mt-5">
+                        <div className="col-md-2 mt-5">
                            <img src={plus} alt="plus icon" />
                         </div>
                      </div>
                      <div className="form-row">
                         <div className="form-group col-md-6">
                            <label htmlFor="inputEmail4">
-                              Amount of Ingredient
+                              Ingredient Amount
                            </label>
                            <input
                               type="text"
