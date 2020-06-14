@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Navigation from "../ui/Navigation";
 import plus from "../../icons/plus.svg";
 

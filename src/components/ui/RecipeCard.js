@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import recipeCard from "../../mock data/recipe-card";
 import recipeDirection from "../../mock data/recipe-direction";
-import mealImg from "../../img/michael-berdyugin-tRA2_EGKhpA-unsplash.jpg";
 const oneCard = recipeCard[3];
 
 export default function RecipeCard() {

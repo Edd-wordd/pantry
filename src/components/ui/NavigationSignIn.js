@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import pantryLogo from "../../img/pantryLogo.png";
 
 export default function NavigationSignIn() {
    return (
@@ -8,12 +9,11 @@ export default function NavigationSignIn() {
             <Link to="/" className="navbar-brand">
                <img
                   id="brandLogo"
-                  src="https://thumbs.dreamstime.com/z/graffiti-grin-wink-icon-face-black-over-white-graffiti-grin-wink-icon-face-black-white-117146447.jpg"
-                  width="50"
-                  height="50"
+                  src={pantryLogo}
+                  width="75"
+                  height="75"
                   alt="pantry logo"
                />
-               EDDWORDDS PANTRY
             </Link>
             <button
                className="navbar-toggler"
