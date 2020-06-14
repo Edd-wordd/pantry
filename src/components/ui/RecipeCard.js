@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import recipeCard from "../../mock data/recipe-card";
 import recipeDirection from "../../mock data/recipe-direction";
+import mealImg from "../../img/michael-berdyugin-tRA2_EGKhpA-unsplash.jpg";
 const oneCard = recipeCard[3];
 
 export default function RecipeCard() {
    console.log(recipeCard);
    return (
-      <div>
-         <div className="mb-3 offset-1 col-10 col-xl-3 ">
+      <div className="row">
+         <div className="mb-3 offset-1 col-10 col-xl-3 card-border">
             <div className="card-body ">
                <div className="mb-3">{oneCard.recipeTitle}</div>
                <div className="row mb-3">
@@ -57,6 +58,8 @@ export default function RecipeCard() {
                   </div>
                </div>
             </div>
+
+            <hr />
          </div>
       </div>
    );

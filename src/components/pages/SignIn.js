@@ -10,18 +10,19 @@ export default function SignIn() {
             <div className="row">
                <div className="col-6 offset-3 text-center ">
                   <form>
-                     <h1>Lets Sign In</h1>
+                     <h3>Lets Sign In</h3>
                      <input
-                        className="mb-3 w-100"
+                        className="mb-3 w-75"
                         placeholder="enter email"
                      ></input>
                      <br />
 
                      <input
-                        className="mb-2 w-100"
+                        className="mb-2 w-75"
                         placeholder="password"
                      ></input>
-                     <Link to="/home" className="btn btn-primary float-right">
+                     <div className="clerfix"></div>
+                     <Link to="/home" className="btn btn-primary">
                         Sign Up
                      </Link>
                   </form>

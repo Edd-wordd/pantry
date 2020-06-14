@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Navigation from "../ui/Navigation";
+import plus from "../../icons/plus.svg";
 
 export default function Pantry() {
    return (
@@ -8,12 +9,10 @@ export default function Pantry() {
          <Navigation />
          <div className="container landing-signIn">
             <div className="row">
-               <div className="col-12 text-center">
-                  <h2>Impressive collection of Ingredients</h2>
-                  <h5>Whats in that pantry!</h5>
-                  <div className="col-9 offset-2">
+               <div className="col-12 col-xl-6 text-center pantry-divider pantry-ingredient">
+                  <h5>Add your Ingredients</h5>
+                  <div className="col-9 offset-2 ">
                      <div className="form-row align-items-center">
-                        <div className="col-auto"></div>
                         <div className="col-auto">
                            <input
                               type="text"
@@ -22,33 +21,12 @@ export default function Pantry() {
                            />
                         </div>
 
-                        <div className="col-auto">
-                           <div className="custom-control custom-switch">
-                              <input
-                                 type="checkbox"
-                                 className="custom-control-input"
-                                 id="customSwitchesChecked"
-                                 defaultChecked
-                              />
-                              <label
-                                 className="custom-control-label"
-                                 htmlFor="customSwitchesChecked"
-                              >
-                                 In-Stock
-                              </label>
-                           </div>
-                        </div>
-                        <div className="col-auto">
-                           <button
-                              type="submit"
-                              className="btn btn-primary mb-2"
-                           >
-                              ADD to Pantry
-                           </button>
+                        <div className="col-md-1 mb-3">
+                           <img src={plus} alt="plus icon"></img>
                         </div>
                      </div>
+                     <hr />
                      <div className="form-row align-items-center">
-                        <div className="col-auto"></div>
                         <div className="col-auto">
                            <input
                               type="text"
@@ -57,33 +35,13 @@ export default function Pantry() {
                            />
                         </div>
 
-                        <div className="col-auto">
-                           <div className="custom-control custom-switch">
-                              <input
-                                 type="checkbox"
-                                 className="custom-control-input"
-                                 id="custom2"
-                                 defaultChecked
-                              />
-                              <label
-                                 className="custom-control-label"
-                                 htmlFor="custom2"
-                              >
-                                 In-Stock
-                              </label>
-                           </div>
-                        </div>
-                        <div className="col-auto">
-                           <button
-                              type="submit"
-                              className="btn btn-primary mb-2"
-                           >
-                              ADD to Pantry
-                           </button>
+                        <div className="col-md-1 mb-3">
+                           <img src={plus} alt="plus icon"></img>
                         </div>
                      </div>
+                     <hr />
+
                      <div className="form-row align-items-center">
-                        <div className="col-auto"></div>
                         <div className="col-auto">
                            <input
                               type="text"
@@ -92,51 +50,85 @@ export default function Pantry() {
                            />
                         </div>
 
-                        <div className="col-auto"></div>
-                        <div className="col-auto">
-                           <button
-                              type="submit"
-                              className="btn btn-primary mb-2"
-                           >
-                              ADD to Pantry
-                           </button>
+                        <div className="col-md-1 mb-3">
+                           <img src={plus} alt="plus icon"></img>
                         </div>
                      </div>
-                     <div className="row">
-                        <div className="card mb-3 offset-1 col-10 offset-sm-1 col-sm-10 offset-md-2 col-md-10  col-lg-6 col-xl-5">
-                           <div className="card-body ">
-                              <h5 className="card-title">Pantry Inventory</h5>
-                           </div>
-                           <ul className="list-group list-group-flush">
-                              <div className="custom-control custom-switch">
-                                 <input
-                                    type="checkbox"
-                                    className="custom-control-input"
-                                    id="custom3"
-                                    defaultChecked
-                                 />{" "}
-                                 <li className="list-group-item">cucumbers</li>
-                                 <label
-                                    className="custom-control-label"
-                                    htmlFor="custom3"
-                                 >
-                                    In-Stock
-                                 </label>
-                              </div>
-                              <li className="list-group-item">Tomatoes</li>
-                              <li className="list-group-item">Bread</li>
-                           </ul>
-                           <div className="card-body">
-                              <Link to="" className="card-link">
-                                 Edit Pantry
-                              </Link>
-                              <Link to="" className="card-link">
-                                 ???
-                              </Link>
-                           </div>
-                        </div>
-                     </div>
+                     <hr />
                   </div>
+               </div>
+               <div className=" mb-3 offset-1 col-10 col-xl-5">
+                  <div className="card-body ">
+                     <h5 className="card-title ">Pantry Inventory</h5>
+                  </div>
+                  <ul className="list-group list-group-flush">
+                     <div className="custom-control custom-switch">
+                        <div className="row">
+                           <input
+                              type="checkbox"
+                              className="custom-control-input col-1"
+                              id="custom3"
+                              defaultChecked
+                           />
+
+                           <label
+                              className="custom-control-label"
+                              htmlFor="custom3"
+                           >
+                              In- Stock
+                           </label>
+                           <li className=" col-6">cucumbers</li>
+                           <button className="btn btn-danger btn-sm col-3">
+                              delete
+                           </button>
+                        </div>
+                        <hr />
+                     </div>
+                     <div className="custom-control custom-switch">
+                        <div className="row">
+                           <input
+                              type="checkbox"
+                              className="custom-control-input col-1"
+                              id="custom2"
+                              defaultChecked
+                           />
+
+                           <label
+                              className="custom-control-label"
+                              htmlFor="custom2"
+                           >
+                              In- Stock
+                           </label>
+                           <li className=" col-6">pasta</li>
+                           <button className="btn btn-danger btn-sm col-3">
+                              delete
+                           </button>
+                        </div>
+                        <hr />
+                     </div>
+                     <div className="custom-control custom-switch">
+                        <div className="row">
+                           <input
+                              type="checkbox"
+                              className="custom-control-input col-1"
+                              id="custom1"
+                              defaultChecked
+                           />
+
+                           <label
+                              className="custom-control-label"
+                              htmlFor="custom1"
+                           >
+                              In- Stock
+                           </label>
+                           <li className=" col-6">onions</li>
+                           <button className="btn btn-danger btn-sm col-3">
+                              delete
+                           </button>
+                        </div>
+                        <hr />
+                     </div>
+                  </ul>
                </div>
             </div>
          </div>
