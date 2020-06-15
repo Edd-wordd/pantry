@@ -66,50 +66,6 @@ export default function Recipes() {
                         <img src={plus} alt="plus icon"></img>
                      </div>
                   </div>
-                  <div className="form-row">
-                     <div className="form-group col-md-5">
-                        <label htmlFor="inputEmail4">Amount</label>
-                        <input
-                           type="text"
-                           className="form-control"
-                           id="inputEmail4"
-                        />
-                     </div>
-
-                     <div className="form-group col-md-6 ">
-                        <label htmlFor="inputPassword4">Ingredient</label>
-                        <input
-                           type="text"
-                           className="form-control"
-                           id="inputPassword4"
-                        />
-                     </div>
-                     <div className="col-md-1 align-self-center mt-2">
-                        <img src={plus} alt="plus icon"></img>
-                     </div>
-                  </div>
-                  <div className="form-row">
-                     <div className="form-group col-md-5">
-                        <label htmlFor="inputEmail4">Amount</label>
-                        <input
-                           type="text"
-                           className="form-control"
-                           id="inputEmail4"
-                        />
-                     </div>
-
-                     <div className="form-group col-md-6 ">
-                        <label htmlFor="inputPassword4">Ingredient</label>
-                        <input
-                           type="text"
-                           className="form-control"
-                           id="inputPassword4"
-                        />
-                     </div>
-                     <div className="col-md-1 align-self-center mt-2">
-                        <img src={plus} alt="plus icon"></img>
-                     </div>
-                  </div>
                   <div>
                      <label>Directions:</label>
                      <textarea className="w-100" rows="15"></textarea>

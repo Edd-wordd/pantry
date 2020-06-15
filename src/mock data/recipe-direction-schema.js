@@ -1,3 +1,0 @@
-const recipeIngredientSchema = {
-   steps: String,
-};
