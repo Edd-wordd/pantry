@@ -95,7 +95,7 @@ export default class SignUp extends React.Component {
    render() {
       return (
          <div className="text-center offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-5 offset-lg-1 col-lg-4 col-xl-4">
-            <div style={{ marginTop: "150px" }}>
+            <div style={{ marginTop: "125px" }}>
                <h4 className="text-left">Your Recipes Await You!</h4>
                <input
                   className=" w-75 form-control mb-3"
@@ -128,6 +128,7 @@ export default class SignUp extends React.Component {
                   })}
                   placeholder="Create Password"
                   id="signUpPassword"
+                  type="password"
                />
                {this.state.hasPasswordError && (
                   <div className="text-danger float-left">
