@@ -29,6 +29,7 @@ export default function Landing() {
                   alt="background"
                ></img>
             </div>
+
             <SignUp />
          </AppTemplate>
       </div>
