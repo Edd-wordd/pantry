@@ -15,7 +15,7 @@ export default function CookMeal() {
          <AppTemplate>
             <div className="mb-3 offset-1 col-10 col-xl-4 card-border">
                <div className="card-body ">
-                  <div className="mb-3">{oneCard.recipeTitle}</div>
+                  <div className="mb-3 text-danger">{oneCard.recipeTitle}</div>
                   <div className="row mb-3">
                      <h6 className="card-subtitle mb-2 text-muted  col-12 ">
                         Prep/Cook-Time:{oneCard.cookTime}
