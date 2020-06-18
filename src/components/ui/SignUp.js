@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import classnames from "classnames";
 import hash from "object-hash";
 import { v4 as getUuid } from "uuid";
 
-export default class SignUp extends React.Component {
+class SignUp extends React.Component {
    constructor(props) {
       super(props);
       console.log("edward is here");
@@ -90,6 +90,7 @@ export default class SignUp extends React.Component {
             createdOn: Date.now(),
          };
          console.log(user);
+         this.props.history.push("/recipes");
       }
    }
    render() {
@@ -97,10 +98,6 @@ export default class SignUp extends React.Component {
          <div className="text-center offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-5 offset-lg-1 col-lg-4 col-xl-4">
             <div style={{ marginTop: "125px" }}>
                <h4 className="text-left">Your Recipes Await You!</h4>
-               <input
-                  className=" w-75 form-control mb-3"
-                  placeholder="FullName"
-               ></input>
 
                <input
                   className={classnames({
@@ -136,17 +133,17 @@ export default class SignUp extends React.Component {
                   </div>
                )}
 
-               <Link
-                  to=""
+               <button
                   className="btn btn-primary w-75 float-left mb-5 mt-3"
                   onClick={() => {
                      this.validateAndCreateUser();
                   }}
                >
                   Sign Up
-               </Link>
+               </button>
             </div>
          </div>
       );
    }
 }
+export default withRouter(SignUp);
