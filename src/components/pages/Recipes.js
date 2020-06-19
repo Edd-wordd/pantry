@@ -2,11 +2,11 @@ import React from "react";
 import Navigation from "../ui/Navigation";
 import recipeImg from "../../img/jason-leung-CWxidfNz-Co-unsplash (1).jpg";
 import AppTemplate from "../ui/AppTemplate";
-import plus from "../../icons/plus.svg";
-import minus from "../../icons/minus.svg";
+
 import recipeCards from "../../mock data/recipe-card";
 import classnames from "classnames";
 import { checkIsOver } from "../../utilis/helpers";
+import AddIngredient from "../ui/AddIngredient";
 
 const recipeCard = recipeCards[2];
 
@@ -108,9 +108,9 @@ export default class Recipes extends React.Component {
                            <label htmlFor="inputState">Cook-Time</label>
                            <select id="inputState" className="form-control">
                               <option defaultValue>Choose...</option>
-                              <option>5-10 mins</option>
-                              <option>10-20 mins</option>
-                              <option>30 or more mins</option>
+                              <option> 10-20 Mins</option>
+                              <option> 20-30 Mins</option>
+                              <option> 30 and Up </option>
                            </select>
                         </div>
 
@@ -125,84 +125,7 @@ export default class Recipes extends React.Component {
                            </select>
                         </div>
                      </div>
-
-                     <div className="form-row">
-                        <div className="form-group col-md-5">
-                           <label htmlFor="inputEmail4">Amount</label>
-                           <input
-                              type="text"
-                              className="form-control"
-                              id="inputEmail4"
-                           />
-                        </div>
-
-                        <div className="form-group col-md-6 ">
-                           <label htmlFor="inputPassword4">Ingredient</label>
-                           <input
-                              type="text"
-                              className="form-control"
-                              id="inputPassword4"
-                           />
-                        </div>
-                        <div className="col-md-1 align-self-center mt-2">
-                           <button
-                              type="button"
-                              className="mt-2 "
-                              onClick={(e) => {
-                                 this.addIngredients(e);
-                              }}
-                           >
-                              <img
-                                 className="py-1"
-                                 src={plus}
-                                 alt="plus icon"
-                              />
-                           </button>
-                        </div>
-                     </div>
-                     <div>
-                        {this.state.ingredientsAdded.map(
-                           (ingredient, index) => {
-                              return (
-                                 <div key={index} className="form-row">
-                                    <div className="form-group col-md-5 ">
-                                       <label>Amount</label>
-                                       <input
-                                          type="text"
-                                          className="form-control"
-                                          onChange={(e) =>
-                                             this.handleChange(e, index)
-                                          }
-                                       />
-                                    </div>
-
-                                    <div className="form-group col-md-6 ">
-                                       <label>Ingredient</label>
-                                       <input
-                                          type="text"
-                                          className="form-control"
-                                       />
-                                    </div>
-                                    <div className="col-md-1 align-self-center mt-2">
-                                       <button
-                                          type="button"
-                                          className="mt-2"
-                                          onClick={(e) => {
-                                             this.removeIngredient(index);
-                                          }}
-                                       >
-                                          <img
-                                             className="py-1"
-                                             src={minus}
-                                             alt="plus icon"
-                                          />
-                                       </button>
-                                    </div>
-                                 </div>
-                              );
-                           }
-                        )}
-                     </div>
+                     <AddIngredient />
 
                      <div>
                         <label>Directions:</label>
