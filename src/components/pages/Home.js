@@ -8,7 +8,7 @@ export default function Home() {
       <div>
          <Navigation />
          <div className=" landing-signIn">
-            <h2 className="text-center">Impressive collection of Meals</h2>
+            <h4 className="text-center">Impressive collection of Meals</h4>
 
             {recipeCard.map((recipe) => {
                return <RecipeCard />;

@@ -41,5 +41,25 @@ const recipeCard = [
       directions: "chop the chicken",
       favorites: false,
    },
+   {
+      recipeTitle: "Mexican Tacos",
+      cookTime: "10-20 mins",
+      servingSize: "4",
+      mealFor: "brunch",
+      ingredientAmount: "5",
+      ingredient: "chicken thighs",
+      directions: "chop the chicken",
+      favorites: false,
+   },
+   {
+      recipeTitle: "Mexican Tacos",
+      cookTime: "10-20 mins",
+      servingSize: "4",
+      mealFor: "brunch",
+      ingredientAmount: "5",
+      ingredient: "chicken thighs",
+      directions: "chop the chicken",
+      favorites: false,
+   },
 ];
 export default recipeCard;

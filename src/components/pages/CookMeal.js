@@ -4,7 +4,6 @@ import recipeCard from "../../mock data/recipe-card";
 import RecipeAmount from "../../components/ui/RecipeAmount";
 import Navigation from "../ui/Navigation";
 import AppTemplate from "../ui/AppTemplate";
-import mealImg from "../../img/ryan-concepcion-50KffXbjIOg-unsplash.jpg";
 
 const oneCard = recipeCard[0];
 
@@ -18,7 +17,7 @@ export default function CookMeal() {
                   <div className="mb-3 text-danger">{oneCard.recipeTitle}</div>
                   <div className="row mb-3">
                      <h6 className="card-subtitle mb-2 text-muted  col-12 ">
-                        Prep/Cook-Time:{oneCard.cookTime}
+                        Prep-Cook-Time: {oneCard.cookTime}
                      </h6>
 
                      <h6 className="card-subtitle mb-2 text-muted  col-12 ">
@@ -46,9 +45,6 @@ export default function CookMeal() {
                </div>
 
                <hr />
-            </div>
-            <div>
-               <img className="mealImage" src={mealImg} alt=""></img>
             </div>
          </AppTemplate>
       </>

@@ -4,6 +4,12 @@ import recipeImg from "../../img/jason-leung-CWxidfNz-Co-unsplash (1).jpg";
 import AppTemplate from "../ui/AppTemplate";
 import plus from "../../icons/plus.svg";
 import minus from "../../icons/minus.svg";
+import recipeCards from "../../mock data/recipe-card";
+import classnames from "classnames";
+import { checkIsOver } from "../../utilis/helpers";
+
+const recipeCard = recipeCards[2];
+
 export default class Recipes extends React.Component {
    constructor(props) {
       super(props);
@@ -11,6 +17,7 @@ export default class Recipes extends React.Component {
       this.state = {
          isClicked: false,
          ingredientsAdded: [],
+         titletext: recipeCard.recipeTitle,
       };
    }
    addIngredients() {
@@ -18,6 +25,30 @@ export default class Recipes extends React.Component {
       this.setState({
          ingredientsAdded: [...this.state.ingredientsAdded, ""],
       });
+   }
+   handleChange(e, index) {
+      this.setState({ ingredientsAdded: [...this.state.ingredientsAdded] });
+      [index] = e.target.value;
+      this.setState({ ingredientsAdded: this.state.ingredientsAdded });
+   }
+   removeIngredient(index) {
+      this.state.ingredientsAdded.splice(index, 1);
+      this.setState({ ingredientsAdded: this.state.ingredientsAdded });
+   }
+   checkHasInvalidCharCount() {
+      if (
+         this.state.titletext.length <= 0 ||
+         this.state.titletext.length > 30
+      ) {
+         return true;
+      } else {
+         return false;
+      }
+   }
+
+   setAnswerText(e) {
+      console.log(e.target, e.target.value);
+      this.setState({ titletext: e.target.value });
    }
    render() {
       return (
@@ -31,13 +62,46 @@ export default class Recipes extends React.Component {
 
                   <form>
                      <div className="form-group">
-                        <label htmlFor="inputAddress">Recipe Title</label>
+                        <label
+                           htmlFor="inputAddress"
+                           className={classnames({
+                              "text-danger": checkIsOver(
+                                 this.state.titletext,
+                                 30
+                              ),
+                           })}
+                        >
+                           Recipe Title
+                        </label>
                         <input
                            type="text"
-                           className="form-control"
+                           className={classnames({
+                              "form-control": true,
+                              "is-invalid": checkIsOver(
+                                 this.state.titletext,
+                                 30
+                              ),
+
+                              "text-danger": checkIsOver(
+                                 this.state.titletext,
+                                 30
+                              ),
+                           })}
                            id="inputAddress"
+                           onChange={(e) => this.setAnswerText(e)}
                         />
-                        <small className="float-right">0/30</small>
+
+                        <small
+                           className={classnames({
+                              "float-right": true,
+                              "text-danger": checkIsOver(
+                                 this.state.titletext,
+                                 30
+                              ),
+                           })}
+                        >
+                           {this.state.titletext.length}/30
+                        </small>
                      </div>
                      <div className="form-row">
                         <div className="form-group col-md-6">
@@ -106,6 +170,9 @@ export default class Recipes extends React.Component {
                                        <input
                                           type="text"
                                           className="form-control"
+                                          onChange={(e) =>
+                                             this.handleChange(e, index)
+                                          }
                                        />
                                     </div>
 
@@ -121,7 +188,7 @@ export default class Recipes extends React.Component {
                                           type="button"
                                           className="mt-2"
                                           onClick={(e) => {
-                                             this.addIngredients(e);
+                                             this.removeIngredient(index);
                                           }}
                                        >
                                           <img
@@ -167,7 +234,7 @@ export default class Recipes extends React.Component {
                      <div className="clearfix"></div>
                   </form>
                </div>
-               <div className="col-xl-6 ">
+               <div className="col-xl-6">
                   <img src={recipeImg} alt="" className="recipeImage"></img>
                </div>
             </AppTemplate>
