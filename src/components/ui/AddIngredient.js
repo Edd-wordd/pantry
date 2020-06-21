@@ -89,6 +89,7 @@ export default class AddIngredient extends React.Component {
                               type="text"
                               className="form-control"
                               onChange={(e) => this.handleChange(e, index)}
+                              id="inputed-amount"
                            />
                         </div>
 

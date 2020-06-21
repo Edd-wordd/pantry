@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../ui/Navigation";
 import AppTemplate from "../ui/AppTemplate";
+import AddPantryIngredient from "../ui/AddPantryIngredient";
 
 export default function Pantry() {
    return (
@@ -11,7 +12,8 @@ export default function Pantry() {
                <div className="card-body ">
                   <h5 className="card-title ">Pantry Inventory</h5>
                </div>
-               <ul className="list-group list-group-flush">
+               <AddPantryIngredient />
+               {/* <ul className="list-group list-group-flush">
                   <div className="custom-control custom-switch ">
                      <div className="row">
                         <input
@@ -78,7 +80,7 @@ export default function Pantry() {
                      </div>
                      <hr />
                   </div>
-               </ul>
+               </ul> */}
             </div>
          </AppTemplate>
       </div>
