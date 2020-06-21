@@ -15,9 +15,16 @@ export default class Recipes extends React.Component {
          ingredientsAdded: [],
          titletext: "",
          value: "",
+         isFavorite: false,
       };
       this.handleChangeNow = this.handleChangeNow.bind(this);
       this.handleSubmitNow = this.handleSubmitNow.bind(this);
+   }
+   isFavoriteRecipe() {
+      console.log("this better fucking work");
+      this.setState({
+         isFavorite: !this.state.isFavorite,
+      });
    }
 
    handleChangeNow(event) {
@@ -70,6 +77,7 @@ export default class Recipes extends React.Component {
          .value;
       const userCookTime = this.state.value;
       const userMealFor = this.state.value;
+      // const userFavorite = isFavoriteRecipe();
 
       const userServingSize = document.getElementById("serving-size").value;
       // const userAmount = document.getElementById("inputed-amount").value;
@@ -84,7 +92,7 @@ export default class Recipes extends React.Component {
          // ingredientAmount: userAmount,
          //       ingredient: String,
          directions: userDirections,
-         //       favorites: Boolean,
+         // favorites: userFavorite,
       };
       console.log("clicked this shit", submittedRecipe, this.state.value);
    }
@@ -187,7 +195,7 @@ export default class Recipes extends React.Component {
                         <label>Directions:</label>
                         <textarea
                            id="inputed-dir"
-                           className="w-100"
+                           className="w-100 form-control mb-2"
                            rows="15"
                         ></textarea>
                      </div>
@@ -210,9 +218,13 @@ export default class Recipes extends React.Component {
 
                      <div className="form-check float-right">
                         <input
+                           defaultChecked={this.state.isFavorite}
                            className="form-check-input"
                            type="checkbox"
                            id="gridCheck"
+                           onClick={() => {
+                              this.isFavoriteRecipe();
+                           }}
                         />
                         <label className="form-check-label" htmlFor="gridCheck">
                            Add to favorite Recipes
