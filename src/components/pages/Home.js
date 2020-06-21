@@ -11,7 +11,13 @@ export default function Home() {
             <h4 className="text-center">Impressive collection of Meals</h4>
 
             {recipeCard.map((recipe) => {
-               return <RecipeCard />;
+               return (
+                  <RecipeCard
+                     recipeName={recipe.recipeTitle}
+                     recipeCookTime={recipe.cookTime}
+                     recipeServing={recipe.servingSize}
+                  />
+               );
             })}
          </div>
       </div>

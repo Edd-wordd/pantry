@@ -7,7 +7,7 @@ import classnames from "classnames";
 import { checkIsOver } from "../../utilis/helpers";
 import AddIngredient from "../ui/AddIngredient";
 
-const recipeCard = recipeCards[2];
+// const recipeCard = recipeCards[2];
 
 export default class Recipes extends React.Component {
    constructor(props) {
@@ -16,7 +16,7 @@ export default class Recipes extends React.Component {
       this.state = {
          isClicked: false,
          ingredientsAdded: [],
-         titletext: recipeCard.recipeTitle,
+         titletext: recipeCards.recipeTitle,
          value: "",
       };
       this.handleChangeNow = this.handleChangeNow.bind(this);
