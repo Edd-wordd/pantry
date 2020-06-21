@@ -2,7 +2,6 @@ import React from "react";
 import Navigation from "../ui/Navigation";
 import recipeImg from "../../img/jason-leung-CWxidfNz-Co-unsplash (1).jpg";
 import AppTemplate from "../ui/AppTemplate";
-import recipeCards from "../../mock data/recipe-card";
 import classnames from "classnames";
 import { checkIsOver } from "../../utilis/helpers";
 import AddIngredient from "../ui/AddIngredient";
@@ -207,22 +206,19 @@ export default class Recipes extends React.Component {
                         >
                            ADD Recipe
                         </button>
-                        <div className="form-group ">
-                           <div className="form-check">
-                              <input
-                                 className="form-check-input"
-                                 type="checkbox"
-                                 id="gridCheck"
-                              />
-                              <label
-                                 className="form-check-label"
-                                 htmlFor="gridCheck"
-                              >
-                                 Add to favorite Recipes
-                              </label>
-                           </div>
-                        </div>
                      </div>
+
+                     <div className="form-check float-right">
+                        <input
+                           className="form-check-input"
+                           type="checkbox"
+                           id="gridCheck"
+                        />
+                        <label className="form-check-label" htmlFor="gridCheck">
+                           Add to favorite Recipes
+                        </label>
+                     </div>
+
                      <div className="clearfix"></div>
                   </form>
                </div>
