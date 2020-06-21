@@ -19,7 +19,24 @@ export default class Recipes extends React.Component {
          titletext: recipeCard.recipeTitle,
          value: "",
       };
+      this.handleChangeNow = this.handleChangeNow.bind(this);
+      this.handleSubmitNow = this.handleSubmitNow.bind(this);
    }
+
+   handleChangeNow(event) {
+      this.setState({ value: event.target.value });
+      this.setState({ value: event.target.value });
+   }
+
+   handleSubmitNow(event) {
+      const userMealFor = this.state.value;
+      const userCookTime = this.state.value;
+
+      event.preventDefault();
+      console.log(userMealFor);
+      console.log(userCookTime);
+   }
+
    addIngredients() {
       console.log("edward click this shit");
       this.setState({
@@ -54,22 +71,22 @@ export default class Recipes extends React.Component {
    submitrecipe(e) {
       const userRecipeTitle = document.getElementById("inputed-recipe-title")
          .value;
+      const userCookTime = this.state.value;
+      const userMealFor = this.state.value;
 
       const userServingSize = document.getElementById("serving-size").value;
-      //    const userMealFor = document.getElementById("inputed-recipe-title").value;
-      //    const userAmount = document.getElementById("inputed-amount").value;
-      //    const userIngredient = document.getElementById("inputed-recipe-title")
-      //       .value;
-      //    const userDirections = document.getElementById("inputed-dir").value;
+      // const userAmount = document.getElementById("inputed-amount").value;
+      const userDirections = document.getElementById("inputed-dir").value;
 
       const submittedRecipe = {
          recipeId: String,
          recipeTitle: userRecipeTitle,
          servingSize: userServingSize,
-         //       mealFor: String,
-         //       ingredientAmount: userAmount,
+         cookTime: userCookTime,
+         mealFor: userMealFor,
+         // ingredientAmount: userAmount,
          //       ingredient: String,
-         //       directions: userDirections,
+         directions: userDirections,
          //       favorites: Boolean,
       };
       console.log("clicked this shit", submittedRecipe, this.state.value);
@@ -130,8 +147,13 @@ export default class Recipes extends React.Component {
                      <div className="form-row">
                         <div className="form-group col-md-5">
                            <label htmlFor="inputState">Cook-Time:</label>
-                           <select id="input-cook" className="form-control">
-                              <option>Choose...</option>
+                           <select
+                              id="input-cook"
+                              className="form-control"
+                              value={this.state.valueHere}
+                              onChange={this.handleChangeNow}
+                           >
+                              <option defaultValue>Choose...</option>
                               <option value="10-20 Mins"> 10-20 Mins</option>
                               <option value="20-30 Mins"> 20-30 Mins</option>
                               <option value="30 and Up"> 30 and Up </option>
@@ -140,12 +162,17 @@ export default class Recipes extends React.Component {
 
                         <div className="form-group col-md-5">
                            <label htmlFor="inputState">Meal For:</label>
-                           <select id="inputState" className="form-control">
+                           <select
+                              id="inputState"
+                              className="form-control"
+                              value={this.state.value}
+                              onChange={this.handleChangeNow}
+                           >
                               <option defaultValue>Choose...</option>
-                              <option>Breakfast</option>
-                              <option>Brunch</option>
-                              <option>Lunch</option>
-                              <option>Dinner</option>
+                              <option value="Breakfast">Breakfast</option>
+                              <option value="Brunch">Brunch</option>
+                              <option value="Lunch">Lunch</option>
+                              <option value="Dinner">Dinner</option>
                            </select>
                         </div>
                         <div className="form-group col-md-2">
@@ -177,7 +204,7 @@ export default class Recipes extends React.Component {
                            type="button"
                            className="btn btn-primary"
                            onClick={(e) => {
-                              this.getcooktime(e);
+                              this.submitrecipe(e);
                            }}
                         >
                            ADD Recipe

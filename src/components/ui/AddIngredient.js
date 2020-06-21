@@ -101,7 +101,7 @@ export default class AddIngredient extends React.Component {
                            <button
                               type="button"
                               className="mt-2"
-                              onClick={(e) => {
+                              onClick={() => {
                                  this.removeIngredient(index);
                               }}
                            >
