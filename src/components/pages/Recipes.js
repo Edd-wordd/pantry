@@ -155,7 +155,7 @@ export default class Recipes extends React.Component {
                            <select
                               id="input-cook"
                               className="form-control"
-                              value={this.state.valueHere}
+                              value={this.state.value}
                               onChange={this.handleChangeNow}
                            >
                               <option defaultValue>Choose...</option>
