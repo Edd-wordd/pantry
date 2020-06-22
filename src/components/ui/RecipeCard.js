@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import recipeCard from "../../mock data/recipe-card";
+import recipes from "../../mock data/recipes";
 import heart from "../../icons/heart.svg";
 
 export default function RecipeCard(props) {
-   console.log(recipeCard);
+   console.log(recipes);
    return (
       <div className="row float-right">
          <div className="mb-3 offset-1 col-10 col-xl-9 offset-xl-1 card-border ">

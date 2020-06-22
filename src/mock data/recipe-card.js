@@ -1,71 +1,34 @@
-const recipeCard = [
+const recipes = [
    {
-      recipeId: "ec011fff-006a-47ec-839a-67811e2d49f1",
-      recipeTitle: "Buffalo Chicken Wrap",
-      cookTime: "10-20 mins",
-      servingSize: "2",
+      id: "ec011fff-006a-47ec-839a-67811e2d49f1",
+      title: "Buffalo Chicken Wrap",
+      cookTime: "20-30 mins",
+      servingSize: "1",
       mealFor: "dinner",
-      ingredientAmount: "5",
-      ingredient: "chicken thighs",
+      ingredients: [
+         {
+            id: 7483920192,
+            ingredient: "chicken thighs",
+            amount: "1 pound",
+            isInStock: true,
+         },
+         {
+            id: 3383920192,
+            ingredient: "carrot",
+            amount: "2 pound",
+            isInStock: true,
+         },
+         {
+            id: 2383920192,
+            ingredient: "tomatoe",
+            amount: "3",
+            isInStock: true,
+         },
+      ],
+
       directions:
          "chop the chicken, toast the bread, stir the pot, melt the chesse, dont put too much milk.",
       favorites: false,
    },
-
-   {
-      recipeId: "5b2d6ca9-8583-403b-b63c-d4e16c07cddb",
-      recipeTitle: "shrimp pasta",
-      cookTime: "30 or mins",
-      servingSize: "7",
-      mealFor: "lunch",
-      ingredientAmount: "5",
-      ingredient: "chicken thighs",
-      directions: "chop the chicken",
-      favorites: false,
-   },
-   {
-      recipeId: "f78eeaa9-2dc8-46f7-9491-0ce38d5388c6",
-      recipeTitle: "Pizza",
-      cookTime: "10-20 mins",
-      servingSize: "8",
-      mealFor: "breakfast",
-      ingredientAmount: "2",
-      ingredient: "chicken thighs",
-      directions: "chop the chicken",
-      favorites: false,
-   },
-   {
-      recipeId: "f216c371-c451-403f-8d70-5fa995943d9b",
-      recipeTitle: "Mexican Tacos",
-      cookTime: "10-20 mins",
-      servingSize: "4",
-      mealFor: "brunch",
-      ingredientAmount: "5",
-      ingredient: "chicken thighs",
-      directions: "chop the chicken",
-      favorites: false,
-   },
-   {
-      recipeId: "b8706b60-fcf4-4716-a249-97632cb3c2de",
-      recipeTitle: "veggie Tacos",
-      cookTime: "10-20 mins",
-      servingSize: "4",
-      mealFor: "brunch",
-      ingredientAmount: "5",
-      ingredient: "chicken thighs",
-      directions: "chop the chicken",
-      favorites: false,
-   },
-   {
-      recipeId: "fdf3c8dd-f797-4998-b930-dfd1f4fd98bd",
-      recipeTitle: "cheese Tacos",
-      cookTime: "10-20 mins",
-      servingSize: "4",
-      mealFor: "brunch",
-      ingredientAmount: "5",
-      ingredient: "chicken thighs",
-      directions: "chop the chicken",
-      favorites: false,
-   },
 ];
-export default recipeCard;
+export default recipes;

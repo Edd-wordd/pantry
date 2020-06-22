@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import recipeCard from "../../mock data/recipe-card";
+import recipes from "../../mock data/recipes";
 import RecipeAmount from "../../components/ui/RecipeAmount";
 import Navigation from "../ui/Navigation";
 import AppTemplate from "../ui/AppTemplate";
 
-const oneCard = recipeCard[0];
+const oneCard = recipes[0];
 
 export default function CookMeal() {
    return (
@@ -14,7 +14,7 @@ export default function CookMeal() {
          <AppTemplate>
             <div className="mb-3 offset-1 col-10 col-xl-4 card-border">
                <div className="card-body ">
-                  <div className="mb-3 text-danger">{oneCard.recipeTitle}</div>
+                  <div className="mb-3 text-danger">{oneCard.title}</div>
                   <div className="row mb-3">
                      <h6 className="card-subtitle mb-2 text-muted  col-12 ">
                         Prep-Cook-Time: {oneCard.cookTime}

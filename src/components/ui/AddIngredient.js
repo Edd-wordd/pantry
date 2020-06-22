@@ -2,9 +2,7 @@ import React from "react";
 
 import plus from "../../icons/plus.svg";
 import minus from "../../icons/minus.svg";
-import recipeCards from "../../mock data/recipe-card";
-
-const recipeCard = recipeCards[2];
+import recipes from "../../mock data/recipe-card";
 
 export default class AddIngredient extends React.Component {
    constructor(props) {
@@ -13,7 +11,7 @@ export default class AddIngredient extends React.Component {
       this.state = {
          isClicked: false,
          ingredientsAdded: [],
-         titletext: recipeCard.recipeTitle,
+         titletext: recipes.title,
       };
    }
    addIngredients() {
