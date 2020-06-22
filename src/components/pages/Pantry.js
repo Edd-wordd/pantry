@@ -19,6 +19,7 @@ export default function Pantry() {
                         ingredientAmount={ingredient.ingredientAmount}
                         ingredients={ingredient.ingredient}
                         inStock={ingredient.isInStock}
+                        key={ingredient.id}
                      />
                   );
                })}

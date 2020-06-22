@@ -16,6 +16,7 @@ export default function Home() {
                      recipeName={recipe.title}
                      recipeCookTime={recipe.cookTime}
                      recipeServing={recipe.servingSize}
+                     key={recipe.id}
                   />
                );
             })}
