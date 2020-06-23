@@ -26,16 +26,14 @@ export default function Home() {
          <div className=" landing-signIn">
             <h4 className="text-center">Impressive collection of Meals</h4>
 
-            {recipes.map((recipe, index) => {
+            {recipes.map((recipe) => {
                return (
-                  <div key={index}>
-                     <RecipeCard
-                        recipeName={recipe.title}
-                        recipeCookTime={recipe.cookTime}
-                        recipeServing={recipe.servingSize}
-                        key={recipe.id}
-                     />
-                  </div>
+                  <RecipeCard
+                     recipeName={recipe.title}
+                     recipeCookTime={recipe.cookTime}
+                     recipeServing={recipe.servingSize}
+                     key={recipe.id}
+                  />
                );
             })}
          </div>
