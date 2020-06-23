@@ -1,5 +1,4 @@
 import React from "react";
-
 import plus from "../../icons/plus.svg";
 import minus from "../../icons/minus.svg";
 import recipes from "../../mock data/recipe-card";
