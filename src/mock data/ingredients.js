@@ -37,7 +37,7 @@ const ingredients = [
    },
    {
       id: "3ce5fc6a-6943-439b-9e3e-6527ffb8e525",
-      ingredient: "tomatoes",
+      ingredient: "tomatoes ",
       amount: "3",
       isInStock: true,
    },
@@ -50,6 +50,18 @@ const ingredients = [
    {
       id: "241b55e1-e869-4e14-9082-4f5ae03351ec",
       ingredient: "onions",
+      amount: "1",
+      isInStock: true,
+   },
+   {
+      id: "beb3e34a-8495-4353-8cff-56339f90ee53",
+      ingredient: "Avocados",
+      amount: "1",
+      isInStock: true,
+   },
+   {
+      id: "071b8371-c555-4b35-84c2-dff7b8fd9d47",
+      ingredient: "bread",
       amount: "1",
       isInStock: true,
    },
