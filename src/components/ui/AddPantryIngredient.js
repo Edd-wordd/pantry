@@ -11,13 +11,17 @@ export default function AddPantryIngredient(props) {
                   <input
                      type="checkbox"
                      className="custom-control-input col-1"
-                     id="custom3"
+                     id={props.ingredients}
                      defaultChecked
                   />
 
-                  <label className="custom-control-label" htmlFor="custom3">
+                  <label
+                     className="custom-control-label"
+                     htmlFor={props.ingredients}
+                  >
                      In- Stock
                   </label>
+
                   <li className=" col-6">{props.ingredients}</li>
                   <button className="btn btn-danger btn-sm col-3">
                      delete

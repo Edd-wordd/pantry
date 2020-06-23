@@ -11,18 +11,24 @@ export default function Pantry() {
          <AppTemplate>
             <div className=" mb-3 offset-1 col-10 col-xl-5">
                <div className="card-body ">
-                  <h5 className="card-title ">Pantry Inventory</h5>
+                  {/* <h5 className="card-title ">Pantry Inventory</h5> */}
                </div>
-               {ingredients.map((ingredient) => {
-                  return (
-                     <AddPantryIngredient
-                        ingredientAmount={ingredient.ingredientAmount}
-                        ingredients={ingredient.ingredient}
-                        inStock={ingredient.isInStock}
-                        key={ingredient.id}
-                     />
-                  );
-               })}
+               <fieldset>
+                  <legend>
+                     <h5 className="card-title ">Pantry Inventory</h5>
+                  </legend>
+
+                  {ingredients.map((ingredient) => {
+                     return (
+                        <AddPantryIngredient
+                           ingredientAmount={ingredient.ingredientAmount}
+                           ingredients={ingredient.ingredient}
+                           inStock={ingredient.isInStock}
+                           key={ingredient.id}
+                        />
+                     );
+                  })}
+               </fieldset>
             </div>
          </AppTemplate>
       </div>
