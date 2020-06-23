@@ -2,6 +2,7 @@ import React from "react";
 import plus from "../../icons/plus.svg";
 import minus from "../../icons/minus.svg";
 import recipes from "../../mock data/recipe-card";
+import axios from "axios";
 
 export default class AddIngredient extends React.Component {
    constructor(props) {
@@ -12,6 +13,21 @@ export default class AddIngredient extends React.Component {
          ingredientsAdded: [],
          titletext: recipes.title,
       };
+      axios
+         .get(
+            "https://github.com/Edd-wordd/pantry/blob/master/src/mock%20data/recipes.js"
+         )
+         .then(function (response) {
+            // handle success
+            console.log(response);
+         })
+         .catch(function (error) {
+            // handle error
+            console.log(error);
+         })
+         .finally(function () {
+            // always executed
+         });
    }
    addIngredients() {
       console.log("edward click this shit");
@@ -77,7 +93,7 @@ export default class AddIngredient extends React.Component {
                </div>
             </div>
             <div>
-               {this.state.ingredientsAdded.map((ingredient, index) => {
+               {this.state.ingredientsAdded.map((index) => {
                   return (
                      <div key={index} className="form-row">
                         <div className="form-group col-md-5 ">

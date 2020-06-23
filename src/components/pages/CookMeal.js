@@ -1,13 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import recipes from "../../mock data/recipes";
-import RecipeAmount from "../../components/ui/RecipeAmount";
+import Ingredient from "../../components/ui/RecipeAmount";
 import Navigation from "../ui/Navigation";
 import AppTemplate from "../ui/AppTemplate";
+import ingredients from "../../mock data/ingredients";
+import axios from "axios";
 
 const oneCard = recipes[0];
 
 export default function CookMeal() {
+   axios
+      .get(
+         "https://github.com/Edd-wordd/pantry/blob/master/src/mock%20data/recipes.js"
+      )
+      .then(function (response) {
+         // handle success
+         console.log(response);
+      })
+      .catch(function (error) {
+         // handle error
+         console.log(error);
+      })
+      .finally(function () {
+         // always executed
+      });
    return (
       <>
          <Navigation />
@@ -25,7 +42,16 @@ export default function CookMeal() {
                      </h6>
                   </div>
                   <h6 className="card-subtitle text-muted">Ingredients</h6>
-                  <RecipeAmount />
+
+                  {ingredients.map((ingredient) => {
+                     return (
+                        <Ingredient
+                           ingredientAmount={ingredient.amount}
+                           ingredient={ingredient.ingredient}
+                           key={ingredient.id}
+                        />
+                     );
+                  })}
 
                   <div className="">
                      <p>

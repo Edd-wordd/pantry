@@ -1,7 +1,23 @@
 import React from "react";
 import ingredients from "../../mock data/ingredients";
+import axios from "axios";
 
 export default function AddPantryIngredient(props) {
+   axios
+      .get(
+         "https://github.com/Edd-wordd/pantry/blob/master/src/mock%20data/ingredients.js"
+      )
+      .then(function (response) {
+         // handle success
+         console.log(response);
+      })
+      .catch(function (error) {
+         // handle error
+         console.log(error);
+      })
+      .finally(function () {
+         // always executed
+      });
    console.log(ingredients);
    return (
       <>
