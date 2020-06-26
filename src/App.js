@@ -18,7 +18,7 @@ function App() {
             <Route exact path="/pantry" component={Pantry}></Route>
             <Route exact path="/signIn" component={SignIn}></Route>
             <Route exact path="/home" component={Home}></Route>
-            <Route exact path="/cookmeal" component={CookMeal}></Route>
+            <Route exact path="/cookmeal/" component={CookMeal}></Route>
 
             <Route component={NotFound}></Route>
          </Switch>

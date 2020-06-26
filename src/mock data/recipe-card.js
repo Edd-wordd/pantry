@@ -15,7 +15,7 @@ const recipes = [
          {
             id: "de85c9c8-1d09-4e70-917a-27a1243cf8ca",
             ingredient: "carrot",
-            amount: "2 pound",
+            amount: "1",
             isInStock: true,
          },
          {

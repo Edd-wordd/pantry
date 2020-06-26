@@ -1,42 +1,53 @@
 import React from "react";
 import Navigation from "../ui/Navigation";
 import RecipeCard from "../ui/RecipeCard";
-import recipes from "../../mock data/recipes";
 import axios from "axios";
+import orderBy from "lodash/orderBy";
 
-export default function Home() {
-   axios
-      .get(
-         "https://github.com/Edd-wordd/pantry/blob/master/src/mock%20data/recipes.js"
-      )
-      .then(function (response) {
-         // handle success
-         console.log(response);
-      })
-      .catch(function (error) {
-         // handle error
-         console.log(error);
-      })
-      .finally(function () {
-         // always executed
-      });
-   return (
-      <div>
-         <Navigation />
-         <div className=" landing-signIn">
-            <h4 className="text-center">Impressive collection of Meals</h4>
+export default class Home extends React.Component {
+   constructor(props) {
+      super(props);
+      this.state = {
+         displayedRecipes: [],
+      };
+   }
 
-            {recipes.map((recipe) => {
-               return (
-                  <RecipeCard
-                     recipeName={recipe.title}
-                     recipeCookTime={recipe.cookTime}
-                     recipeServing={recipe.servingSize}
-                     key={recipe.id}
-                  />
-               );
-            })}
-         </div>
-      </div>
-   );
+   componentDidMount() {
+      axios
+         .get("https://run.mocky.io/v3/bba96bf0-ddc2-422b-bff7-1d2fd240a16e")
+         .then((response) => {
+            // handle success
+            console.log(response);
+            const recipes = response.data;
+            console.log("here", recipes);
+            this.setState({
+               displayedRecipes: orderBy(recipes, ["id"]),
+            });
+         })
+         .catch((error) => {
+            // handle error
+            console.log(error);
+         });
+   }
+
+   render() {
+      return (
+         <>
+            <Navigation />
+            <div className=" landing-signIn">
+               <h4 className="text-center">Impressive collection of Meals</h4>
+               {this.state.displayedRecipes.map((recipes) => {
+                  return (
+                     <RecipeCard
+                        recipeName={recipes.title}
+                        recipeCookTime={recipes.cookTime}
+                        recipeServing={recipes.servingSize}
+                        key={recipes.id}
+                     />
+                  );
+               })}
+            </div>
+         </>
+      );
+   }
 }
