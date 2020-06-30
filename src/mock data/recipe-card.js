@@ -5,7 +5,7 @@ const recipes = [
       cookTime: "20-30 mins",
       servingSize: "1",
       mealFor: "dinner",
-      userId: ""
+      userId: "9b607c36-4103-4f01-afff-d06e7737a116",
       ingredients: [
          {
             id: "a1c37620-27fa-4f7a-8d00-2a130a2d7e64",
@@ -37,6 +37,8 @@ const recipes = [
       cookTime: "20-30 mins",
       servingSize: "4",
       mealFor: "dinner",
+      userId: "ee2e843d-e2e1-47ab-8ae7-0ec501bd6864",
+
       ingredients: [
          {
             id: "10a88863-3ebe-463d-b28a-58b19a532098",
@@ -68,6 +70,8 @@ const recipes = [
       cookTime: "10-20 mins",
       servingSize: "2",
       mealFor: "dinner",
+      userId: "68247db4-ab28-4e05-ba10-90a6f6360e56",
+
       ingredients: [
          {
             id: "1ffe90f5-fbf1-4114-8253-058d998b9efa",
@@ -98,6 +102,8 @@ const recipes = [
       cookTime: "10-20 mins",
       servingSize: "3",
       mealFor: "brunch",
+      userId: "a0ded867-644b-448d-a441-8aff79044ec6",
+
       ingredients: [
          {
             id: "beb3e34a-8495-4353-8cff-56339f90ee53",
