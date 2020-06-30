@@ -10,14 +10,13 @@ class Home extends React.Component {
    constructor(props) {
       super(props);
       axios
-         .get("https://run.mocky.io/v3/b78a0948-289b-4991-886c-4b331b1b7e30")
+         .get("https://run.mocky.io/v3/ddbdb68f-c4a8-4c1b-8c04-2cf963ec7cdd")
          .then((response) => {
             // handle success
-            console.log(response);
-            const recipes = response.data;
-            console.log("here", recipes);
+            console.log("allRecipes", response);
+
             props.dispatch({
-               type: actions.STORE_RECIPES,
+               type: actions.STORE_ALL_RECIPES,
                payload: response.data,
             });
          })
@@ -27,29 +26,29 @@ class Home extends React.Component {
          });
    }
 
-   cookMealRecipe() {
-      console.log("storing editable card");
-      const recipeIndex = this.props.recipes[this.props.indexOfCurrentRecipe];
-      console.log("indexed", recipeIndex);
-      this.props.dispatch({
-         type: actions.STORE_COOKED_RECIPE,
-         payload: {
-            recipeCard: recipeIndex,
-            preCard: "/home",
-         },
-      });
-   }
+   // cookMealRecipe() {
+   //    console.log("storing editable card");
+   //    const recipeIndex = this.props.recipes[this.props.indexOfCurrentRecipe];
+   //    console.log("indexed", recipeIndex);
+   //    this.props.dispatch({
+   //       type: actions.STORE_COOKED_RECIPE,
+   //       payload: {
+   //          recipeCard: recipeIndex,
+   //          preCard: "/home",
+   //       },
+   //    });
+   // }
 
    render() {
-      const recipeIndex = this.props.recipes[this.props.indexOfCurrentRecipe];
-      console.log("heres the one index recipe", recipeIndex);
+      const recipeIndex = this.props.allRecipes;
+      console.log("index recipe", recipeIndex);
 
       return (
          <>
             <Navigation />
             <div className=" landing-signIn">
                <h4 className="text-center">Impressive collection of Meals</h4>
-               {this.props.recipes.map((recipe) => {
+               {this.props.allRecipes.map((recipe) => {
                   return (
                      <>
                         <RecipeCard
@@ -64,9 +63,9 @@ class Home extends React.Component {
                                  <Link
                                     to="/CookMeal"
                                     className=" mb-3 btn btn-outline-primary float-right"
-                                    onClick={() => {
-                                       this.cookMealRecipe();
-                                    }}
+                                    // onClick={() => {
+                                    //    this.cookMealRecipe();
+                                    // }}
                                  >
                                     Cook Meal
                                  </Link>
@@ -84,8 +83,7 @@ class Home extends React.Component {
 
 function mapStateToProps(state) {
    return {
-      recipes: state.recipes,
-      indexOfCurrentRecipe: state.indexOfCurrentRecipe,
+      allRecipes: state.allRecipes,
    };
 }
 export default connect(mapStateToProps)(Home);

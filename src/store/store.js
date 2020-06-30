@@ -4,10 +4,10 @@ import combineReducers from "./combineReducers";
 
 const initialState = {
    currentUser: {},
-   recipes: [],
-   ingredients: [],
-   indexOfCurrentRecipe: 0,
-   avaliableRecipes: {},
+   allRecipes: [],
+   // ingredients: [],
+   // indexOfCurrentRecipe: 0,
+   // avaliableRecipes: {},
 };
 
 const store = createStore(combineReducers, initialState, composeWithDevTools());

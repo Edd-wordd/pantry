@@ -1,37 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Ingredient from "../../components/ui/RecipeAmount";
 import Navigation from "../ui/Navigation";
 import AppTemplate from "../ui/AppTemplate";
-// import ingredients from "../../mock data/ingredients";
-import axios from "axios";
+// import axios from "axios";
 import { connect } from "react-redux";
-import actions from "../../store/actions";
+// import actions from "../../store/actions";
 
 class CookMeal extends React.Component {
    constructor(props) {
       super(props);
 
-      axios
-         .get("https://run.mocky.io/v3/b78a0948-289b-4991-886c-4b331b1b7e30")
-         .then((response) => {
-            // handle success
-            console.log(response);
-            props.dispatch({
-               type: actions.STORE_COOKED_RECIPES,
-               payload: response.data,
-            });
-         })
-         .catch((error) => {
-            // handle error
-            console.log(error);
-         });
+      //    axios
+      //       .get("https://run.mocky.io/v3/b78a0948-289b-4991-886c-4b331b1b7e30")
+      //       .then((response) => {
+      //          // handle success
+      //          console.log(response);
+      //          props.dispatch({
+      //             type: actions.STORE_COOKED_RECIPES,
+      //             payload: response.data,
+      //          });
+      //       })
+      //       .catch((error) => {
+      //          // handle error
+      //          console.log(error);
+      //       });
    }
 
    render() {
       const recipes = this.props.avaliableRecipes;
 
-      console.log("is this working", recipes);
+      // console.log("is this working", recipes);
 
       return (
          <>
@@ -89,8 +87,7 @@ class CookMeal extends React.Component {
 }
 function mapStateToProps(state) {
    return {
-      avaliableRecipes: state.avaliableRecipes,
-      indexOfCurrentRecipe: state.indexOfCurrentRecipe,
+      allRecipes: state.allRecipes,
    };
 }
 export default connect(mapStateToProps)(CookMeal);

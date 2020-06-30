@@ -1,5 +1,5 @@
 import React from "react";
-import ingredients from "../../mock data/ingredients";
+// import ingredients from "../../mock data/ingredients";
 import axios from "axios";
 
 // class AddPantryIngredient extends React.Component {
@@ -66,9 +66,7 @@ import axios from "axios";
 
 export default function AddPantryIngredient(props) {
    axios
-      .get(
-         "https://github.com/Edd-wordd/pantry/blob/master/src/mock%20data/ingredients.js"
-      )
+      .get("https://run.mocky.io/v3/ddbdb68f-c4a8-4c1b-8c04-2cf963ec7cdd")
       .then(function (response) {
          // handle success
          console.log(response);
@@ -80,7 +78,7 @@ export default function AddPantryIngredient(props) {
       .finally(function () {
          // always executed
       });
-   console.log(ingredients);
+   // console.log(ingredients);
    return (
       <>
          <ul className="list-group list-group-flush">

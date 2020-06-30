@@ -15,7 +15,7 @@ export default class AddIngredient extends React.Component {
       };
       axios
 
-         .get("https://run.mocky.io/v3/bba96bf0-ddc2-422b-bff7-1d2fd240a16e")
+         .get("https://run.mocky.io/v3/ddbdb68f-c4a8-4c1b-8c04-2cf963ec7cdd")
 
          .then(function (response) {
             // handle success

@@ -1,26 +1,24 @@
 import React from "react";
 import Navigation from "../ui/Navigation";
 import AppTemplate from "../ui/AppTemplate";
-import AddPantryIngredient from "../ui/AddPantryIngredient";
-import ingredients from "../../mock data/ingredients";
-import axios from "axios";
+// import AddPantryIngredient from "../ui/AddPantryIngredient";
+// import ingredients from "../../mock data/ingredients";
+// import axios from "axios";
 
 export default function Pantry() {
-   axios
-      .get(
-         "https://github.com/Edd-wordd/pantry/blob/master/src/mock%20data/ingredients.js"
-      )
-      .then(function (response) {
-         // handle success
-         console.log(response);
-      })
-      .catch(function (error) {
-         // handle error
-         console.log(error);
-      })
-      .finally(function () {
-         // always executed
-      });
+   // axios
+   //    .get("https://run.mocky.io/v3/ddbdb68f-c4a8-4c1b-8c04-2cf963ec7cdd")
+   //    .then(function (response) {
+   //       // handle success
+   //       console.log(response);
+   //    })
+   //    .catch(function (error) {
+   //       // handle error
+   //       console.log(error);
+   //    })
+   //    .finally(function () {
+   //       // always executed
+   //    });
    return (
       <div>
          <Navigation />
@@ -34,7 +32,7 @@ export default function Pantry() {
                      <h5 className="card-title ">Pantry Inventory</h5>
                   </legend>
 
-                  {ingredients.map((ingredient) => {
+                  {/* {ingredients.map((ingredient) => {
                      return (
                         <AddPantryIngredient
                            ingredientAmount={ingredient.ingredientAmount}
@@ -43,7 +41,7 @@ export default function Pantry() {
                            key={ingredient.id}
                         />
                      );
-                  })}
+                  })} */}
                </fieldset>
             </div>
          </AppTemplate>

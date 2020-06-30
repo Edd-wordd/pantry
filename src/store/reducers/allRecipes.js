@@ -1,9 +1,8 @@
 import actions from "../actions";
 
-export default function recipes(state = [], action) {
+export default function allRecipes(state = [], action) {
    switch (action.type) {
-      case actions.STORE_RECIPES:
-         // const newState = [...state];
+      case actions.STORE_ALL_RECIPES:
          return action.payload;
       default:
          return state;
