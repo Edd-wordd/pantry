@@ -1,56 +1,59 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import recipes from "../../mock data/recipe-card";
-import Ingredient from "../../components/ui/RecipeAmount";
+// import Ingredient from "../../components/ui/RecipeAmount";
 import Navigation from "../ui/Navigation";
 import AppTemplate from "../ui/AppTemplate";
-import ingredients from "../../mock data/ingredients";
+// import ingredients from "../../mock data/ingredients";
 import axios from "axios";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
 
-const oneCard = recipes[0];
-
 class CookMeal extends React.Component {
    constructor(props) {
       super(props);
+
       axios
-         .get(
-            "https://run.mocky.ibba96bf0o/v3/bba96bf0-ddc2-422b-bff7-1d2fd240a16e"
-         )
-         .then(function (response) {
+         .get("https://run.mocky.io/v3/b78a0948-289b-4991-886c-4b331b1b7e30")
+         .then((response) => {
             // handle success
             console.log(response);
             props.dispatch({
-               type: actions.STORE_RECIPE,
+               type: actions.STORE_COOKED_RECIPES,
                payload: response.data,
             });
          })
-         .catch(function (error) {
+         .catch((error) => {
             // handle error
             console.log(error);
          });
    }
+
    render() {
+      const recipes = this.props.avaliableRecipes;
+
+      console.log("is this working", recipes);
+
       return (
          <>
             <Navigation />
             <AppTemplate>
                <div className="mb-3 offset-1 col-10 col-xl-4 card-border">
                   <div className="card-body ">
-                     <div className="mb-3 text-danger">{oneCard.title}</div>
+                     <div className="mb-3 text-danger">{recipes.title}</div>
                      <div className="row mb-3">
                         <h6 className="card-subtitle mb-2 text-muted  col-12 ">
-                           Prep-Cook-Time: {oneCard.cookTime}
+                           Prep-Cook-Time:{" "}
+                           {/* {this.props.avaliableRecipes.cookTime} */}
                         </h6>
 
                         <h6 className="card-subtitle mb-2 text-muted  col-12 ">
-                           Serving Size:{oneCard.servingSize}
+                           Serving Size:
+                           {/* {this.props.avaliableRecipes.servingSize} */}
                         </h6>
                      </div>
                      <h6 className="card-subtitle text-muted">Ingredients</h6>
 
-                     {ingredients.map((ingredient) => {
+                     {/* {ingredients.map((ingredient) => {
                         return (
                            <Ingredient
                               ingredientAmount={ingredient.amount}
@@ -58,12 +61,12 @@ class CookMeal extends React.Component {
                               key={ingredient.id}
                            />
                         );
-                     })}
+                     })} */}
 
                      <div className="">
                         <p>
                            Directions:&nbsp;&nbsp;&nbsp;
-                           {oneCard.directions}
+                           {/* {this.props.avaliableRecipes.directions} */}
                         </p>
 
                         <div className="">
@@ -86,7 +89,7 @@ class CookMeal extends React.Component {
 }
 function mapStateToProps(state) {
    return {
-      recipes: state.recipe,
+      avaliableRecipes: state.avaliableRecipes,
       indexOfCurrentRecipe: state.indexOfCurrentRecipe,
    };
 }

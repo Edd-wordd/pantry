@@ -7,6 +7,7 @@ const initialState = {
    recipes: [],
    ingredients: [],
    indexOfCurrentRecipe: 0,
+   avaliableRecipes: {},
 };
 
 const store = createStore(combineReducers, initialState, composeWithDevTools());

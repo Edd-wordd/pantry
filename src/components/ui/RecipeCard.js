@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import heart from "../../icons/heart.svg";
 
 export default function RecipeCard(props) {
@@ -18,12 +17,15 @@ export default function RecipeCard(props) {
                   </h6>
                </div>
                <img src={heart} alt="favorites" />
-               <Link
+               {/* <Link
                   to="/CookMeal"
                   className=" mb-3 btn btn-outline-primary float-right"
+                  onClick={() => {
+                     this.cookMealRecipe();
+                  }}
                >
                   Cook Meal
-               </Link>
+               </Link> */}
             </div>
             <hr />
          </div>
