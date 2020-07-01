@@ -40,6 +40,7 @@ class Home extends React.Component {
                         recipeServing={recipe.servingSize}
                         key={recipe.id}
                         id={recipe.id}
+                        recipe={recipe}
                      />
                   );
                })}
@@ -52,7 +53,6 @@ class Home extends React.Component {
 function mapStateToProps(state) {
    return {
       allRecipes: state.allRecipes,
-      editableRecipe: state.editableRecipe,
    };
 }
 export default connect(mapStateToProps)(Home);
