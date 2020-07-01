@@ -96,7 +96,7 @@ export default connect(mapStateToProps)(RecipeCard);
 //                      to="/CookMeal"
 //                      className=" mb-3 btn btn-outline-primary float-right"
 //                      onClick={() => {
-//                         this.storeEditableRecipe(props.recipe);
+//                      storeEditableRecipe(props.recipe);
 //                      }}
 //                   >
 //                      Cook Meal

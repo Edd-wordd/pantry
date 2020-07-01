@@ -4,8 +4,6 @@ import Navigation from "../ui/Navigation";
 import AppTemplate from "../ui/AppTemplate";
 import { connect } from "react-redux";
 import axios from "axios";
-// import actions from "../../store/actions";
-// import editableRecipe from "../../store/reducers/editableRecipe";
 
 class CookMeal extends React.Component {
    constructor(props) {
@@ -25,8 +23,6 @@ class CookMeal extends React.Component {
    }
 
    render() {
-      const editableRecipe2 = this.props.editableRecipe;
-      console.log("one", editableRecipe2);
       return (
          <>
             <Navigation />
@@ -72,8 +68,11 @@ class CookMeal extends React.Component {
                            <Link to="/pantry" className="card-link ">
                               Check Pantry
                            </Link>
-                           <Link to="" className="card-link ">
+                           {/* <Link to="" className="card-link ">
                               Add to Favorites
+                           </Link> */}
+                           <Link to="/Home" className="card-link">
+                              Back to recipes
                            </Link>
                         </div>
                      </div>
