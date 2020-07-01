@@ -5,9 +5,7 @@ import combineReducers from "./combineReducers";
 const initialState = {
    currentUser: {},
    allRecipes: [],
-   // ingredients: [],
-   // indexOfCurrentRecipe: 0,
-   // avaliableRecipes: {},
+   editableRecipe: {},
 };
 
 const store = createStore(combineReducers, initialState, composeWithDevTools());

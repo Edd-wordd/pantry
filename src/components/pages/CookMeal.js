@@ -10,24 +10,26 @@ class CookMeal extends React.Component {
    constructor(props) {
       super(props);
 
-      //    axios
-      //       .get("https://run.mocky.io/v3/b78a0948-289b-4991-886c-4b331b1b7e30")
-      //       .then((response) => {
-      //          // handle success
-      //          console.log(response);
-      //          props.dispatch({
-      //             type: actions.STORE_COOKED_RECIPES,
-      //             payload: response.data,
-      //          });
-      //       })
-      //       .catch((error) => {
-      //          // handle error
-      //          console.log(error);
+      // axios
+      //    .get("https://run.mocky.io/v3/b78a0948-289b-4991-886c-4b331b1b7e30")
+      //    .then((response) => {
+      //       // handle success
+      //       console.log("details", response);
+      //       const edward = response.data[3].id;
+      //       console.log(edward);
+      //       props.dispatch({
+      //          type: actions.STORE_COOKED_RECIPE,
+      //          payload: edward,
       //       });
+      //    })
+      //    .catch((error) => {
+      //       // handle error
+      //       console.log(error);
+      //    });
    }
 
    render() {
-      const recipes = this.props.avaliableRecipes;
+      // const recipes = this.props.avaliableRecipes;
 
       // console.log("is this working", recipes);
 
@@ -37,7 +39,9 @@ class CookMeal extends React.Component {
             <AppTemplate>
                <div className="mb-3 offset-1 col-10 col-xl-4 card-border">
                   <div className="card-body ">
-                     <div className="mb-3 text-danger">{recipes.title}</div>
+                     <div className="mb-3 text-danger">
+                        {/* {this.props.avaliableRecipes.title} */}
+                     </div>
                      <div className="row mb-3">
                         <h6 className="card-subtitle mb-2 text-muted  col-12 ">
                            Prep-Cook-Time:{" "}

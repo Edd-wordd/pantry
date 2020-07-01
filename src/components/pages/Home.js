@@ -14,7 +14,6 @@ class Home extends React.Component {
          .then((response) => {
             // handle success
             console.log("allRecipes", response);
-
             props.dispatch({
                type: actions.STORE_ALL_RECIPES,
                payload: response.data,
@@ -26,22 +25,20 @@ class Home extends React.Component {
          });
    }
 
-   // cookMealRecipe() {
-   //    console.log("storing editable card");
-   //    const recipeIndex = this.props.recipes[this.props.indexOfCurrentRecipe];
-   //    console.log("indexed", recipeIndex);
-   //    this.props.dispatch({
-   //       type: actions.STORE_COOKED_RECIPE,
-   //       payload: {
-   //          recipeCard: recipeIndex,
-   //          preCard: "/home",
-   //       },
-   //    });
-   // }
+   storeEditableRecipe(recipe) {
+      console.log("storing clicked recipe");
+      //need to get the recipe id and or index to display on cookmeal
+      recipe = this.props.allRecipes[3].id;
+      console.log("reciped id in store", recipe);
+      this.props.dispatch({
+         type: actions.STORE_EDITABLE_RECIPE,
+         payload: { recipe }, //needs to match the recipe and the previous page it came from
+      });
+   }
 
    render() {
-      const recipeIndex = this.props.allRecipes;
-      console.log("index recipe", recipeIndex);
+      const recipeId = this.props.allRecipes;
+      console.log("recipeId", recipeId);
 
       return (
          <>
@@ -63,9 +60,9 @@ class Home extends React.Component {
                                  <Link
                                     to="/CookMeal"
                                     className=" mb-3 btn btn-outline-primary float-right"
-                                    // onClick={() => {
-                                    //    this.cookMealRecipe();
-                                    // }}
+                                    onClick={() => {
+                                       this.storeEditableRecipe(recipe);
+                                    }}
                                  >
                                     Cook Meal
                                  </Link>
@@ -84,6 +81,7 @@ class Home extends React.Component {
 function mapStateToProps(state) {
    return {
       allRecipes: state.allRecipes,
+      editableRecipe: state.editableRecipe,
    };
 }
 export default connect(mapStateToProps)(Home);

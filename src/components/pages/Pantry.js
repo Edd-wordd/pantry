@@ -24,9 +24,9 @@ export default function Pantry() {
          <Navigation />
          <AppTemplate>
             <div className=" mb-3 offset-1 col-10 col-xl-5">
-               <div className="card-body ">
-                  {/* <h5 className="card-title ">Pantry Inventory</h5> */}
-               </div>
+               {/* <div className="card-body "> */}
+               {/* <h5 className="card-title ">Pantry Inventory</h5> */}
+               {/* </div> */}
                <fieldset>
                   <legend>
                      <h5 className="card-title ">Pantry Inventory</h5>
