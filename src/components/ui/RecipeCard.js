@@ -1,7 +1,12 @@
 import React from "react";
 import heart from "../../icons/heart.svg";
+import { Link } from "react-router-dom";
 
 export default function RecipeCard(props) {
+   function storeEditableRecipe() {
+      const recipe = props.id;
+      console.log("reciped id in store", recipe);
+   }
    return (
       <div className="row float-right">
          <div className="mb-3 offset-1 col-10 col-xl-9 offset-xl-1 card-border ">
@@ -17,15 +22,15 @@ export default function RecipeCard(props) {
                   </h6>
                </div>
                <img src={heart} alt="favorites" />
-               {/* <Link
+               <Link
                   to="/CookMeal"
                   className=" mb-3 btn btn-outline-primary float-right"
                   onClick={() => {
-                     this.cookMealRecipe();
+                     storeEditableRecipe();
                   }}
                >
                   Cook Meal
-               </Link> */}
+               </Link>
             </div>
             <hr />
          </div>
