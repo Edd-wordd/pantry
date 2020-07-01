@@ -30,7 +30,9 @@ class CookMeal extends React.Component {
                <div className="mb-3 offset-1 col-10 col-xl-4 card-border">
                   <div className="card-body ">
                      <div className="mb-3 text-danger">
-                        {this.props.editableRecipe.editableRecipe.title}
+                        <h3>
+                           {this.props.editableRecipe.editableRecipe.title}
+                        </h3>
                      </div>
                      <div className="row mb-3">
                         <h6 className="card-subtitle mb-2 text-muted  col-12 ">
@@ -58,24 +60,30 @@ class CookMeal extends React.Component {
                         );
                      })} */}
 
-                     <div className="">
-                        <p>
-                           Directions:&nbsp;&nbsp;&nbsp;
-                           {this.props.editableRecipe.editableRecipe.directions}
-                        </p>
+                     {/* <div className=""> */}
+                     <h6 className="card-subtitle text-muted py-2">
+                        Directions:
+                     </h6>
 
-                        <div className="">
-                           <Link to="/pantry" className="card-link ">
-                              Check Pantry
-                           </Link>
-                           {/* <Link to="" className="card-link ">
+                     <p>
+                        {this.props.editableRecipe.editableRecipe.directions}
+                     </p>
+
+                     <div className="">
+                        <Link
+                           to="/pantry"
+                           className="card-link btn btn-primary"
+                        >
+                           Check Pantry
+                        </Link>
+                        {/* <Link to="" className="card-link ">
                               Add to Favorites
                            </Link> */}
-                           <Link to="/Home" className="card-link">
-                              Back to recipes
-                           </Link>
-                        </div>
+                        <Link to="/Home" className="card-link btn btn-primary">
+                           Back To Recipes
+                        </Link>
                      </div>
+                     {/* </div> */}
                   </div>
 
                   <hr />
