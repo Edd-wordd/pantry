@@ -60,7 +60,6 @@ class CookMeal extends React.Component {
                         );
                      })} */}
 
-                     {/* <div className=""> */}
                      <h6 className="card-subtitle text-muted py-2">
                         Directions:
                      </h6>
@@ -83,7 +82,6 @@ class CookMeal extends React.Component {
                            Back To Recipes
                         </Link>
                      </div>
-                     {/* </div> */}
                   </div>
 
                   <hr />
