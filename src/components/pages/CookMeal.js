@@ -80,7 +80,7 @@ class CookMeal extends React.Component {
                            </Link> */}
                         <Link
                            to="/Home"
-                           className="card-link btn btn-primary  col-10 offset-1 mt-2 col-xl-12f"
+                           className="card-link btn btn-primary  col-10 offset-1 mt-2 col-xl-12"
                         >
                            Back To Recipes
                         </Link>
