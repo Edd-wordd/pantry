@@ -68,17 +68,20 @@ class CookMeal extends React.Component {
                         {this.props.editableRecipe.editableRecipe.directions}
                      </p>
 
-                     <div className="">
+                     <div>
                         <Link
                            to="/pantry"
-                           className="card-link btn btn-primary"
+                           className="card-link btn btn-primary col-10 offset-1"
                         >
                            Check Pantry
                         </Link>
                         {/* <Link to="" className="card-link ">
                               Add to Favorites
                            </Link> */}
-                        <Link to="/Home" className="card-link btn btn-primary">
+                        <Link
+                           to="/Home"
+                           className="card-link btn btn-primary  col-10 offset-1 mt-2"
+                        >
                            Back To Recipes
                         </Link>
                      </div>
