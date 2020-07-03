@@ -22,7 +22,19 @@
          {
             "id": "3ce5fc6a-6943-439b-9e3e-6527ffb8e525",
             "ingredient": "tomatoes",
-            "amount": "3",
+            "amount": "1",
+            "isInStock": true
+         },
+         {
+            "id": "24161210-c10d-4b95-9eff-01621c6d50bd",
+            "ingredient": "green spinach wrap",
+            "amount": "1",
+            "isInStock": true
+         },
+         {
+            "id": "d44dff85-306c-43bf-9e3f-74ce22fdae90",
+            "ingredient": "ranch dressing",
+            "amount": "1/2",
             "isInStock": true
          }
       ],
