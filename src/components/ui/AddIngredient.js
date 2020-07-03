@@ -15,7 +15,9 @@ export default class AddIngredient extends React.Component {
       };
       axios
 
-         .get("https://run.mocky.io/v3/ddbdb68f-c4a8-4c1b-8c04-2cf963ec7cdd")
+         .get(
+            "https://raw.githubusercontent.com/Edd-wordd/pantry/master/src/mock%20data/recipes.JSON"
+         )
 
          .then(function (response) {
             // handle success

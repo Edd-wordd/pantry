@@ -15,9 +15,6 @@ class CookMeal extends React.Component {
          .then((response) => {
             // handle success
             console.log("allRecipes", response);
-            // const ingredients2 = this.props.editableRecipe.editableRecipe
-            //    .ingredients;
-            // console.log("ingredient array", ingredients2);
          })
          .catch((error) => {
             // handle error
@@ -56,13 +53,13 @@ class CookMeal extends React.Component {
                      {this.props.editableRecipe.editableRecipe.ingredients.map(
                         (ingredient) => {
                            return (
-                              <ul>
+                              <ul key={ingredient.id}>
                                  <li
-                                    ingredientAmount={ingredient.amount}
                                     ingredient={ingredient.ingredient}
+                                    amount={ingredient.amount}
                                     key={ingredient.id}
                                  >
-                                    ingredient
+                                    {ingredient.amount}- {ingredient.ingredient}
                                  </li>
                               </ul>
                            );
