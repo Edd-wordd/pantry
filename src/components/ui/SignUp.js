@@ -5,6 +5,7 @@ import hash from "object-hash";
 import { v4 as getUuid } from "uuid";
 import actions from "../../store/actions";
 import axios from "axios";
+import { connect } from "react-redux";
 
 class SignUp extends React.Component {
    constructor(props) {
@@ -94,7 +95,7 @@ class SignUp extends React.Component {
          console.log("created user object for POST", user);
          axios
             .get(
-               "https://raw.githubusercontent.com/Edd-wordd/pantry/master/src/mock%20data/user-schema.js"
+               "https://raw.githubusercontent.com/Edd-wordd/pantry/master/src/mock%20data/user.js"
             )
             .then((res) => {
                // handle success
@@ -166,4 +167,7 @@ class SignUp extends React.Component {
       );
    }
 }
-export default withRouter(SignUp);
+function mapStateToProps(state) {
+   return {};
+}
+export default withRouter(connect(mapStateToProps)(SignUp));
