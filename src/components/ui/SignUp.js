@@ -95,7 +95,7 @@ class SignUp extends React.Component {
          console.log("created user object for POST", user);
          axios
             .get(
-               "https://raw.githubusercontent.com/Edd-wordd/pantry/master/src/mock%20data/user.js"
+               "https://raw.githubusercontent.com/Edd-wordd/pantry/master/src/mock%20data/user.JSON"
             )
             .then((res) => {
                // handle success
