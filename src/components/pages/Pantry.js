@@ -36,45 +36,48 @@ class Pantry extends React.Component {
                         <h5 className="card-title ">Pantry Inventory</h5>
                      </legend>
                      {this.props.allRecipes.map((recipe) => {
-                        return {};
+                        return (
+                           // {/* // <AddPantryIngredient  */}
+                           // {/* //    ingredientAmount={ingredient.ingredientAmount}
+                           //    //    ingredients={ingredient.ingredient}
+                           //    //    inStock={ingredient.isInStock}
+                           //    //    key={ingredient.id} */}
+                           // {/* // /> */}
+                           // {recipe.ingredients.map((ingredient) =>
+                           // return (
+                           <>
+                              <ul className="list-group list-group-flush">
+                                 <div className="custom-control custom-switch ">
+                                    <div className="row">
+                                       <input
+                                          type="checkbox"
+                                          className="custom-control-input col-1"
+                                          id={recipe.id}
+                                          defaultChecked
+                                       />
+
+                                       <label
+                                          className="custom-control-label"
+                                          htmlFor={recipe.id}
+                                       >
+                                          In-Stock
+                                       </label>
+
+                                       <li className=" col-6">
+                                          {recipe.ingredient}
+                                       </li>
+                                       <button className="btn btn-danger btn-sm col-3">
+                                          delete
+                                       </button>
+                                    </div>
+                                    <hr />
+                                 </div>
+                              </ul>
+                           </>
+                           //   );
+                           // })}
+                        );
                      })}
-                     {/* // <AddPantryIngredient  */}
-                     {/* //    ingredientAmount={ingredient.ingredientAmount}
-                        //    ingredients={ingredient.ingredient}
-                        //    inStock={ingredient.isInStock}
-                        //    key={ingredient.id} */}
-                     {/* // /> */}
-                     {/* {recipe.ingredients.map((ingredient) => 
-                     return {}})} */}
-                     <>
-                        <ul className="list-group list-group-flush">
-                           <div className="custom-control custom-switch ">
-                              <div className="row">
-                                 <input
-                                    type="checkbox"
-                                    className="custom-control-input col-1"
-                                    id={this.props.recipe.id}
-                                    defaultChecked
-                                 />
-
-                                 <label
-                                    className="custom-control-label"
-                                    htmlFor={this.props.recipe.id}
-                                 >
-                                    In-Stock
-                                 </label>
-
-                                 <li className=" col-6">
-                                    {this.props.recipe.ingredient}
-                                 </li>
-                                 <button className="btn btn-danger btn-sm col-3">
-                                    delete
-                                 </button>
-                              </div>
-                              <hr />
-                           </div>
-                        </ul>
-                     </>
                   </fieldset>
                </div>
             </AppTemplate>

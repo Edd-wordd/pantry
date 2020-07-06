@@ -81,10 +81,9 @@ class CookMeal extends React.Component {
                         >
                            Check Pantry
                         </Link>
-                        {/* <Link to="" className="card-link ">
-                              Add to Favorites
-                           </Link> */}
+
                         <Link
+                           // TODO: add prevRoute to back to recipe link
                            to="/Home"
                            className="card-link btn btn-primary  col-10 offset-1 mt-2 col-xl-12"
                         >
