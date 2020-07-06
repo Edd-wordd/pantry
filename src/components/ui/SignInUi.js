@@ -3,6 +3,9 @@ import { withRouter } from "react-router-dom";
 import classnames from "classnames";
 import hash from "object-hash";
 import { v4 as getUuid } from "uuid";
+import actions from "../../store/actions";
+import axios from "axios";
+import { connect } from "react-redux";
 
 class SignInUi extends React.Component {
    constructor(props) {
@@ -89,10 +92,30 @@ class SignInUi extends React.Component {
             password: hash(passwordInput),
             createdOn: Date.now(),
          };
-         console.log(user);
-         this.props.history.push("/Home");
+         console.log("created user object for POST", user);
+         axios
+            .get(
+               "https://raw.githubusercontent.com/Edd-wordd/pantry/master/src/mock%20data/user.JSON"
+            )
+            .then((res) => {
+               // handle success
+               const currentUser = res.data;
+               console.log(currentUser);
+               this.props.dispatch({
+                  type: actions.STORE_CURRENT_USER,
+                  payload: res.data,
+               });
+            })
+            .catch((error) => {
+               // handle error
+               console.log(error);
+            });
+         this.props.history.push("/recipes");
+         // this.props.history.push("/recipes");
       }
+      this.props.history.push("/Home");
    }
+
    render() {
       return (
          <>
@@ -142,4 +165,7 @@ class SignInUi extends React.Component {
       );
    }
 }
-export default withRouter(SignInUi);
+function mapStateToProps(state) {
+   return {};
+}
+export default withRouter(connect(mapStateToProps)(SignInUi));
