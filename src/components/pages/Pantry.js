@@ -5,6 +5,7 @@ import AppTemplate from "../ui/AppTemplate";
 // import ingredients from "../../mock data/ingredients";
 import axios from "axios";
 import { connect } from "react-redux";
+import actions from "../../store/actions";
 
 class Pantry extends React.Component {
    constructor(props) {
@@ -16,6 +17,10 @@ class Pantry extends React.Component {
          .then(function (response) {
             // handle success
             console.log(response);
+            props.dispatch({
+               type: actions.STORE_ALL_RECIPES,
+               payload: response.data,
+            });
          })
          .catch(function (error) {
             // handle error
@@ -26,6 +31,8 @@ class Pantry extends React.Component {
          });
    }
    render() {
+      const level = this.props.allRecipes;
+      console.log(level);
       return (
          <>
             <Navigation />
@@ -36,7 +43,7 @@ class Pantry extends React.Component {
                         <h5 className="card-title ">Pantry Inventory</h5>
                      </legend>
                      {this.props.allRecipes.map((recipe) => {
-                        return recipe.ingredient.map((ingredient) => {
+                        return recipe.ingredients.map((ingredient) => {
                            return (
                               <>
                                  <ul className="list-group list-group-flush">
