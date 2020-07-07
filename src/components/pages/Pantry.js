@@ -1,8 +1,6 @@
 import React from "react";
 import Navigation from "../ui/Navigation";
 import AppTemplate from "../ui/AppTemplate";
-// import AddPantryIngredient from "../ui/AddPantryIngredient";
-// import ingredients from "../../mock data/ingredients";
 import axios from "axios";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
@@ -84,51 +82,6 @@ class Pantry extends React.Component {
    }
 }
 
-// export default function Pantry() {
-// axios
-//    .get(
-//       "https://raw.githubusercontent.com/Edd-wordd/pantry/master/src/mock%20data/recipes.JSON"
-//    )
-//    .then(function (response) {
-//       // handle success
-//       console.log(response);
-//    })
-//    .catch(function (error) {
-//       // handle error
-//       console.log(error);
-//    })
-//    .finally(function () {
-//       // always executed
-//    });
-// return (
-// <>
-//    <Navigation />
-//    <AppTemplate>
-//       <div className=" mb-3 offset-1 col-10 col-xl-5">
-//          {/* <div className="card-body "> */}
-//          {/* <h5 className="card-title ">Pantry Inventory</h5> */}
-//          {/* </div> */}
-//          <fieldset>
-//             <legend>
-//                <h5 className="card-title ">Pantry Inventory</h5>
-//             </legend>
-
-//             {/* {ingredients.map((ingredient) => {
-//                return (
-//                   <AddPantryIngredient
-//                      ingredientAmount={ingredient.ingredientAmount}
-//                      ingredients={ingredient.ingredient}
-//                      inStock={ingredient.isInStock}
-//                      key={ingredient.id}
-//                   />
-//                );
-//             })} */}
-//          </fieldset>
-//       </div>
-//    </AppTemplate>
-// </>
-// );
-// }
 function mapStateToProps(state) {
    return {
       allRecipes: state.allRecipes,
