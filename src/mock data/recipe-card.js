@@ -71,7 +71,6 @@ const recipes = [
       servingSize: "2",
       mealFor: "dinner",
       userId: "68247db4-ab28-4e05-ba10-90a6f6360e56",
-
       ingredients: [
          {
             id: "1ffe90f5-fbf1-4114-8253-058d998b9efa",
