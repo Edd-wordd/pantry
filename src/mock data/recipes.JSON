@@ -65,7 +65,7 @@
          },
          {
             "id": "07c7c751-3d49-44ed-a745-a4471d9dc460",
-            "ingredient": "tomatoes",
+            "ingredient": "pizza sauce",
             "amount": "3",
             "isInStock": true
          }
@@ -97,7 +97,7 @@
          },
          {
             "id": "fb3f5de4-97dd-4d1f-9541-bfa3c8aed503",
-            "ingredient": "tomatoes",
+            "ingredient": "green peppers",
             "amount": "3",
             "isInStock": true
          }
@@ -129,7 +129,7 @@
          },
          {
             "id": "5583ed6b-8bd1-426d-8afa-c4469860ac73",
-            "ingredient": "tomatoes",
+            "ingredient": "egg",
             "amount": "3",
             "isInStock": true
          },
