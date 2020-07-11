@@ -29,7 +29,7 @@ const recipes = [
 
       directions:
          "chop the chicken, toast the bread, stir the pot, melt the chesse, dont put too much milk.",
-      favorites: false,
+      favorites: true,
    },
    {
       id: "4a481e74-a05c-4148-a0c3-e6b7d959fba0",
@@ -132,7 +132,7 @@ const recipes = [
 
       directions:
          "cut the avocado, toast the bread, add some cheese before tomatoes",
-      favorites: false,
+      favorites: true,
    },
 ];
 export default recipes;

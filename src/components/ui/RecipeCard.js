@@ -30,6 +30,8 @@ class RecipeCard extends React.Component {
                         Serving Size:&nbsp;{this.props.recipeServing}
                      </h6>
                   </div>
+                  {/* TODO ADD LOGIC TO MAKE FAVORITES APPEAR IF TRUE
+                  AND NOT APPEAR IF FALSE */}
                   <img src={heart} alt="favorites" />
                   <Link
                      to="/CookMeal"

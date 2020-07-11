@@ -5,8 +5,9 @@ import AppTemplate from "../ui/AppTemplate";
 import classnames from "classnames";
 import { checkIsOver } from "../../utilis/helpers";
 import AddIngredient from "../ui/AddIngredient";
+import { connect } from "react-redux";
 
-export default class Recipes extends React.Component {
+class Recipes extends React.Component {
    constructor(props) {
       super(props);
       console.log("edward is here reciepes");
@@ -135,6 +136,9 @@ export default class Recipes extends React.Component {
                            Recipe Title
                         </label>
                         <input
+                           defaultValue={
+                              this.props.editableRecipe.editableRecipe.title
+                           }
                            type="text"
                            id="inputed-recipe-title"
                            className={classnames({
@@ -173,7 +177,12 @@ export default class Recipes extends React.Component {
                               // value={this.state.value}
                               // onChange={this.handleChangeNow}
                            >
-                              <option defaultValue>Choose...</option>
+                              <option defaultValue>
+                                 {
+                                    this.props.editableRecipe.editableRecipe
+                                       .cookTime
+                                 }
+                              </option>
                               <option value="10-20 Mins"> 10-20 Mins</option>
                               <option value="20-30 Mins"> 20-30 Mins</option>
                               <option value="30 and Up"> 30 and Up </option>
@@ -188,7 +197,12 @@ export default class Recipes extends React.Component {
                               // value={this.state.value}
                               // onChange={this.handleChangeNow}
                            >
-                              <option defaultValue>Choose...</option>
+                              <option defaultValue>
+                                 {
+                                    this.props.editableRecipe.editableRecipe
+                                       .mealFor
+                                 }
+                              </option>
                               <option value="Breakfast">Breakfast</option>
                               <option value="Brunch">Brunch</option>
                               <option value="Lunch">Lunch</option>
@@ -201,6 +215,10 @@ export default class Recipes extends React.Component {
                               type="text"
                               id="serving-size"
                               className="form-control "
+                              defaultValue={
+                                 this.props.editableRecipe.editableRecipe
+                                    .servingSize
+                              }
                            ></input>
                         </div>
                      </div>
@@ -236,6 +254,10 @@ export default class Recipes extends React.Component {
                            })}
                            rows="15"
                            onChange={(e) => this.setDirectionsText(e)}
+                           defaultValue={
+                              this.props.editableRecipe.editableRecipe
+                                 .directions
+                           }
                         ></textarea>
                         <small
                            className={classnames({
@@ -271,7 +293,7 @@ export default class Recipes extends React.Component {
                         </button>
                      </div>
 
-                     <div className="form-check float-right">
+                     <div className="form-check ">
                         <input
                            defaultChecked={this.state.isFavorite}
                            className="form-check-input"
@@ -297,3 +319,9 @@ export default class Recipes extends React.Component {
       );
    }
 }
+function mapStateToProps(state) {
+   return {
+      editableRecipe: state.editableRecipe,
+   };
+}
+export default connect(mapStateToProps)(Recipes);

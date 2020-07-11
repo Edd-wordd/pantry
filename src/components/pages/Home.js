@@ -43,6 +43,7 @@ class Home extends React.Component {
                         key={recipe.id}
                         id={recipe.id}
                         recipe={recipe}
+                        favorties={recipe.favorties}
                      />
                   );
                })}
