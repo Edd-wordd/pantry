@@ -32,7 +32,9 @@ class RecipeCard extends React.Component {
                   </div>
                   {/* TODO ADD LOGIC TO MAKE FAVORITES APPEAR IF TRUE
                   AND NOT APPEAR IF FALSE */}
-                  <img src={heart} alt="favorites" />
+                  {this.props.favorites === true && (
+                     <img src={heart} alt="favorites" />
+                  )}
                   <Link
                      to="/CookMeal"
                      className=" mb-3 btn btn-outline-primary float-right"
@@ -50,6 +52,8 @@ class RecipeCard extends React.Component {
    }
 }
 function mapStateToProps(state) {
-   return {};
+   return {
+      allRecipes: state.allRecipes,
+   };
 }
 export default connect(mapStateToProps)(RecipeCard);
