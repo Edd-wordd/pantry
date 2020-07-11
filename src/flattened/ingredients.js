@@ -49,7 +49,7 @@ const ingredients = [
    },
    {
       id: "07c7c751-3d49-44ed-a745-a4471d9dc460",
-      ingredient: "pizza sauce",
+      ingredient: "pizza dough",
       amount: "3",
       isInStock: true,
       recipeId: "4a481e74-a05c-4148-a0c3-e6b7d959fba0",
