@@ -17,8 +17,8 @@ class RecipeCard extends React.Component {
    }
    render() {
       return (
-         <div className="row float-right">
-            <div className="mb-3 offset-1 col-10 col-xl-9 offset-xl-1 card-border ">
+         <div className="row lg-float-right">
+            <div className="mb-3 offset-1 col-10 card-border ">
                <div className="card-body py-5">
                   <h5 className="mb-3">{this.props.recipeName}</h5>
                   <div className="row mb-3">
