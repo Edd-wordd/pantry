@@ -63,9 +63,6 @@ class Pantry extends React.Component {
                                           <li className=" col-6">
                                              {ingredient.ingredient}
                                           </li>
-                                          <button className="btn btn-danger btn-sm col-3">
-                                             delete
-                                          </button>
                                        </div>
                                        <hr />
                                     </div>

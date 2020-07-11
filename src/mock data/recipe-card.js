@@ -53,8 +53,8 @@ const recipes = [
             isInStock: true,
          },
          {
-            id: "3ce5fc6a-6943-439b-9e3e-6527ffb8e525",
-            ingredient: "tomatoes",
+            id: "07c7c751-3d49-44ed-a745-a4471d9dc460",
+            ingredient: "pizza dough",
             amount: "3",
             isInStock: true,
          },
@@ -85,8 +85,8 @@ const recipes = [
             isInStock: true,
          },
          {
-            id: "3ce5fc6a-6943-439b-9e3e-6527ffb8e525",
-            ingredient: "tomatoes",
+            id: "fb3f5de4-97dd-4d1f-9541-bfa3c8aed503",
+            ingredient: "green peppers",
             amount: "3",
             isInStock: true,
          },
@@ -117,8 +117,8 @@ const recipes = [
             isInStock: true,
          },
          {
-            id: "3ce5fc6a-6943-439b-9e3e-6527ffb8e525",
-            ingredient: "tomatoes",
+            id: "5583ed6b-8bd1-426d-8afa-c4469860ac73",
+            ingredient: "egg",
             amount: "3",
             isInStock: true,
          },
