@@ -16,8 +16,9 @@ export default class Recipes extends React.Component {
          titletext: "",
          value: "",
          isFavorite: false,
+         directionsText: "",
       };
-      this.handleChangeNow = this.handleChangeNow.bind(this);
+      // this.handleChangeNow = this.handleChangeNow.bind(this);
       this.handleSubmitNow = this.handleSubmitNow.bind(this);
    }
    isFavoriteRecipe() {
@@ -27,10 +28,10 @@ export default class Recipes extends React.Component {
       });
    }
 
-   handleChangeNow(event) {
-      this.setState({ value: event.target.value });
-      this.setState({ value: event.target.value });
-   }
+   // handleChangeNow(event) {
+   //    this.setState({ value: event.target.value });
+   //    this.setState({ value: event.target.value });
+   // }
 
    handleSubmitNow(event) {
       const userMealFor = this.state.value;
@@ -67,10 +68,24 @@ export default class Recipes extends React.Component {
          return false;
       }
    }
+   checkHasInvalidCharCountDirections() {
+      if (
+         this.state.directionsText.length <= 0 ||
+         this.state.directionsText.length > 1000
+      ) {
+         return true;
+      } else {
+         return false;
+      }
+   }
 
    setAnswerText(e) {
       console.log(e.target, e.target.value);
       this.setState({ titletext: e.target.value });
+   }
+   setDirectionsText(e) {
+      console.log(e.target, e.target.value);
+      this.setState({ directionsText: e.target.value });
    }
    submitrecipe(e) {
       const userRecipeTitle = document.getElementById("inputed-recipe-title")
@@ -155,8 +170,8 @@ export default class Recipes extends React.Component {
                            <select
                               id="input-cook"
                               className="form-control"
-                              value={this.state.value}
-                              onChange={this.handleChangeNow}
+                              // value={this.state.value}
+                              // onChange={this.handleChangeNow}
                            >
                               <option defaultValue>Choose...</option>
                               <option value="10-20 Mins"> 10-20 Mins</option>
@@ -170,8 +185,8 @@ export default class Recipes extends React.Component {
                            <select
                               id="inputState"
                               className="form-control"
-                              value={this.state.value}
-                              onChange={this.handleChangeNow}
+                              // value={this.state.value}
+                              // onChange={this.handleChangeNow}
                            >
                               <option defaultValue>Choose...</option>
                               <option value="Breakfast">Breakfast</option>
@@ -191,13 +206,48 @@ export default class Recipes extends React.Component {
                      </div>
                      <AddIngredient />
 
-                     <div>
-                        <label>Directions:</label>
+                     <div className="py-4">
+                        <label
+                           className={classnames({
+                              "text-danger": checkIsOver(
+                                 this.state.directionsText,
+                                 1000
+                              ),
+                           })}
+                        >
+                           Directions:
+                        </label>
                         <textarea
                            id="inputed-dir"
-                           className="w-100 form-control mb-2"
+                           // className="w-100 form-control mb-2"
+                           className={classnames({
+                              "w-100": true,
+                              "mb-2": true,
+                              "form-control": true,
+                              "is-invalid": checkIsOver(
+                                 this.state.directionsText,
+                                 1000
+                              ),
+
+                              "text-danger": checkIsOver(
+                                 this.state.directionsText,
+                                 1000
+                              ),
+                           })}
                            rows="15"
+                           onChange={(e) => this.setDirectionsText(e)}
                         ></textarea>
+                        <small
+                           className={classnames({
+                              "float-right": true,
+                              "text-danger": checkIsOver(
+                                 this.state.directionsText,
+                                 1000
+                              ),
+                           })}
+                        >
+                           {this.state.directionsText.length}/1000
+                        </small>
                      </div>
 
                      <button className="btn btn-danger mr-5">
@@ -206,8 +256,13 @@ export default class Recipes extends React.Component {
 
                      <div className="float-right mb-5">
                         <button
+                           className={classnames({
+                              btn: true,
+                              "btn-primary": true,
+                              disabled: this.checkHasInvalidCharCountDirections(),
+                           })}
                            type="button"
-                           className="btn btn-primary"
+                           // className="btn btn-primary"
                            onClick={(e) => {
                               this.submitrecipe(e);
                            }}
