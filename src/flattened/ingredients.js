@@ -84,7 +84,7 @@ const ingredients = [
    },
    {
       id: "3b20bcb1-9d1c-4397-af55-ff79abfcdd00",
-      ingredient: "cheese",
+      ingredient: "feta",
       amount: "1 cup",
       isInStock: true,
       recipeId: "1e47bd90-51bf-45c1-bae3-2089942cd872",
