@@ -136,9 +136,9 @@ class Recipes extends React.Component {
                            Recipe Title
                         </label>
                         <input
-                           defaultValue={
-                              this.props.editableRecipe.editableRecipe.title
-                           }
+                           // defaultValue={
+                           //    this.props.editableRecipe.editableRecipe.title
+                           // }
                            type="text"
                            id="inputed-recipe-title"
                            className={classnames({
@@ -178,10 +178,11 @@ class Recipes extends React.Component {
                               // onChange={this.handleChangeNow}
                            >
                               <option defaultValue>
-                                 {
+                                 {/* {
                                     this.props.editableRecipe.editableRecipe
                                        .cookTime
-                                 }
+                                 } */}{" "}
+                                 Choose
                               </option>
                               <option value="10-20 Mins"> 10-20 Mins</option>
                               <option value="20-30 Mins"> 20-30 Mins</option>
@@ -198,10 +199,11 @@ class Recipes extends React.Component {
                               // onChange={this.handleChangeNow}
                            >
                               <option defaultValue>
-                                 {
+                                 {/* {
                                     this.props.editableRecipe.editableRecipe
                                        .mealFor
-                                 }
+                                 } */}{" "}
+                                 Choose
                               </option>
                               <option value="Breakfast">Breakfast</option>
                               <option value="Brunch">Brunch</option>
@@ -215,10 +217,10 @@ class Recipes extends React.Component {
                               type="text"
                               id="serving-size"
                               className="form-control "
-                              defaultValue={
-                                 this.props.editableRecipe.editableRecipe
-                                    .servingSize
-                              }
+                              // defaultValue={
+                              //    this.props.editableRecipe.editableRecipe
+                              //       .servingSize
+                              // }
                            ></input>
                         </div>
                      </div>
@@ -254,10 +256,10 @@ class Recipes extends React.Component {
                            })}
                            rows="15"
                            onChange={(e) => this.setDirectionsText(e)}
-                           defaultValue={
-                              this.props.editableRecipe.editableRecipe
-                                 .directions
-                           }
+                           // defaultValue={
+                           //    this.props.editableRecipe.editableRecipe
+                           //       .directions
+                           // }
                         ></textarea>
                         <small
                            className={classnames({
@@ -295,7 +297,7 @@ class Recipes extends React.Component {
 
                      <div className="form-check ">
                         <input
-                           defaultChecked={this.state.isFavorite}
+                           // defaultChecked={this.state.isFavorite}
                            className="form-check-input"
                            type="checkbox"
                            id="gridCheck"
