@@ -47,7 +47,7 @@ export default function Landing() {
                      Impressive collection of Recipes
                   </h4>
                   <p>Designed to make great food in a breeze!</p>
-                  <p></p>
+                  {/* <p></p> */}
                </div>
 
                <img

@@ -10,7 +10,6 @@ import { connect } from "react-redux";
 class SignUp extends React.Component {
    constructor(props) {
       super(props);
-      console.log("edward is here");
       this.state = {
          isSignUpClicked: false,
          emailerror: "",
@@ -75,7 +74,6 @@ class SignUp extends React.Component {
    }
 
    async validateAndCreateUser() {
-      console.log("clicked");
       const emailInput = document.getElementById("signUpEmail").value;
       const passwordInput = document.getElementById("signUpPassword").value;
 

@@ -10,7 +10,6 @@ import { connect } from "react-redux";
 class SignInUi extends React.Component {
    constructor(props) {
       super(props);
-      console.log("edward is here");
       this.state = {
          isSignUpClicked: false,
          emailerror: "",
@@ -111,9 +110,8 @@ class SignInUi extends React.Component {
                console.log(error);
             });
          this.props.history.push("/recipes");
-         // this.props.history.push("/recipes");
       }
-      this.props.history.push("/Home");
+      // this.props.history.push("/Home");
    }
 
    render() {
