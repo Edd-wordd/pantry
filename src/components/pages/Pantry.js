@@ -94,11 +94,20 @@ class Pantry extends React.Component {
                                              id={ingredient.ingredient}
                                              defaultChecked
                                              isInStock={ingredient.isInStock}
-                                             onClick={() => {
-                                                this.checkIsInStock(
-                                                   ingredient.id
-                                                );
-                                             }}
+                                             // onClick={() => {
+                                             //    this.checkIsInStock(
+                                             //       ingredient.id
+                                             //    );
+                                             onClick={
+                                                ingredient.isInStock === true
+                                                   ? (e) =>
+                                                        this.checkIsInStock(
+                                                           ingredient.id
+                                                        )
+                                                   : (e) =>
+                                                        this.checkIsInStock()
+                                             }
+                                             // }
                                           />
                                           <label
                                              className="custom-control-label"
