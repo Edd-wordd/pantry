@@ -1,5 +1,5 @@
 import React from "react";
-import heart from "../../icons/heart.svg";
+// import heart from "../../icons/heart.svg";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import actions from "../../store/actions";

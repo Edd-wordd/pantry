@@ -18,7 +18,7 @@ class Pantry extends React.Component {
          )
          .then(function (response) {
             // handle success
-            console.log(response);
+            console.log("data", response);
             props.dispatch({
                type: actions.STORE_ALL_RECIPES,
                payload: response.data,
