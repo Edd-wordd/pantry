@@ -34,9 +34,9 @@ class RecipeCard extends React.Component {
                   </div>
                   {/* TODO ADD LOGIC TO MAKE FAVORITES APPEAR IF TRUE
                   AND NOT APPEAR IF FALSE */}
-                  {this.props.favorites === true && (
+                  {/* {this.props.favorites === true && (
                      <img src={heart} alt="favorites" />
-                  )}
+                  )} */}
                   <Link
                      to="/CookMeal"
                      className=" mb-3 btn btn-outline-secondary float-right"
