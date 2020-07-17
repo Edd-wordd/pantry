@@ -11,7 +11,7 @@ class Pantry extends React.Component {
       super(props);
       this.state = {
          isInStock: true,
-         idstest: [],
+         outOfStock: [],
       };
       axios
          .get(
@@ -36,7 +36,7 @@ class Pantry extends React.Component {
 
    checkIsInStock(id) {
       console.log("toggled");
-      this.setState({ idstest: [...this.state.idstest, id] });
+      this.setState({ outOfStock: [...this.state.outOfStock, id] });
 
       if (this.state.isInStock === true) {
          this.setState({ isInStock: false });
@@ -46,29 +46,8 @@ class Pantry extends React.Component {
       }
    }
 
-   // function to get the id of the ingredient which is toggled to false\
-   // getOutOfStockIngredientId() {
-   //    const outOfStock = [];
-   //    console.log(outOfStock);
-
-   //    this.props.allRecipes.map((recipe) => {
-   //       return recipe.ingredients.map((ingredient) => {
-   //          if (ingredient.isInStock === false) {
-   //             outOfStock.push(ingredient.id);
-   //          }
-   //          if (ingredient.isInStock === true) {
-   //             outOfStock.pop(ingredient.id);
-   //          }
-   //       });
-   //    });
-   // if (this.props.ingredient.ingredients === true) {
-   //    return this.props.ingredient.ingredients.id;
-   // then push id to empty array of out of stock ingredients
-   // use same mapping for recipe and ingredient and
-   // if ingredient.ingredients.id === false return ingredient.ingredients.id
-
    render() {
-      console.log(this.state.idstest);
+      console.log(this.state.outOfStock);
 
       return (
          <>
