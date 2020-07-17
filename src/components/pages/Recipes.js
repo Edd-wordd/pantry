@@ -153,7 +153,7 @@ class Recipes extends React.Component {
                         </small>
                      </div>
                      <div className="form-row ">
-                        <div className="form-group col-5">
+                        <div className="form-group col-4">
                            <label htmlFor="inputState">Cook-Time:</label>
                            <select
                               id="input-cook"
@@ -195,12 +195,12 @@ class Recipes extends React.Component {
                               <option value="Dinner">Dinner</option>
                            </select>
                         </div>
-                        <div className="form-group col-2 ">
+                        <div className=" col-2 ">
                            <label htmlFor="serving-size ">Serves:</label>
                            <input
                               type="text"
                               id="serving-size"
-                              className="form-control "
+                              className="form-control"
                               // defaultValue={
                               //    this.props.editableRecipe.editableRecipe
                               //       .servingSize

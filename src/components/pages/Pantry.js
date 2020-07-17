@@ -58,6 +58,9 @@ class Pantry extends React.Component {
             if (ingredient.isInStock === false) {
                outOfStock.push(ingredient.id);
             }
+            if (ingredient.isInStock === true) {
+               outOfStock.pop(ingredient.id);
+            }
          });
       });
       // if (this.props.ingredient.ingredients === true) {
