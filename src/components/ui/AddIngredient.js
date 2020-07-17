@@ -7,7 +7,6 @@ import axios from "axios";
 export default class AddIngredient extends React.Component {
    constructor(props) {
       super(props);
-      console.log("edward is here reciepes");
       this.state = {
          isClicked: false,
          ingredientsAdded: [],

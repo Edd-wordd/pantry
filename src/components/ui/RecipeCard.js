@@ -44,7 +44,7 @@ class RecipeCard extends React.Component {
                         this.storeEditableRecipe(this.props.recipe);
                      }}
                   >
-                     Cook Meal
+                     View Recipe
                   </Link>
                </div>
                <hr />

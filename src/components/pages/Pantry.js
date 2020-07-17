@@ -37,6 +37,7 @@ class Pantry extends React.Component {
       console.log("toggled");
       const inStockIngredients = this.props.allRecipes.ingredients; //use map here to map through recipes and ingedients
       console.log("check", inStockIngredients);
+
       if (this.state.isInStock === true) {
          return this.setState({ isInStock: false });
       } else {
