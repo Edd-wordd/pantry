@@ -35,6 +35,8 @@ class Pantry extends React.Component {
 
    checkIsInStock() {
       console.log("toggled");
+      const inStockIngredients = this.props.allRecipes.ingredients; //use map here to map through recipes and ingedients
+      console.log("check", inStockIngredients);
       if (this.state.isInStock === true) {
          return this.setState({ isInStock: false });
       } else {
@@ -43,10 +45,15 @@ class Pantry extends React.Component {
    }
    // function to get the id of the ingredient which is toggled to false\
    getOutOfStockIngredient() {
-      if (this.props.ingredient.ingredients === true) {
-         return this.props.ingredient.ingredients.id;
-      }
-
+      // if (this.props.ingredient.ingredients === true) {
+      //    return this.props.ingredient.ingredients.id;
+      // }
+      // {this.props.allRecipes.map((recipe) => {
+      //    return recipe.ingredients.map((ingredient) => {
+      //       return (
+      //       );
+      //    });
+      // })}
       // then push id to empty array of out of stock ingredients
       // use same mapping for recipe and ingredient and
       // if ingredient.ingredients.id === false return ingredient.ingredients.id
