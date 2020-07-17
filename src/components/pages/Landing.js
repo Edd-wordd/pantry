@@ -1,5 +1,5 @@
 import React from "react";
-import pantryBackground from "../../img/maddi-bazzocco-UhrHTmVBzzE-unsplash.jpg";
+import pantryBackground from "../../img/mae-mu-Pvclb-iHHYY-unsplash.jpg";
 import AppTemplate from "../ui/AppTemplate";
 import SignUp from "../ui/SignUp";
 import { Link } from "react-router-dom";
@@ -54,6 +54,7 @@ export default function Landing() {
                   className="backgroundImage img-fluid"
                   src={pantryBackground}
                   alt="background"
+                  style={{ "border-radius": ".5rem" }}
                ></img>
             </div>
 

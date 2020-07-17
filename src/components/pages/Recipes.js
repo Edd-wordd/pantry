@@ -118,9 +118,7 @@ class Recipes extends React.Component {
             <Navigation />
             <AppTemplate>
                <div className="col-12 col-xl-5">
-                  <h3 className="text-center">
-                     Impressive collection of Recipes
-                  </h3>
+                  <h3 className="text-center">Add Your Recipes</h3>
 
                   <form>
                      <div className="form-group">

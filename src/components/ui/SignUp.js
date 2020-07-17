@@ -10,6 +10,7 @@ import { connect } from "react-redux";
 class SignUp extends React.Component {
    constructor(props) {
       super(props);
+      console.log("edward is here");
       this.state = {
          isSignUpClicked: false,
          emailerror: "",
@@ -74,6 +75,7 @@ class SignUp extends React.Component {
    }
 
    async validateAndCreateUser() {
+      console.log("clicked");
       const emailInput = document.getElementById("signUpEmail").value;
       const passwordInput = document.getElementById("signUpPassword").value;
 
@@ -153,7 +155,7 @@ class SignUp extends React.Component {
                )}
 
                <button
-                  className="btn btn-primary w-75 float-left mb-5 mt-3"
+                  className="btn btn-secondary w-75 float-left mb-5 mt-3"
                   onClick={() => {
                      this.validateAndCreateUser();
                   }}
