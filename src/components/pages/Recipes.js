@@ -99,7 +99,7 @@ class Recipes extends React.Component {
          mealFor: userMealFor,
          directions: userDirections,
       };
-      console.log("clicked this shit", submittedRecipe, this.state.value);
+      console.log("data", submittedRecipe, this.state.value);
    }
    render() {
       return (
@@ -123,9 +123,6 @@ class Recipes extends React.Component {
                            Recipe Title:
                         </label>
                         <input
-                           // defaultValue={
-                           //    this.props.editableRecipe.editableRecipe.title
-                           // }
                            type="text"
                            id="inputed-recipe-title"
                            className={classnames({
@@ -282,7 +279,7 @@ class Recipes extends React.Component {
                         </button>
                      </div>
 
-                     <div className="form-check ">
+                     {/* <div className="form-check ">
                         <input
                            // defaultChecked={this.state.isFavorite}
                            className="form-check-input"
@@ -295,7 +292,7 @@ class Recipes extends React.Component {
                         <label className="form-check-label" htmlFor="gridCheck">
                            Add to favorite Recipes
                         </label>
-                     </div>
+                     </div> */}
 
                      <div className="clearfix"></div>
                   </form>

@@ -84,7 +84,7 @@ export default class AddIngredient extends React.Component {
                <div className="col-md-1 align-self-center mt-2">
                   <button
                      type="button"
-                     className="mt-2 "
+                     className="mt-2 btn "
                      onClick={(e) => {
                         this.addIngredients(e);
                      }}
@@ -114,7 +114,7 @@ export default class AddIngredient extends React.Component {
                         <div className="col-md-1 align-self-center mt-2">
                            <button
                               type="button"
-                              className="mt-2"
+                              className="mt-2 btn"
                               onClick={() => {
                                  this.removeIngredient(index);
                               }}

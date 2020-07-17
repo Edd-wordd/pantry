@@ -117,7 +117,7 @@ class SignInUi extends React.Component {
    render() {
       return (
          <>
-            <h4 className="text-center">Lets Sign In</h4>
+            <h4 className="text-center">Sign In</h4>
 
             <input
                className={classnames({
