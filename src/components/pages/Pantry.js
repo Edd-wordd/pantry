@@ -4,11 +4,14 @@ import AppTemplate from "../ui/AppTemplate";
 import axios from "axios";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
-import pantryImg from "../../img/heather-mckean-1I9bMlIAIBM-unsplash.jpg";
+import pantryImg from "../../img/jake-charles-zoymUrsMg0g-unsplash.jpg";
 
 class Pantry extends React.Component {
    constructor(props) {
       super(props);
+      this.state = {
+         isInStock: true,
+      };
       axios
          .get(
             "https://raw.githubusercontent.com/Edd-wordd/pantry/master/src/mock%20data/recipes.JSON"
@@ -29,9 +32,17 @@ class Pantry extends React.Component {
             // always executed
          });
    }
+
+   checkIsInStock() {
+      console.log("toggled");
+      if (this.state.isInStock === true) {
+         return this.setState({ isInStock: false });
+      } else {
+         this.setState({ isInStock: true });
+      }
+   }
+
    render() {
-      const level = this.props.allRecipes;
-      console.log(level);
       return (
          <>
             <Navigation />
@@ -55,6 +66,9 @@ class Pantry extends React.Component {
                                              className="custom-control-input col-1"
                                              id={ingredient.ingredient}
                                              defaultChecked
+                                             onClick={() => {
+                                                this.checkIsInStock();
+                                             }}
                                           />
                                           <label
                                              className="custom-control-label"
