@@ -41,6 +41,12 @@ class Pantry extends React.Component {
          this.setState({ isInStock: true });
       }
    }
+   // function to get the id of the ingredient which is toggled to false\
+   getOutOfStockIngredient() {
+      if (this.props.ingredient.ingredients === true) {
+         return this.props.ingredient.ingredients.id;
+      }
+   }
 
    render() {
       return (
@@ -66,6 +72,7 @@ class Pantry extends React.Component {
                                              className="custom-control-input col-1"
                                              id={ingredient.ingredient}
                                              defaultChecked
+                                             isInStock={ingredient.isInStock}
                                              onClick={() => {
                                                 this.checkIsInStock();
                                              }}

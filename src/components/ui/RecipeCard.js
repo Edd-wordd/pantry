@@ -6,9 +6,9 @@ import actions from "../../store/actions";
 import person from "../../icons/person.svg";
 
 class RecipeCard extends React.Component {
-   constructor(props) {
-      super(props);
-   }
+   // constructor(props) {
+   //    super(props);
+   // }
 
    storeEditableRecipe(recipe) {
       this.props.dispatch({
