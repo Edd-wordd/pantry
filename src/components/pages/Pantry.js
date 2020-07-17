@@ -4,6 +4,7 @@ import AppTemplate from "../ui/AppTemplate";
 import axios from "axios";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
+import pantryImg from "../../img/heather-mckean-1I9bMlIAIBM-unsplash.jpg";
 
 class Pantry extends React.Component {
    constructor(props) {
@@ -35,10 +36,12 @@ class Pantry extends React.Component {
          <>
             <Navigation />
             <AppTemplate>
-               <div className=" mb-3 offset-1 col-10 col-xl-5">
+               <div className=" mb-3 col-xl-5 offset-xl-1">
                   <fieldset>
                      <legend>
-                        <h5 className="card-title ">Pantry Inventory</h5>
+                        <h5 className="card-title text-left">
+                           Pantry Inventory
+                        </h5>
                      </legend>
                      {this.props.allRecipes.map((recipe) => {
                         return recipe.ingredients.map((ingredient) => {
@@ -60,7 +63,7 @@ class Pantry extends React.Component {
                                              In-Stock
                                           </label>
 
-                                          <li className=" col-6">
+                                          <li className=" col-5">
                                              {ingredient.ingredient}
                                           </li>
                                        </div>
@@ -72,6 +75,9 @@ class Pantry extends React.Component {
                         });
                      })}
                   </fieldset>
+               </div>
+               <div className="col-xl-6">
+                  <img src={pantryImg} alt="" className="pantryImage"></img>
                </div>
             </AppTemplate>
          </>
