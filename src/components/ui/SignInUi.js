@@ -152,7 +152,7 @@ class SignInUi extends React.Component {
             )}
 
             <button
-               className="btn btn-primary w-100 mt-3"
+               className="btn btn-secondary w-100 mt-3"
                onClick={() => {
                   this.validateAndCreateUser();
                }}

@@ -4,6 +4,7 @@ import Navigation from "../ui/Navigation";
 import AppTemplate from "../ui/AppTemplate";
 import { connect } from "react-redux";
 import axios from "axios";
+import person from "../../icons/person.svg";
 
 class CookMeal extends React.Component {
    constructor(props) {
@@ -29,18 +30,23 @@ class CookMeal extends React.Component {
             <AppTemplate>
                <div className="mb-3 offset-1 col-10 col-xl-4 card-border">
                   <div className="card-body ">
-                     <div className="mb-3 text-danger">
+                     <div className="mb-3">
                         <h3>
                            {this.props.editableRecipe.editableRecipe.title}
                         </h3>
                      </div>
                      <div className="row mb-3">
-                        <h6 className="card-subtitle mb-2 text-muted  col-12 ">
+                        <h6 className="card-subtitle mb-3 text-muted  col-12 ">
                            Prep-Cook-Time:{" "}
                            {this.props.editableRecipe.editableRecipe.cookTime}
                         </h6>
 
                         <h6 className="card-subtitle mb-2 text-muted  col-12 ">
+                           <img
+                              src={person}
+                              alt="serving icon"
+                              className="mr-1"
+                           />
                            Serving Size:
                            {
                               this.props.editableRecipe.editableRecipe

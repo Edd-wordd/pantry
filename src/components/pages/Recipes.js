@@ -1,6 +1,6 @@
 import React from "react";
 import Navigation from "../ui/Navigation";
-import recipeImg from "../../img/jason-leung-CWxidfNz-Co-unsplash (1).jpg";
+import recipeImg from "../../img/heather-mckean-1I9bMlIAIBM-unsplash.jpg";
 import AppTemplate from "../ui/AppTemplate";
 import classnames from "classnames";
 import { checkIsOver } from "../../utilis/helpers";
@@ -19,7 +19,6 @@ class Recipes extends React.Component {
          isFavorite: false,
          directionsText: "",
       };
-      // this.handleChangeNow = this.handleChangeNow.bind(this);
       this.handleSubmitNow = this.handleSubmitNow.bind(this);
    }
    isFavoriteRecipe() {
@@ -28,11 +27,6 @@ class Recipes extends React.Component {
          isFavorite: !this.state.isFavorite,
       });
    }
-
-   // handleChangeNow(event) {
-   //    this.setState({ value: event.target.value });
-   //    this.setState({ value: event.target.value });
-   // }
 
    handleSubmitNow(event) {
       const userMealFor = this.state.value;
@@ -93,10 +87,8 @@ class Recipes extends React.Component {
          .value;
       const userCookTime = this.state.value;
       const userMealFor = this.state.value;
-      // const userFavorite = isFavoriteRecipe();
 
       const userServingSize = document.getElementById("serving-size").value;
-      // const userAmount = document.getElementById("inputed-amount").value;
       const userDirections = document.getElementById("inputed-dir").value;
 
       const submittedRecipe = {
@@ -105,10 +97,7 @@ class Recipes extends React.Component {
          servingSize: userServingSize,
          cookTime: userCookTime,
          mealFor: userMealFor,
-         // ingredientAmount: userAmount,
-         //       ingredient: String,
          directions: userDirections,
-         // favorites: userFavorite,
       };
       console.log("clicked this shit", submittedRecipe, this.state.value);
    }
@@ -131,7 +120,7 @@ class Recipes extends React.Component {
                               ),
                            })}
                         >
-                           Recipe Title
+                           Recipe Title:
                         </label>
                         <input
                            // defaultValue={
@@ -166,12 +155,12 @@ class Recipes extends React.Component {
                            {this.state.titletext.length}/30
                         </small>
                      </div>
-                     <div className="form-row">
-                        <div className="form-group col-md-5">
+                     <div className="form-row ">
+                        <div className="form-group col-5">
                            <label htmlFor="inputState">Cook-Time:</label>
                            <select
                               id="input-cook"
-                              className="form-control"
+                              className="form-control "
                               // value={this.state.value}
                               // onChange={this.handleChangeNow}
                            >
@@ -188,7 +177,7 @@ class Recipes extends React.Component {
                            </select>
                         </div>
 
-                        <div className="form-group col-md-5">
+                        <div className="col-5">
                            <label htmlFor="inputState">Meal For:</label>
                            <select
                               id="inputState"
@@ -209,7 +198,7 @@ class Recipes extends React.Component {
                               <option value="Dinner">Dinner</option>
                            </select>
                         </div>
-                        <div className="form-group col-md-2">
+                        <div className="form-group col-2 ">
                            <label htmlFor="serving-size ">Serves:</label>
                            <input
                               type="text"
@@ -280,7 +269,7 @@ class Recipes extends React.Component {
                         <button
                            className={classnames({
                               btn: true,
-                              "btn-primary": true,
+                              "btn-secondary": true,
                               disabled: this.checkHasInvalidCharCountDirections(),
                            })}
                            type="button"

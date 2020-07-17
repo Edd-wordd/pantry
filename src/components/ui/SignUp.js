@@ -149,7 +149,7 @@ class SignUp extends React.Component {
                   type="password"
                />
                {this.state.hasPasswordError && (
-                  <div className="text-danger float-left">
+                  <div className="text-danger float-left ">
                      <small>{this.state.passwordError}</small>
                   </div>
                )}

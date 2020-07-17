@@ -3,6 +3,7 @@ import heart from "../../icons/heart.svg";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
+import person from "../../icons/person.svg";
 
 class RecipeCard extends React.Component {
    constructor(props) {
@@ -17,7 +18,7 @@ class RecipeCard extends React.Component {
    }
    render() {
       return (
-         <div className="row lg-float-right">
+         <div className="row float-right">
             <div className="mb-3 offset-1 col-10 card-border ">
                <div className="card-body py-5">
                   <h5 className="mb-3">{this.props.recipeName}</h5>
@@ -27,6 +28,7 @@ class RecipeCard extends React.Component {
                      </h6>
 
                      <h6 className="card-subtitle mb-2 text-muted  col-12 ">
+                        <img src={person} alt="serving icon" className="mr-1" />
                         Serving Size:&nbsp;{this.props.recipeServing}
                      </h6>
                   </div>
@@ -37,7 +39,7 @@ class RecipeCard extends React.Component {
                   )}
                   <Link
                      to="/CookMeal"
-                     className=" mb-3 btn btn-outline-primary float-right"
+                     className=" mb-3 btn btn-outline-secondary float-right"
                      onClick={() => {
                         this.storeEditableRecipe(this.props.recipe);
                      }}
