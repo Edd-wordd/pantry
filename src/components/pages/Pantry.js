@@ -46,6 +46,10 @@ class Pantry extends React.Component {
       if (this.props.ingredient.ingredients === true) {
          return this.props.ingredient.ingredients.id;
       }
+
+      // then push id to empty array of out of stock ingredients
+      // use same mapping for recipe and ingredient and
+      // if ingredient.ingredients.id === false return ingredient.ingredients.id
    }
 
    render() {
