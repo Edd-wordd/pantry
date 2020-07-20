@@ -32,7 +32,7 @@ class Home extends React.Component {
             <Navigation />
             <div className=" landing-signIn">
                <h4 className="text-center mb-4">
-                  Impressive collection of Meals
+                  Impressive collection of Recipes
                </h4>
                {this.props.allRecipes.map((recipe) => {
                   return (
