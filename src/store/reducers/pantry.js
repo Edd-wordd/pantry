@@ -1,9 +1,9 @@
 import actions from "../actions";
 
-export default function pantry(state = {}, action) {
+export default function pantry(state = [], action) {
    switch (action.type) {
-      case actions.STORE_OUT_OF_STOCK_INGREDIENT:
-         return action.payload;
+      case actions.STORE_INGREDIENTS:
+         return [...state, action.payload];
       default:
          return state;
    }

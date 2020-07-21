@@ -17,20 +17,26 @@ class Pantry extends React.Component {
          .get(
             "https://raw.githubusercontent.com/Edd-wordd/pantry/master/src/mock%20data/recipes.JSON"
          )
-         .then(function (response) {
+         .then((response) => {
             // handle success
             console.log("data", response);
-            props.dispatch({
-               type: actions.STORE_ALL_RECIPES,
-               payload: response.data,
-            });
+
+            props
+               .dispatch({
+                  type: actions.STORE_ALL_RECIPES,
+                  payload: response.data,
+               })
+               .then((response) => {
+                  props.dispatch({
+                     type: actions.STORE_INGREDIENTS,
+                     // get ingredients with this payload
+                     payload: response.data.ingredients,
+                  });
+               });
          })
-         .catch(function (error) {
+         .catch((error) => {
             // handle error
             console.log(error);
-         })
-         .finally(function () {
-            // always executed
          });
    }
 
