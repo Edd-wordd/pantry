@@ -21,18 +21,19 @@ class Pantry extends React.Component {
             // handle success
             console.log("data", response);
 
-            props
-               .dispatch({
-                  type: actions.STORE_ALL_RECIPES,
-                  payload: response.data,
-               })
-               .then((response) => {
-                  props.dispatch({
-                     type: actions.STORE_INGREDIENTS,
-                     // get ingredients with this payload
-                     payload: response.data.ingredients,
-                  });
-               });
+            props.dispatch({
+               type: actions.STORE_ALL_RECIPES,
+               payload: response.data,
+            });
+            const ingredients = response.data.map((recipe) => {
+               return recipe.ingredients.map((ingredient) => ingredient);
+            });
+            console.log(ingredients);
+            props.dispatch({
+               type: actions.STORE_INGREDIENTS,
+               // get ingredients with this payload
+               payload: ingredients,
+            });
          })
          .catch((error) => {
             // handle error
