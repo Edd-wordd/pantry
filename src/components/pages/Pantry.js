@@ -10,7 +10,7 @@ class Pantry extends React.Component {
    constructor(props) {
       super(props);
       this.state = {
-         isInStock: true,
+         // isInStock: true,
          outOfStock: [],
       };
       axios
@@ -42,15 +42,32 @@ class Pantry extends React.Component {
    }
 
    checkIsInStock(id) {
-      console.log("toggled");
-      this.setState({ outOfStock: [...this.state.outOfStock, id] });
+      //grab the  id of the ingredient that was clicked on
+      // toggel  isInStock state to false
+      //update global state
+      const sample = this.props.pantry.map((item) => {
+         return item;
+      });
 
-      if (this.state.isInStock === true) {
-         this.setState({ isInStock: false });
-      } else {
-         this.setState({ isInStock: true });
-         console.log("hello");
+      console.log({ sample });
+      const outStock = [];
+      outStock.push(id);
+      console.log({ outStock });
+      console.log({ id });
+      console.log("pantry", this.props.pantry);
+      console.log("toggled");
+      // this.setState({ outOfStock: [...this.state.outOfStock, id] });
+      // here si where im trying to compare the ids
+      if (id === this.props.pantry.id && this.props.pantry.isInStock === true) {
+         return JSON.parse({ isInStock: false });
       }
+
+      // if (this.props.pantry.isInStock === true) {
+      //    this.setState({ isInStock: false });
+      // } else {
+      //    this.setState({ isInStock: true });
+      //    console.log("hello");
+      // }
    }
 
    render() {
@@ -80,10 +97,6 @@ class Pantry extends React.Component {
                                              id={ingredient.ingredient}
                                              defaultChecked
                                              isInStock={ingredient.isInStock}
-                                             // onClick={() => {
-                                             //    this.checkIsInStock(
-                                             //       ingredient.id
-                                             //    );
                                              onClick={
                                                 ingredient.isInStock === true
                                                    ? (e) =>
@@ -127,6 +140,7 @@ class Pantry extends React.Component {
 function mapStateToProps(state) {
    return {
       allRecipes: state.allRecipes,
+      pantry: state.pantry,
    };
 }
 export default connect(mapStateToProps)(Pantry);
