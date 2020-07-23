@@ -25,6 +25,8 @@ class Pantry extends React.Component {
                type: actions.STORE_ALL_RECIPES,
                payload: response.data,
             });
+            // may have to flatten into single array
+            // map through ingredients again
             const ingredients = response.data.map((recipe) => {
                return recipe.ingredients.map((ingredient) => ingredient);
             });
@@ -42,37 +44,27 @@ class Pantry extends React.Component {
    }
 
    checkIsInStock(id) {
-      //grab the  id of the ingredient that was clicked on
-      // toggel  isInStock state to false
-      //update global state
-      const sample = this.props.pantry.map((item) => {
-         return item;
+      this.props.dispatch({
+         type: actions.STORE_OUT_OF_STOCK_INGREDIENT,
+         payload: id,
       });
-
-      console.log({ sample });
-      const outStock = [];
-      outStock.push(id);
-      console.log({ outStock });
-      console.log({ id });
-      console.log("pantry", this.props.pantry);
-      console.log("toggled");
-      // this.setState({ outOfStock: [...this.state.outOfStock, id] });
-      // here si where im trying to compare the ids
-      if (id === this.props.pantry.id && this.props.pantry.isInStock === true) {
-         return JSON.parse({ isInStock: false });
-      }
-
-      // if (this.props.pantry.isInStock === true) {
-      //    this.setState({ isInStock: false });
-      // } else {
-      //    this.setState({ isInStock: true });
-      //    console.log("hello");
+      // const sample = this.props.pantry.map((item) => {
+      //    return item;
+      // });
+      // console.log(sample);
+      // if (id === this.props.pantry.id) {
+      //    return isInStock;
       // }
+      // console.log({ sample });
+      // const outStock = [];
+      // outStock.push(id);
+      // console.log({ outStock });
+      console.log({ id });
+      // console.log("pantry", this.props.pantry);
+      // console.log("toggled");
    }
 
    render() {
-      console.log(this.state.outOfStock);
-
       return (
          <>
             <Navigation />
