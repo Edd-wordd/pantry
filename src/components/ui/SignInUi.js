@@ -111,7 +111,6 @@ class SignInUi extends React.Component {
             });
          this.props.history.push("/recipes");
       }
-      // this.props.history.push("/Home");
    }
 
    render() {
