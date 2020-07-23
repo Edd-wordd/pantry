@@ -15,6 +15,7 @@ export default function pantry(state = [], action) {
                }
             }),
          };
+
       default:
          return state;
    }
