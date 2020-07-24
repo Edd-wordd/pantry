@@ -5,7 +5,6 @@ import axios from "axios";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
 import pantryImg from "../../img/jake-charles-zoymUrsMg0g-unsplash.jpg";
-import { ingredients } from "../../flattened/ingredients";
 
 class Pantry extends React.Component {
    constructor(props) {
@@ -26,17 +25,6 @@ class Pantry extends React.Component {
                type: actions.STORE_ALL_RECIPES,
                payload: response.data,
             });
-            // may have to flatten into single array
-            // map through ingredients again
-            const ingredients = response.data.map((recipe) => {
-               return recipe.ingredients.map((ingredient) => ingredient);
-            });
-            // console.log(ingredients);
-            // props.dispatch({
-            //    type: actions.STORE_INGREDIENTS,
-            //    // get ingredients with this payload
-            //    payload: ingredients,
-            // });
          })
          .catch((error) => {
             // handle error
@@ -51,8 +39,6 @@ class Pantry extends React.Component {
       });
 
       console.log({ id });
-      // console.log("pantry", this.props.pantry);
-      // console.log("toggled");
    }
    toggleIsInStock(id) {
       const modifiedPantry = this.props.pantry.map((ingredient) => {
