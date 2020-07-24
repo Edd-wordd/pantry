@@ -48,6 +48,10 @@ class Pantry extends React.Component {
          type: actions.STORE_OUT_OF_STOCK_INGREDIENT,
          payload: id,
       });
+      this.props.dispatch({
+         type: actions.TOGGLE_INSTOCK_INGREDIENT,
+         payload: actions.payload,
+      });
       // const sample = this.props.pantry.map((item) => {
       //    return item;
       // });

@@ -109,7 +109,7 @@ class SignInUi extends React.Component {
                // handle error
                console.log(error);
             });
-         this.props.history.push("/recipes");
+         this.props.history.push("/home");
       }
    }
 
