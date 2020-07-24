@@ -155,19 +155,8 @@ class Recipes extends React.Component {
                      <div className="form-row ">
                         <div className="form-group col-4">
                            <label htmlFor="inputState">Cook-Time:</label>
-                           <select
-                              id="input-cook"
-                              className="form-control "
-                              // value={this.state.value}
-                              // onChange={this.handleChangeNow}
-                           >
-                              <option defaultValue>
-                                 {/* {
-                                    this.props.editableRecipe.editableRecipe
-                                       .cookTime
-                                 } */}{" "}
-                                 Choose
-                              </option>
+                           <select id="input-cook" className="form-control ">
+                              <option defaultValue>Choose</option>
                               <option value="10-20 Mins"> 10-20 Mins</option>
                               <option value="20-30 Mins"> 20-30 Mins</option>
                               <option value="30 and Up"> 30 and Up </option>
@@ -176,19 +165,8 @@ class Recipes extends React.Component {
 
                         <div className="col-5">
                            <label htmlFor="inputState">Meal For:</label>
-                           <select
-                              id="inputState"
-                              className="form-control"
-                              // value={this.state.value}
-                              // onChange={this.handleChangeNow}
-                           >
-                              <option defaultValue>
-                                 {/* {
-                                    this.props.editableRecipe.editableRecipe
-                                       .mealFor
-                                 } */}{" "}
-                                 Choose
-                              </option>
+                           <select id="inputState" className="form-control">
+                              <option defaultValue>Choose</option>
                               <option value="Breakfast">Breakfast</option>
                               <option value="Brunch">Brunch</option>
                               <option value="Lunch">Lunch</option>
@@ -201,10 +179,6 @@ class Recipes extends React.Component {
                               type="text"
                               id="serving-size"
                               className="form-control"
-                              // defaultValue={
-                              //    this.props.editableRecipe.editableRecipe
-                              //       .servingSize
-                              // }
                            ></input>
                         </div>
                      </div>
@@ -223,7 +197,6 @@ class Recipes extends React.Component {
                         </label>
                         <textarea
                            id="inputed-dir"
-                           // className="w-100 form-control mb-2"
                            className={classnames({
                               "w-100": true,
                               "mb-2": true,
@@ -240,10 +213,6 @@ class Recipes extends React.Component {
                            })}
                            rows="15"
                            onChange={(e) => this.setDirectionsText(e)}
-                           // defaultValue={
-                           //    this.props.editableRecipe.editableRecipe
-                           //       .directions
-                           // }
                         ></textarea>
                         <small
                            className={classnames({
@@ -270,7 +239,6 @@ class Recipes extends React.Component {
                               disabled: this.checkHasInvalidCharCountDirections(),
                            })}
                            type="button"
-                           // className="btn btn-primary"
                            onClick={(e) => {
                               this.submitrecipe(e);
                            }}
@@ -278,21 +246,6 @@ class Recipes extends React.Component {
                            ADD Recipe
                         </button>
                      </div>
-
-                     {/* <div className="form-check ">
-                        <input
-                           // defaultChecked={this.state.isFavorite}
-                           className="form-check-input"
-                           type="checkbox"
-                           id="gridCheck"
-                           onClick={() => {
-                              this.isFavoriteRecipe();
-                           }}
-                        />
-                        <label className="form-check-label" htmlFor="gridCheck">
-                           Add to favorite Recipes
-                        </label>
-                     </div> */}
 
                      <div className="clearfix"></div>
                   </form>
