@@ -4,11 +4,13 @@ import RecipeCard from "../ui/RecipeCard";
 import axios from "axios";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
+import { ingredients } from "../../flattened/ingredients";
 
 class Home extends React.Component {
    constructor(props) {
       super(props);
       axios
+
          .get(
             "https://raw.githubusercontent.com/Edd-wordd/pantry/master/src/mock%20data/recipes.JSON"
          )
@@ -24,9 +26,31 @@ class Home extends React.Component {
             // handle error
             console.log(error);
          });
+
+      console.log("test", ingredients);
+      console.log(this.props.pantry.length);
+      if (this.props.pantry.length === 0) {
+         props.dispatch({
+            type: actions.STORE_INGREDIENTS,
+            payload: ingredients,
+         });
+      }
    }
 
    render() {
+      const displayedRecipes = this.props.allRecipes.filter((recipe) => {
+         for (let r in recipe.ingredients) {
+            for (let p in this.props.pantry) {
+               if (recipe.ingredients[r].id === this.props.pantry[p].id) {
+                  if (!this.props.pantry[p].isInStock) {
+                     return false;
+                  }
+               }
+            }
+         }
+         return true;
+      });
+
       return (
          <>
             <Navigation />
@@ -34,7 +58,7 @@ class Home extends React.Component {
                <h4 className="text-center mb-4">
                   Impressive collection of Recipes
                </h4>
-               {this.props.allRecipes.map((recipe) => {
+               {displayedRecipes.map((recipe) => {
                   return (
                      <RecipeCard
                         recipeName={recipe.title}
@@ -56,6 +80,7 @@ class Home extends React.Component {
 function mapStateToProps(state) {
    return {
       allRecipes: state.allRecipes,
+      pantry: state.pantry,
    };
 }
 export default connect(mapStateToProps)(Home);

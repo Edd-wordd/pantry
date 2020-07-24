@@ -5,8 +5,7 @@ export default function pantry(state = [], action) {
    switch (action.type) {
       case actions.STORE_INGREDIENTS:
          return action.payload;
-      // another case to toggle in stock
-      // send new pantry
+
       case actions.TOGGLE_INSTOCK_INGREDIENT:
          return {
             ...state.map((ingredient) => {

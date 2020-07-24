@@ -5,6 +5,7 @@ import axios from "axios";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
 import pantryImg from "../../img/jake-charles-zoymUrsMg0g-unsplash.jpg";
+import { ingredients } from "../../flattened/ingredients";
 
 class Pantry extends React.Component {
    constructor(props) {
@@ -30,12 +31,12 @@ class Pantry extends React.Component {
             const ingredients = response.data.map((recipe) => {
                return recipe.ingredients.map((ingredient) => ingredient);
             });
-            console.log(ingredients);
-            props.dispatch({
-               type: actions.STORE_INGREDIENTS,
-               // get ingredients with this payload
-               payload: ingredients,
-            });
+            // console.log(ingredients);
+            // props.dispatch({
+            //    type: actions.STORE_INGREDIENTS,
+            //    // get ingredients with this payload
+            //    payload: ingredients,
+            // });
          })
          .catch((error) => {
             // handle error
@@ -48,24 +49,24 @@ class Pantry extends React.Component {
          type: actions.STORE_OUT_OF_STOCK_INGREDIENT,
          payload: id,
       });
-      this.props.dispatch({
-         type: actions.TOGGLE_INSTOCK_INGREDIENT,
-         payload: actions.payload,
-      });
-      // const sample = this.props.pantry.map((item) => {
-      //    return item;
-      // });
-      // console.log(sample);
-      // if (id === this.props.pantry.id) {
-      //    return isInStock;
-      // }
-      // console.log({ sample });
-      // const outStock = [];
-      // outStock.push(id);
-      // console.log({ outStock });
+
       console.log({ id });
       // console.log("pantry", this.props.pantry);
       // console.log("toggled");
+   }
+   toggleIsInStock(id) {
+      const modifiedPantry = this.props.pantry.map((ingredient) => {
+         const newIngredient = { ...ingredient };
+         if (id === ingredient.id) {
+            newIngredient.isInStock = !ingredient.isInStock;
+         }
+         return newIngredient;
+      });
+      this.props.dispatch({
+         type: actions.STORE_INGREDIENTS,
+         payload: modifiedPantry,
+      });
+      console.log(modifiedPantry);
    }
 
    render() {
@@ -80,47 +81,42 @@ class Pantry extends React.Component {
                            Pantry Inventory
                         </h5>
                      </legend>
-                     {this.props.allRecipes.map((recipe) => {
-                        return recipe.ingredients.map((ingredient) => {
-                           return (
-                              <>
-                                 <ul className="list-group list-group-flush">
-                                    <div className="custom-control custom-switch ">
-                                       <div className="row">
-                                          <input
-                                             type="checkbox"
-                                             className="custom-control-input col-1"
-                                             id={ingredient.ingredient}
-                                             defaultChecked
-                                             isInStock={ingredient.isInStock}
-                                             onClick={
-                                                ingredient.isInStock === true
-                                                   ? (e) =>
-                                                        this.checkIsInStock(
-                                                           ingredient.id
-                                                        )
-                                                   : (e) =>
-                                                        this.checkIsInStock()
-                                             }
-                                             // }
-                                          />
-                                          <label
-                                             className="custom-control-label"
-                                             htmlFor={ingredient.ingredient}
-                                          >
-                                             In-Stock
-                                          </label>
+                     {this.props.pantry.map((ingredient) => {
+                        // return recipe.ingredients.map((ingredient) => {
+                        return (
+                           <>
+                              <ul className="list-group list-group-flush">
+                                 <div className="custom-control custom-switch ">
+                                    <div className="row">
+                                       <input
+                                          type="checkbox"
+                                          className="custom-control-input col-1"
+                                          id={ingredient.ingredient}
+                                          checked={ingredient.isInStock}
+                                          onClick={() => {
+                                             this.toggleIsInStock(
+                                                ingredient.id
+                                             );
+                                          }}
+                                          // }
+                                       />
+                                       <label
+                                          className="custom-control-label"
+                                          htmlFor={ingredient.ingredient}
+                                       >
+                                          In-Stock
+                                       </label>
 
-                                          <li className=" col-5">
-                                             {ingredient.ingredient}
-                                          </li>
-                                       </div>
-                                       <hr />
+                                       <li className=" col-5">
+                                          {ingredient.ingredient}
+                                       </li>
                                     </div>
-                                 </ul>
-                              </>
-                           );
-                        });
+                                    <hr />
+                                 </div>
+                              </ul>
+                           </>
+                        );
+                        // });
                      })}
                   </fieldset>
                </div>
