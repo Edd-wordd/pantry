@@ -54,7 +54,7 @@ class Home extends React.Component {
       return (
          <>
             <Navigation />
-            <div className=" landing-signIn">
+            <div className="landing-signIn">
                <h4 className="text-center mb-4">
                   Impressive collection of Recipes
                </h4>

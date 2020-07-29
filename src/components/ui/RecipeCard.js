@@ -1,5 +1,5 @@
 import React from "react";
-// import heart from "../../icons/heart.svg";
+import heart from "../../icons/heart.svg";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
@@ -34,9 +34,9 @@ class RecipeCard extends React.Component {
                   </div>
                   {/* TODO ADD LOGIC TO MAKE FAVORITES APPEAR IF TRUE
                   AND NOT APPEAR IF FALSE */}
-                  {/* {this.props.favorites === true && (
+                  {this.props.favorites === true && (
                      <img src={heart} alt="favorites" />
-                  )} */}
+                  )}
                   <Link
                      to="/CookMeal"
                      className=" mb-3 btn btn-outline-secondary float-right"
