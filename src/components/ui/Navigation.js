@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import pantryLogo from "../../img/pantryLogo.png";
+import pantryLogo from "../../img/23a6d358-7bc0-4037-bdae-3c1727d4fa3f_200x200.png";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 export default function Navigation() {
@@ -13,10 +13,20 @@ export default function Navigation() {
             variant="dark"
             fixed="top"
          >
-            <Navbar.Brand href="#home">PANTRY</Navbar.Brand>
+            <Navbar.Brand href="#home">
+               PANTRY
+               {/* <img
+                  className="logo py-0"
+                  id="brandLogo"
+                  src={pantryLogo}
+                  width="30px"
+                  height="30px"
+                  alt="pantry logo"
+               /> */}
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-               <Nav className="mr-auto">
+               <Nav className="ml-auto">
                   <Nav.Link href="#features">Features</Nav.Link>
                   <Nav.Link href="/pantry">Pantry</Nav.Link>
                   <NavDropdown title="Recipes" id="collasible-nav-dropdown">
@@ -37,9 +47,9 @@ export default function Navigation() {
                </Nav>
                <Nav>
                   <Nav.Link href="/">LogOut</Nav.Link>
-                  <Nav.Link eventKey={2} href="#memes">
+                  {/* <Nav.Link eventKey={2} href="#memes">
                      Dank memes
-                  </Nav.Link>
+                  </Nav.Link> */}
                </Nav>
             </Navbar.Collapse>
          </Navbar>
