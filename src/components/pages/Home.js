@@ -5,6 +5,7 @@ import axios from "axios";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
 import { ingredients } from "../../flattened/ingredients";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 
 class Home extends React.Component {
    constructor(props) {
@@ -55,10 +56,26 @@ class Home extends React.Component {
          <>
             <Navigation />
             <div className="landing-signIn">
-               <h4 className="text-center mb-4">
-                  Impressive collection of Recipes
-               </h4>
-
+               <div>
+                  <h4 className="text-center mb-4">
+                     Impressive collection of Recipes
+                  </h4>
+               </div>
+               {/* <div className="float-right col-3 mb-5">
+                  <DropdownButton
+                     id="dropdown-item-button"
+                     title="Browse"
+                     variant="outline-secondary"
+                  >
+                     <Dropdown.ItemText>Filter By</Dropdown.ItemText>
+                     <Dropdown.Item as="button">Favorites</Dropdown.Item>
+                     <Dropdown.Item as="button">A-Z</Dropdown.Item>
+                     <Dropdown.Item as="button">Z-A</Dropdown.Item>
+                     <Dropdown.Item as="button">Most Recent</Dropdown.Item>
+                     <Dropdown.Item as="button">Meal Type</Dropdown.Item>
+                  </DropdownButton>
+               </div> */}
+               <br style={{ clear: "both" }} />
                {displayedRecipes.map((recipe) => {
                   return (
                      <RecipeCard
