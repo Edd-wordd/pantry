@@ -6,19 +6,25 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 export default function Navigation() {
    return (
       <div>
-         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+         <Navbar
+            collapseOnSelect
+            expand="lg"
+            bg="dark"
+            variant="dark"
+            fixed="top"
+         >
+            <Navbar.Brand href="#home">PANTRY</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="mr-auto">
                   <Nav.Link href="#features">Features</Nav.Link>
-                  <Nav.Link href="#pricing">Pricing</Nav.Link>
+                  <Nav.Link href="/pantry">Pantry</Nav.Link>
                   <NavDropdown title="Recipes" id="collasible-nav-dropdown">
-                     <NavDropdown.Item href="#action/3.1">
-                        Action
+                     <NavDropdown.Item href="/recipes">
+                        Add Recipes
                      </NavDropdown.Item>
-                     <NavDropdown.Item href="#action/3.2">
-                        Another action
+                     <NavDropdown.Item href="/home">
+                        View All Recipes
                      </NavDropdown.Item>
                      <NavDropdown.Item href="#action/3.3">
                         Something
@@ -30,7 +36,7 @@ export default function Navigation() {
                   </NavDropdown>
                </Nav>
                <Nav>
-                  <Nav.Link href="#deets">More deets</Nav.Link>
+                  <Nav.Link href="/">LogOut</Nav.Link>
                   <Nav.Link eventKey={2} href="#memes">
                      Dank memes
                   </Nav.Link>
