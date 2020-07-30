@@ -20,7 +20,7 @@ class RecipeCard extends React.Component {
       return (
          <div className="row float-right">
             <div className="mb-3 offset-1 col-10 card-border ">
-               <div className="card-body py-5">
+               <div className="card-body py-5 home-cards">
                   <h5 className="mb-3">{this.props.recipeName}</h5>
                   <div className="row mb-3">
                      <h6 className="card-subtitle mb-2 text-muted  col-12 ">
@@ -28,7 +28,11 @@ class RecipeCard extends React.Component {
                      </h6>
 
                      <h6 className="card-subtitle mb-2 text-muted  col-12 ">
-                        <img src={person} alt="serving icon" className="mr-1" />
+                        <img
+                           src={person}
+                           alt="serving icon"
+                           className="mr-1 "
+                        />
                         Serving Size:&nbsp;{this.props.recipeServing}
                      </h6>
                   </div>

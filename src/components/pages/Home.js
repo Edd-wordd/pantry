@@ -58,6 +58,7 @@ class Home extends React.Component {
                <h4 className="text-center mb-4">
                   Impressive collection of Recipes
                </h4>
+
                {displayedRecipes.map((recipe) => {
                   return (
                      <RecipeCard
