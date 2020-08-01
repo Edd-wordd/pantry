@@ -61,20 +61,51 @@ class Home extends React.Component {
                      Impressive collection of Recipes
                   </h4>
                </div>
-               {/* <div className="float-right col-3 mb-5">
-                  <DropdownButton
-                     id="dropdown-item-button"
-                     title="Browse"
-                     variant="outline-secondary"
-                  >
-                     <Dropdown.ItemText>Filter By</Dropdown.ItemText>
-                     <Dropdown.Item as="button">Favorites</Dropdown.Item>
-                     <Dropdown.Item as="button">A-Z</Dropdown.Item>
-                     <Dropdown.Item as="button">Z-A</Dropdown.Item>
-                     <Dropdown.Item as="button">Most Recent</Dropdown.Item>
-                     <Dropdown.Item as="button">Meal Type</Dropdown.Item>
-                  </DropdownButton>
-               </div> */}
+               <div className="text-center">
+                  <div className="row">
+                     <div className="col-4 offset-1">
+                        <DropdownButton
+                           id="dropdown-item-button"
+                           title="Browse"
+                           variant="outline-secondary"
+                        >
+                           <Dropdown.ItemText>Filter By</Dropdown.ItemText>
+                           <Dropdown.Item as="button">Favorites</Dropdown.Item>
+                           <Dropdown.Item as="button">A-Z</Dropdown.Item>
+                           <Dropdown.Item as="button">Z-A</Dropdown.Item>
+                           <Dropdown.Item as="button">
+                              Most Recent
+                           </Dropdown.Item>
+                           <Dropdown.Item as="button">Meal Type</Dropdown.Item>
+                        </DropdownButton>
+                     </div>
+
+                     {/* <form> */}
+                     <div class="col-6 ">
+                        {/* <div> */}
+                        <input
+                           type="text"
+                           class="form-control"
+                           placeholder="Search"
+                        />
+                        {/* </div> */}
+                     </div>
+                  </div>
+                  {/* </form> */}
+               </div>
+               <div>
+                  {/* <form>
+                     <div class="row">
+                        <div class="col-4">
+                           <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Search"
+                           />
+                        </div>
+                     </div>
+                  </form> */}
+               </div>
                <br style={{ clear: "both" }} />
                {displayedRecipes.map((recipe) => {
                   return (
