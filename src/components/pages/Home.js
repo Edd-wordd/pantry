@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import actions from "../../store/actions";
 import { ingredients } from "../../flattened/ingredients";
 import { Dropdown, DropdownButton } from "react-bootstrap";
+import searchIcon from "../../icons/magnifying-glass.svg";
 
 class Home extends React.Component {
    constructor(props) {
@@ -61,50 +62,55 @@ class Home extends React.Component {
                      Impressive collection of Recipes
                   </h4>
                </div>
-               <div className="text-center">
+               <div className="">
+                  <div className="row ">
+                     <div className="col offset-1 mb-2"></div>
+                  </div>
                   <div className="row">
-                     <div className="col-4 offset-1">
-                        <DropdownButton
-                           id="dropdown-item-button"
-                           title="Browse"
-                           variant="outline-secondary"
-                        >
-                           <Dropdown.ItemText>Filter By</Dropdown.ItemText>
-                           <Dropdown.Item as="button">Favorites</Dropdown.Item>
-                           <Dropdown.Item as="button">A-Z</Dropdown.Item>
-                           <Dropdown.Item as="button">Z-A</Dropdown.Item>
-                           <Dropdown.Item as="button">
-                              Most Recent
-                           </Dropdown.Item>
-                           <Dropdown.Item as="button">Meal Type</Dropdown.Item>
-                        </DropdownButton>
-                     </div>
-
-                     {/* <form> */}
-                     <div class="col-6 ">
-                        {/* <div> */}
-                        <input
-                           type="text"
-                           class="form-control"
-                           placeholder="Search"
-                        />
-                        {/* </div> */}
+                     <div className="col-10  offset-1">
+                        <form class="form-inline">
+                           <input
+                              class="form-control mr-sm-2 "
+                              type="search"
+                              placeholder="What are you looking for?"
+                              aria-label="Search"
+                           />
+                           <button
+                              class="btn btn-outline-secondary my-2 my-sm-0"
+                              type="submit"
+                           >
+                              Search&nbsp;
+                              <img
+                                 src={searchIcon}
+                                 alt="search-icon"
+                                 className="mb-1"
+                              />
+                           </button>
+                           <div className="ml-3">
+                              <DropdownButton
+                                 id="dropdown-item-button"
+                                 title="Filter All Recipes By:   "
+                                 variant="outline-secondary"
+                              >
+                                 <Dropdown.ItemText>
+                                    Filter By
+                                 </Dropdown.ItemText>
+                                 <Dropdown.Item as="button">
+                                    Favorites
+                                 </Dropdown.Item>
+                                 <Dropdown.Item as="button">A-Z</Dropdown.Item>
+                                 <Dropdown.Item as="button">Z-A</Dropdown.Item>
+                                 <Dropdown.Item as="button">
+                                    Most Recent
+                                 </Dropdown.Item>
+                                 <Dropdown.Item as="button">
+                                    Meal Type
+                                 </Dropdown.Item>
+                              </DropdownButton>
+                           </div>
+                        </form>
                      </div>
                   </div>
-                  {/* </form> */}
-               </div>
-               <div>
-                  {/* <form>
-                     <div class="row">
-                        <div class="col-4">
-                           <input
-                              type="text"
-                              class="form-control"
-                              placeholder="Search"
-                           />
-                        </div>
-                     </div>
-                  </form> */}
                </div>
                <br style={{ clear: "both" }} />
                {displayedRecipes.map((recipe) => {
