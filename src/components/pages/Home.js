@@ -123,6 +123,7 @@ class Home extends React.Component {
                         id={recipe.id}
                         recipe={recipe}
                         favorites={recipe.favorites}
+                        mealType={recipe.mealFor}
                      />
                   );
                })}

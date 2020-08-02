@@ -28,7 +28,9 @@ class RecipeCard extends React.Component {
                         Prep &amp; Cook <img src={clockIcon} className="mb-1" />
                         &nbsp;{this.props.recipeCookTime}
                      </h6>
-
+                     <h6 className="card-subtitle mb-2 text-muted  col-12 ">
+                        Meal Type:&nbsp;{this.props.mealType}
+                     </h6>
                      <h6 className="card-subtitle mb-2 text-muted  col-12 ">
                         <img
                            src={person}
@@ -36,7 +38,7 @@ class RecipeCard extends React.Component {
                            className="mr-1 mb-1"
                         />
                         Serving Size:&nbsp;{this.props.recipeServing}
-                     </h6>
+                     </h6>{" "}
                   </div>
                   {/* TODO ADD LOGIC TO MAKE FAVORITES APPEAR IF TRUE
                   AND NOT APPEAR IF FALSE */}

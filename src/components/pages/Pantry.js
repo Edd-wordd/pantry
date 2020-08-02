@@ -32,14 +32,14 @@ class Pantry extends React.Component {
          });
    }
 
-   checkIsInStock(id) {
-      this.props.dispatch({
-         type: actions.STORE_OUT_OF_STOCK_INGREDIENT,
-         payload: id,
-      });
+   // checkIsInStock(id) {
+   //    this.props.dispatch({
+   //       type: actions.STORE_OUT_OF_STOCK_INGREDIENT,
+   //       payload: id,
+   //    });
 
-      console.log({ id });
-   }
+   //    console.log({ id });
+   // }
    toggleIsInStock(id) {
       const modifiedPantry = this.props.pantry.map((ingredient) => {
          const newIngredient = { ...ingredient };
