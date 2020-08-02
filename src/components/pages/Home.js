@@ -62,71 +62,69 @@ class Home extends React.Component {
                      Impressive collection of Recipes
                   </h4>
                </div>
-               <div className="">
-                  <div className="row ">
-                     <div className="col offset-1 mb-2"></div>
-                  </div>
-                  <div className="row">
-                     <div className="col-10  offset-1">
-                        <form class="form-inline">
-                           <input
-                              class="form-control mr-sm-2 "
-                              type="search"
-                              placeholder="What are you looking for?"
-                              aria-label="Search"
+
+               <div className="row ml-md-5">
+                  <div className="col-10 offset-1 col-md-6 offset-md-3">
+                     <form class="form-inline">
+                        <input
+                           class="form-control mr-sm-2"
+                           type="search"
+                           placeholder="What are you looking for?"
+                           aria-label="Search"
+                        />
+                        <button
+                           class="btn btn-outline-secondary my-2 my-sm-0"
+                           type="submit"
+                        >
+                           Search&nbsp;
+                           <img
+                              src={searchIcon}
+                              alt="search-icon"
+                              className="mb-1"
                            />
-                           <button
-                              class="btn btn-outline-secondary my-2 my-sm-0"
-                              type="submit"
+                        </button>
+                        <div className="ml-3">
+                           <DropdownButton
+                              id="dropdown-item-button"
+                              title="Filter All Recipes By:   "
+                              variant="outline-secondary"
                            >
-                              Search&nbsp;
-                              <img
-                                 src={searchIcon}
-                                 alt="search-icon"
-                                 className="mb-1"
-                              />
-                           </button>
-                           <div className="ml-3">
-                              <DropdownButton
-                                 id="dropdown-item-button"
-                                 title="Filter All Recipes By:   "
-                                 variant="outline-secondary"
-                              >
-                                 <Dropdown.ItemText>
-                                    Filter By
-                                 </Dropdown.ItemText>
-                                 <Dropdown.Item as="button">
-                                    Favorites
-                                 </Dropdown.Item>
-                                 <Dropdown.Item as="button">A-Z</Dropdown.Item>
-                                 <Dropdown.Item as="button">Z-A</Dropdown.Item>
-                                 <Dropdown.Item as="button">
-                                    Most Recent
-                                 </Dropdown.Item>
-                                 <Dropdown.Item as="button">
-                                    Meal Type
-                                 </Dropdown.Item>
-                              </DropdownButton>
-                           </div>
-                        </form>
-                     </div>
+                              {/* <Dropdown.ItemText>Filter By</Dropdown.ItemText> */}
+                              <Dropdown.Item as="button">
+                                 Favorites
+                              </Dropdown.Item>
+                              <Dropdown.Item as="button">
+                                 Most Recent
+                              </Dropdown.Item>
+                              <Dropdown.Item as="button">
+                                 Meal Type
+                              </Dropdown.Item>
+                              <Dropdown.Item as="button">A - Z</Dropdown.Item>
+                              <Dropdown.Item as="button">Z - A</Dropdown.Item>
+                           </DropdownButton>
+                        </div>
+                     </form>
                   </div>
                </div>
-               <br style={{ clear: "both" }} />
-               {displayedRecipes.map((recipe) => {
-                  return (
-                     <RecipeCard
-                        recipeName={recipe.title}
-                        recipeCookTime={recipe.cookTime}
-                        recipeServing={recipe.servingSize}
-                        key={recipe.id}
-                        id={recipe.id}
-                        recipe={recipe}
-                        favorites={recipe.favorites}
-                        mealType={recipe.mealFor}
-                     />
-                  );
-               })}
+            </div>
+            <br style={{ clear: "both" }} />
+            <div className="row">
+               <div className="col-12 d-md-flex flex-md-row ">
+                  {displayedRecipes.map((recipe) => {
+                     return (
+                        <RecipeCard
+                           recipeName={recipe.title}
+                           recipeCookTime={recipe.cookTime}
+                           recipeServing={recipe.servingSize}
+                           key={recipe.id}
+                           id={recipe.id}
+                           recipe={recipe}
+                           favorites={recipe.favorites}
+                           mealType={recipe.mealFor}
+                        />
+                     );
+                  })}
+               </div>
             </div>
          </>
       );

@@ -4,7 +4,7 @@
       "title": "Buffalo Chicken Wrap",
       "cookTime": "20-30 Mins",
       "servingSize": "1",
-      "mealFor": "dinner",
+      "mealFor": "Lunch",
       "userId": "9b607c36-4103-4f01-afff-d06e7737a116",
       "ingredients": [
          {
@@ -47,7 +47,7 @@
       "title": "Cheese Pizza",
       "cookTime": "20-30 Mins",
       "servingSize": "4",
-      "mealFor": "dinner",
+      "mealFor": "Dinner",
       "userId": "ee2e843d-e2e1-47ab-8ae7-0ec501bd6864",
 
       "ingredients": [
@@ -79,7 +79,7 @@
       "title": "Veggie Burrito",
       "cookTime": "10-20 Mins",
       "servingSize": "2",
-      "mealFor": "dinner",
+      "mealFor": "Breakfast",
       "userId": "68247db4-ab28-4e05-ba10-90a6f6360e56",
 
       "ingredients": [
@@ -111,7 +111,7 @@
       "title": "Avocado Toast",
       "cookTime": "10-20 Mins",
       "servingSize": "3",
-      "mealFor": "brunch",
+      "mealFor": "Brunch",
       "userId": "a0ded867-644b-448d-a441-8aff79044ec6",
 
       "ingredients": [
