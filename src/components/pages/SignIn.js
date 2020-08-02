@@ -3,11 +3,12 @@ import AppTemplate from "../ui/AppTemplate";
 import SignInUi from "../ui/SignInUi";
 import { Link } from "react-router-dom";
 import pantryLogo from "../../img/pantryLogo.png";
+import { Nav, Navbar } from "react-bootstrap";
 
 export default function SignIn() {
    return (
       <div>
-         <nav className="navbar navbar-expand-md navbar-light fixed-top">
+         {/* <nav className="navbar navbar-expand-md navbar-light fixed-top">
             <Link to="/" className="navbar-brand">
                <img
                   id="brandLogo"
@@ -38,7 +39,23 @@ export default function SignIn() {
                   </li>
                </ul>
             </div>
-         </nav>
+         </nav> */}
+         <Navbar
+            collapseOnSelect
+            expand="lg"
+            bg="dark"
+            variant="dark"
+            fixed="top"
+         >
+            <Navbar.Brand href="#home">PANTRY</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+               <Nav className="ml-auto"></Nav>
+               <Nav>
+                  <Nav.Link href="/">Back</Nav.Link>
+               </Nav>
+            </Navbar.Collapse>
+         </Navbar>
          <AppTemplate>
             <div className="col-4 offset-4 text-center ">
                <SignInUi />
