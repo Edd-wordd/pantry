@@ -26,7 +26,7 @@ class RecipeCard extends React.Component {
                   <div className="row mb-3">
                      <h6 className="card-subtitle mb-2 text-muted  col-12 ">
                         Prep &amp; Cook <img src={clockIcon} className="mb-1" />
-                        &nbsp;{this.props.recipeCookTime}
+                        &nbsp;:&nbsp;{this.props.recipeCookTime}
                      </h6>
                      <h6 className="card-subtitle mb-2 text-muted  col-12 ">
                         Meal Type:&nbsp;{this.props.mealType}

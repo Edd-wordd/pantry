@@ -17,7 +17,7 @@ export default function Navigation() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="ml-auto">
-                  <Nav.Link href="#features">About Us</Nav.Link>
+                  {/* <Nav.Link href="#features">About Us</Nav.Link> */}
                   <NavDropdown title="Recipes" id="collasible-nav-dropdown">
                      <NavDropdown.Item href="/home">
                         View All Recipes
