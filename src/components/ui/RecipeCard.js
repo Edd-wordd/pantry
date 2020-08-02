@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import actions from "../../store/actions";
 import person from "../../icons/person.svg";
+import clockIcon from "../../icons/clock.svg";
 
 class RecipeCard extends React.Component {
    // constructor(props) {
@@ -24,14 +25,15 @@ class RecipeCard extends React.Component {
                   <h5 className="mb-3">{this.props.recipeName}</h5>
                   <div className="row mb-3">
                      <h6 className="card-subtitle mb-2 text-muted  col-12 ">
-                        Prep-Cook-Time:&nbsp;{this.props.recipeCookTime}
+                        Prep &amp; Cook <img src={clockIcon} className="mb-1" />
+                        &nbsp;{this.props.recipeCookTime}
                      </h6>
 
                      <h6 className="card-subtitle mb-2 text-muted  col-12 ">
                         <img
                            src={person}
                            alt="serving icon"
-                           className="mr-1 "
+                           className="mr-1 mb-1"
                         />
                         Serving Size:&nbsp;{this.props.recipeServing}
                      </h6>

@@ -2,7 +2,7 @@
    {
       "id": "ec011fff-006a-47ec-839a-67811e2d49f1",
       "title": "Buffalo Chicken Wrap",
-      "cookTime": "20-30 mins",
+      "cookTime": "20-30 Mins",
       "servingSize": "1",
       "mealFor": "dinner",
       "userId": "9b607c36-4103-4f01-afff-d06e7737a116",
@@ -45,7 +45,7 @@
    {
       "id": "4a481e74-a05c-4148-a0c3-e6b7d959fba0",
       "title": "Cheese Pizza",
-      "cookTime": "20-30 mins",
+      "cookTime": "20-30 Mins",
       "servingSize": "4",
       "mealFor": "dinner",
       "userId": "ee2e843d-e2e1-47ab-8ae7-0ec501bd6864",
@@ -71,13 +71,13 @@
          }
       ],
 
-      "directions": "speard the sauce, add lots of cheese, 375 degree oven for 25 mins,till cheese is melted.",
+      "directions": "speard the sauce, add lots of cheese, 375 degree oven for 25 Mins,till cheese is melted.",
       "favorites": false
    },
    {
       "id": "c7917ecd-ccc6-4512-8cce-b5f0dcba1f25",
       "title": "Veggie Burrito",
-      "cookTime": "10-20 mins",
+      "cookTime": "10-20 Mins",
       "servingSize": "2",
       "mealFor": "dinner",
       "userId": "68247db4-ab28-4e05-ba10-90a6f6360e56",
@@ -109,7 +109,7 @@
    {
       "id": "1e47bd90-51bf-45c1-bae3-2089942cd872",
       "title": "Avocado Toast",
-      "cookTime": "10-20 mins",
+      "cookTime": "10-20 Mins",
       "servingSize": "3",
       "mealFor": "brunch",
       "userId": "a0ded867-644b-448d-a441-8aff79044ec6",
